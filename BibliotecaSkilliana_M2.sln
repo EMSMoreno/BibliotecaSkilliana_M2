@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaSkilliana_M2", "BibliotecaSkilliana_M2.csproj", "{61A3356A-F578-47EB-9AD9-48D2BED8BC7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61A3356A-F578-47EB-9AD9-48D2BED8BC7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A3356A-F578-47EB-9AD9-48D2BED8BC7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A3356A-F578-47EB-9AD9-48D2BED8BC7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A3356A-F578-47EB-9AD9-48D2BED8BC7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A713D9F4-D411-49B5-828F-A6BA0F4DD78D}
+	EndGlobalSection
+EndGlobal

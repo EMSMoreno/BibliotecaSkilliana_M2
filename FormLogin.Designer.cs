@@ -33,16 +33,16 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            label2 = new Label();
             pictureBox2 = new PictureBox();
+            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtUsernameNew = new TextBox();
+            txtPasswordNew = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             label7 = new Label();
             label8 = new Label();
             btnCreateUser = new Button();
@@ -95,6 +95,16 @@
             panel2.Size = new Size(799, 64);
             panel2.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(11, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(52, 41);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -105,16 +115,6 @@
             label2.Size = new Size(313, 30);
             label2.TabIndex = 0;
             label2.Text = "Bem-vindos à Livraria Skilliana";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(11, 12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(52, 41);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -152,33 +152,35 @@
             label6.TabIndex = 6;
             label6.Text = "Password";
             // 
-            // textBox1
+            // txtUsernameNew
             // 
-            textBox1.Location = new Point(26, 150);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(184, 23);
-            textBox1.TabIndex = 7;
+            txtUsernameNew.Location = new Point(26, 150);
+            txtUsernameNew.Name = "txtUsernameNew";
+            txtUsernameNew.Size = new Size(184, 23);
+            txtUsernameNew.TabIndex = 7;
             // 
-            // textBox2
+            // txtPasswordNew
             // 
-            textBox2.Location = new Point(26, 207);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(184, 23);
-            textBox2.TabIndex = 8;
+            txtPasswordNew.Location = new Point(26, 207);
+            txtPasswordNew.Name = "txtPasswordNew";
+            txtPasswordNew.PasswordChar = '*';
+            txtPasswordNew.Size = new Size(184, 23);
+            txtPasswordNew.TabIndex = 8;
             // 
-            // textBox3
+            // txtUsername
             // 
-            textBox3.Location = new Point(252, 150);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(184, 23);
-            textBox3.TabIndex = 9;
+            txtUsername.Location = new Point(252, 150);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(184, 23);
+            txtUsername.TabIndex = 9;
             // 
-            // textBox4
+            // txtPassword
             // 
-            textBox4.Location = new Point(252, 207);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(184, 23);
-            textBox4.TabIndex = 10;
+            txtPassword.Location = new Point(252, 207);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(184, 23);
+            txtPassword.TabIndex = 10;
             // 
             // label7
             // 
@@ -210,6 +212,7 @@
             btnCreateUser.TabIndex = 13;
             btnCreateUser.Text = "Create User";
             btnCreateUser.UseVisualStyleBackColor = true;
+            btnCreateUser.Click += btnCreateUser_Click;
             // 
             // btnLoginUser
             // 
@@ -221,6 +224,7 @@
             btnLoginUser.TabIndex = 14;
             btnLoginUser.Text = "Login User";
             btnLoginUser.UseVisualStyleBackColor = true;
+            btnLoginUser.Click += btnLogin_Click;
             // 
             // btnLimparFormCreate
             // 
@@ -231,6 +235,7 @@
             btnLimparFormCreate.TabIndex = 15;
             btnLimparFormCreate.Text = "Limpar Form";
             btnLimparFormCreate.UseVisualStyleBackColor = true;
+            btnLimparFormCreate.Click += btnClear_Click;
             // 
             // btnLimparFormLogin
             // 
@@ -241,6 +246,7 @@
             btnLimparFormLogin.TabIndex = 16;
             btnLimparFormLogin.Text = "Limpar Form";
             btnLimparFormLogin.UseVisualStyleBackColor = true;
+            btnLimparFormLogin.Click += btnClear_Click;
             // 
             // FormLogin
             // 
@@ -253,10 +259,10 @@
             Controls.Add(btnCreateUser);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Controls.Add(txtPasswordNew);
+            Controls.Add(txtUsernameNew);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -289,10 +295,10 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtUsernameNew;
+        private TextBox txtPasswordNew;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
         private Label label7;
         private Label label8;
         private Button btnCreateUser;

@@ -150,7 +150,7 @@ namespace BibliotecaSkilliana_M2.Emprestimo
                     da.Fill(dt);
 
                     // Exibe os resultados no DataGridViewProcurarEmprestimos
-                    dataGridViewPesquisaEmprestimos.DataSource = dt;
+                    dataGridViewProcura.DataSource = dt;
 
                     if (dt.Rows.Count > 0)
                     {

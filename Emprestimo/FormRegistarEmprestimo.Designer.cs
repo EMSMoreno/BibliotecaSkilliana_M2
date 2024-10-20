@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblRegistoEmprestimos = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistarEmprestimo));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -40,82 +40,81 @@
             dateTimePickerDataRegisto = new DateTimePicker();
             dateTimePickerDataDevolucao = new DateTimePicker();
             dataGridViewEmprestimos = new DataGridView();
-            label6 = new Label();
             btnRegistarEmprestimo = new Button();
             btnLimparForm = new Button();
-            label7 = new Label();
-            dataGridViewPesquisaEmprestimos = new DataGridView();
+            dataGridViewProcura = new DataGridView();
             txtProcurarEmprestimos = new TextBox();
-            btnProcurarEmprestimos = new Button();
+            btnProcurarEmprestimo = new Button();
+            panel1 = new Panel();
+            label8 = new Label();
+            panel2 = new Panel();
+            pictureBox2 = new PictureBox();
+            label9 = new Label();
+            lblEditarLivro = new Label();
+            label6 = new Label();
+            btnLimparProcuraEmprestimo = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmprestimos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPesquisaEmprestimos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // lblRegistoEmprestimos
-            // 
-            lblRegistoEmprestimos.AutoSize = true;
-            lblRegistoEmprestimos.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            lblRegistoEmprestimos.Location = new Point(12, 43);
-            lblRegistoEmprestimos.Name = "lblRegistoEmprestimos";
-            lblRegistoEmprestimos.Size = new Size(275, 25);
-            lblRegistoEmprestimos.TabIndex = 0;
-            lblRegistoEmprestimos.Text = "Fazer Registo de Empréstimos";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(39, 101);
+            label1.Location = new Point(45, 145);
             label1.Name = "label1";
-            label1.Size = new Size(88, 15);
+            label1.Size = new Size(85, 15);
             label1.TabIndex = 1;
-            label1.Text = "Empréstimo ID:";
+            label1.Text = "Empréstimo ID";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(39, 144);
+            label2.Location = new Point(53, 188);
             label2.Name = "label2";
-            label2.Size = new Size(76, 15);
+            label2.Size = new Size(73, 15);
             label2.TabIndex = 2;
-            label2.Text = "Data Registo:";
+            label2.Text = "Data Registo";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(39, 184);
+            label3.Location = new Point(53, 228);
             label3.Name = "label3";
             label3.Size = new Size(78, 30);
             label3.TabIndex = 3;
-            label3.Text = "Data Prevista \r\nDevolução:";
+            label3.Text = "Data Prevista \r\nDevolução";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(39, 236);
+            label4.Location = new Point(53, 283);
             label4.Name = "label4";
-            label4.Size = new Size(86, 15);
+            label4.Size = new Size(83, 15);
             label4.TabIndex = 4;
-            label4.Text = "Número Sócio:";
+            label4.Text = "Número Sócio";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(40, 284);
+            label5.Location = new Point(53, 328);
             label5.Name = "label5";
-            label5.Size = new Size(87, 15);
+            label5.Size = new Size(84, 15);
             label5.TabIndex = 5;
-            label5.Text = "Funcionário ID:";
+            label5.Text = "Funcionário ID";
             // 
             // txtEmprestimoID
             // 
-            txtEmprestimoID.Location = new Point(143, 98);
+            txtEmprestimoID.Location = new Point(143, 142);
             txtEmprestimoID.Name = "txtEmprestimoID";
             txtEmprestimoID.Size = new Size(68, 23);
             txtEmprestimoID.TabIndex = 6;
             // 
             // txtNumeroSocio
             // 
-            txtNumeroSocio.Location = new Point(143, 236);
+            txtNumeroSocio.Location = new Point(143, 280);
             txtNumeroSocio.Name = "txtNumeroSocio";
             txtNumeroSocio.Size = new Size(200, 23);
             txtNumeroSocio.TabIndex = 7;
@@ -123,21 +122,21 @@
             // comboBoxFuncionarioID
             // 
             comboBoxFuncionarioID.FormattingEnabled = true;
-            comboBoxFuncionarioID.Location = new Point(143, 281);
+            comboBoxFuncionarioID.Location = new Point(143, 325);
             comboBoxFuncionarioID.Name = "comboBoxFuncionarioID";
             comboBoxFuncionarioID.Size = new Size(133, 23);
             comboBoxFuncionarioID.TabIndex = 8;
             // 
             // dateTimePickerDataRegisto
             // 
-            dateTimePickerDataRegisto.Location = new Point(143, 138);
+            dateTimePickerDataRegisto.Location = new Point(143, 182);
             dateTimePickerDataRegisto.Name = "dateTimePickerDataRegisto";
             dateTimePickerDataRegisto.Size = new Size(200, 23);
             dateTimePickerDataRegisto.TabIndex = 9;
             // 
             // dateTimePickerDataDevolucao
             // 
-            dateTimePickerDataDevolucao.Location = new Point(143, 191);
+            dateTimePickerDataDevolucao.Location = new Point(143, 235);
             dateTimePickerDataDevolucao.Name = "dateTimePickerDataDevolucao";
             dateTimePickerDataDevolucao.Size = new Size(200, 23);
             dateTimePickerDataDevolucao.TabIndex = 10;
@@ -145,26 +144,16 @@
             // dataGridViewEmprestimos
             // 
             dataGridViewEmprestimos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewEmprestimos.Location = new Point(378, 101);
+            dataGridViewEmprestimos.Location = new Point(378, 85);
             dataGridViewEmprestimos.Name = "dataGridViewEmprestimos";
-            dataGridViewEmprestimos.Size = new Size(551, 350);
+            dataGridViewEmprestimos.Size = new Size(487, 325);
             dataGridViewEmprestimos.TabIndex = 11;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label6.Location = new Point(378, 43);
-            label6.Name = "label6";
-            label6.Size = new Size(267, 25);
-            label6.TabIndex = 12;
-            label6.Text = "Ver Registos de Empréstimos";
             // 
             // btnRegistarEmprestimo
             // 
             btnRegistarEmprestimo.FlatAppearance.BorderColor = Color.LimeGreen;
             btnRegistarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnRegistarEmprestimo.Location = new Point(12, 354);
+            btnRegistarEmprestimo.Location = new Point(189, 373);
             btnRegistarEmprestimo.Name = "btnRegistarEmprestimo";
             btnRegistarEmprestimo.Size = new Size(154, 37);
             btnRegistarEmprestimo.TabIndex = 13;
@@ -175,7 +164,7 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(189, 354);
+            btnLimparForm.Location = new Point(24, 373);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 14;
@@ -183,57 +172,131 @@
             btnLimparForm.UseVisualStyleBackColor = true;
             btnLimparForm.Click += btnLimparForm_Click;
             // 
-            // label7
+            // dataGridViewProcura
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label7.Location = new Point(12, 426);
-            label7.Name = "label7";
-            label7.Size = new Size(285, 25);
-            label7.TabIndex = 15;
-            label7.Text = "Fazer Pesquisa de Empréstimos";
-            // 
-            // dataGridViewPesquisaEmprestimos
-            // 
-            dataGridViewPesquisaEmprestimos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPesquisaEmprestimos.Location = new Point(378, 463);
-            dataGridViewPesquisaEmprestimos.Name = "dataGridViewPesquisaEmprestimos";
-            dataGridViewPesquisaEmprestimos.Size = new Size(551, 79);
-            dataGridViewPesquisaEmprestimos.TabIndex = 16;
+            dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewProcura.Location = new Point(378, 477);
+            dataGridViewProcura.Name = "dataGridViewProcura";
+            dataGridViewProcura.Size = new Size(487, 90);
+            dataGridViewProcura.TabIndex = 16;
             // 
             // txtProcurarEmprestimos
             // 
-            txtProcurarEmprestimos.Location = new Point(45, 472);
+            txtProcurarEmprestimos.Location = new Point(45, 486);
             txtProcurarEmprestimos.Name = "txtProcurarEmprestimos";
             txtProcurarEmprestimos.PlaceholderText = "Procura aqui o empréstimo que desejas";
             txtProcurarEmprestimos.Size = new Size(242, 23);
             txtProcurarEmprestimos.TabIndex = 17;
             txtProcurarEmprestimos.TextAlign = HorizontalAlignment.Center;
             // 
-            // btnProcurarEmprestimos
+            // btnProcurarEmprestimo
             // 
-            btnProcurarEmprestimos.FlatAppearance.BorderColor = Color.DarkOrchid;
-            btnProcurarEmprestimos.FlatStyle = FlatStyle.Flat;
-            btnProcurarEmprestimos.Location = new Point(83, 501);
-            btnProcurarEmprestimos.Name = "btnProcurarEmprestimos";
-            btnProcurarEmprestimos.Size = new Size(154, 37);
-            btnProcurarEmprestimos.TabIndex = 18;
-            btnProcurarEmprestimos.Text = "Procurar Empréstimo";
-            btnProcurarEmprestimos.UseVisualStyleBackColor = true;
-            btnProcurarEmprestimos.Click += btnProcurarEmprestimos_Click;
+            btnProcurarEmprestimo.FlatAppearance.BorderColor = Color.DarkOrchid;
+            btnProcurarEmprestimo.FlatStyle = FlatStyle.Flat;
+            btnProcurarEmprestimo.Location = new Point(189, 530);
+            btnProcurarEmprestimo.Name = "btnProcurarEmprestimo";
+            btnProcurarEmprestimo.Size = new Size(154, 37);
+            btnProcurarEmprestimo.TabIndex = 18;
+            btnProcurarEmprestimo.Text = "Procurar Empréstimo";
+            btnProcurarEmprestimo.UseVisualStyleBackColor = true;
+            btnProcurarEmprestimo.Click += btnProcurarEmprestimos_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(label8);
+            panel1.Location = new Point(0, 585);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(881, 41);
+            panel1.TabIndex = 54;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(220, 14);
+            label8.Name = "label8";
+            label8.Size = new Size(446, 17);
+            label8.TabIndex = 1;
+            label8.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.CornflowerBlue;
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(label9);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(881, 64);
+            panel2.TabIndex = 55;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(11, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(52, 41);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(69, 12);
+            label9.Name = "label9";
+            label9.Size = new Size(313, 30);
+            label9.TabIndex = 0;
+            label9.Text = "Bem-vindos à Livraria Skilliana";
+            // 
+            // lblEditarLivro
+            // 
+            lblEditarLivro.AutoSize = true;
+            lblEditarLivro.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblEditarLivro.Location = new Point(24, 85);
+            lblEditarLivro.Name = "lblEditarLivro";
+            lblEditarLivro.Size = new Size(335, 21);
+            lblEditarLivro.TabIndex = 53;
+            lblEditarLivro.Text = "Menu Empréstimos - Registrar Empréstimo";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label6.Location = new Point(45, 443);
+            label6.Name = "label6";
+            label6.Size = new Size(332, 21);
+            label6.TabIndex = 56;
+            label6.Text = "Menu Empréstimos - Procurar Empréstimo";
+            // 
+            // btnLimparProcuraEmprestimo
+            // 
+            btnLimparProcuraEmprestimo.FlatStyle = FlatStyle.Flat;
+            btnLimparProcuraEmprestimo.Location = new Point(29, 530);
+            btnLimparProcuraEmprestimo.Name = "btnLimparProcuraEmprestimo";
+            btnLimparProcuraEmprestimo.Size = new Size(154, 37);
+            btnLimparProcuraEmprestimo.TabIndex = 57;
+            btnLimparProcuraEmprestimo.Text = "Limpar Form";
+            btnLimparProcuraEmprestimo.UseVisualStyleBackColor = true;
             // 
             // FormRegistarEmprestimo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(941, 554);
-            Controls.Add(btnProcurarEmprestimos);
+            ClientSize = new Size(881, 626);
+            Controls.Add(btnLimparProcuraEmprestimo);
+            Controls.Add(label6);
+            Controls.Add(lblEditarLivro);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(btnProcurarEmprestimo);
             Controls.Add(txtProcurarEmprestimos);
-            Controls.Add(dataGridViewPesquisaEmprestimos);
-            Controls.Add(label7);
+            Controls.Add(dataGridViewProcura);
             Controls.Add(btnLimparForm);
             Controls.Add(btnRegistarEmprestimo);
-            Controls.Add(label6);
             Controls.Add(dataGridViewEmprestimos);
             Controls.Add(dateTimePickerDataDevolucao);
             Controls.Add(dateTimePickerDataRegisto);
@@ -245,19 +308,21 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(lblRegistoEmprestimos);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormRegistarEmprestimo";
             Text = "FormRegistarEmprestimo";
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmprestimos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPesquisaEmprestimos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label lblRegistoEmprestimos;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -269,12 +334,18 @@
         private DateTimePicker dateTimePickerDataRegisto;
         private DateTimePicker dateTimePickerDataDevolucao;
         private DataGridView dataGridViewEmprestimos;
-        private Label label6;
         private Button btnRegistarEmprestimo;
         private Button btnLimparForm;
-        private Label label7;
-        private DataGridView dataGridViewPesquisaEmprestimos;
+        private DataGridView dataGridViewProcura;
         private TextBox txtProcurarEmprestimos;
-        private Button btnProcurarEmprestimos;
+        private Button btnProcurarEmprestimo;
+        private Panel panel1;
+        private Label label8;
+        private Panel panel2;
+        private PictureBox pictureBox2;
+        private Label label9;
+        private Label lblEditarLivro;
+        private Label label6;
+        private Button btnLimparProcuraEmprestimo;
     }
 }

@@ -60,6 +60,10 @@
             apagarFuncionárioToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
             label2 = new Label();
+            btnRegistarLivro = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             menuStrip2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -67,7 +71,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(235, 174);
+            label1.Location = new Point(261, 81);
             label1.Name = "label1";
             label1.Size = new Size(293, 30);
             label1.TabIndex = 0;
@@ -92,20 +96,23 @@
             // registarLivroToolStripMenuItem
             // 
             registarLivroToolStripMenuItem.Name = "registarLivroToolStripMenuItem";
-            registarLivroToolStripMenuItem.Size = new Size(145, 22);
+            registarLivroToolStripMenuItem.Size = new Size(180, 22);
             registarLivroToolStripMenuItem.Text = "Registar Livro";
+            registarLivroToolStripMenuItem.Click += registarLivroToolStripMenuItem_Click;
             // 
             // editarLivroToolStripMenuItem
             // 
             editarLivroToolStripMenuItem.Name = "editarLivroToolStripMenuItem";
-            editarLivroToolStripMenuItem.Size = new Size(145, 22);
+            editarLivroToolStripMenuItem.Size = new Size(180, 22);
             editarLivroToolStripMenuItem.Text = "Editar Livro";
+            editarLivroToolStripMenuItem.Click += editarLivroToolStripMenuItem_Click;
             // 
             // apagarLivroToolStripMenuItem
             // 
             apagarLivroToolStripMenuItem.Name = "apagarLivroToolStripMenuItem";
-            apagarLivroToolStripMenuItem.Size = new Size(145, 22);
+            apagarLivroToolStripMenuItem.Size = new Size(180, 22);
             apagarLivroToolStripMenuItem.Text = "Apagar Livro";
+            apagarLivroToolStripMenuItem.Click += apagarLivroToolStripMenuItem_Click;
             // 
             // estanteToolStripMenuItem
             // 
@@ -286,11 +293,63 @@
             label2.TabIndex = 1;
             label2.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
+            // btnRegistarLivro
+            // 
+            btnRegistarLivro.FlatAppearance.BorderColor = Color.DodgerBlue;
+            btnRegistarLivro.FlatStyle = FlatStyle.Flat;
+            btnRegistarLivro.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegistarLivro.Location = new Point(202, 160);
+            btnRegistarLivro.Name = "btnRegistarLivro";
+            btnRegistarLivro.Size = new Size(171, 77);
+            btnRegistarLivro.TabIndex = 66;
+            btnRegistarLivro.Text = "Livros 📖";
+            btnRegistarLivro.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderColor = Color.Lime;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(202, 266);
+            button1.Name = "button1";
+            button1.Size = new Size(171, 77);
+            button1.TabIndex = 67;
+            button1.Text = "Sócios 👔";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderColor = Color.Gold;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(413, 160);
+            button2.Name = "button2";
+            button2.Size = new Size(171, 77);
+            button2.TabIndex = 68;
+            button2.Text = "Empréstimos 📚";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderColor = Color.Crimson;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(413, 266);
+            button3.Name = "button3";
+            button3.Size = new Size(171, 77);
+            button3.TabIndex = 69;
+            button3.Text = "Colaboradores \U0001f9cd";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(btnRegistarLivro);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(menuStrip2);
@@ -339,5 +398,9 @@
         private ToolStripMenuItem apagarFuncionárioToolStripMenuItem;
         private Panel panel1;
         private Label label2;
+        private Button btnRegistarLivro;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

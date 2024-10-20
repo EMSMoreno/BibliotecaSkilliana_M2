@@ -1,5 +1,6 @@
 using BibliotecaSkilliana_M2.Emprestimo;
 using BibliotecaSkilliana_M2.Funcionario;
+using BibliotecaSkilliana_M2.Livro;
 using BibliotecaSkilliana_M2.Socio;
 
 namespace BibliotecaSkilliana_M2
@@ -79,5 +80,26 @@ namespace BibliotecaSkilliana_M2
 
         #endregion
 
+        #region Feito Depois
+
+        private void registarLivroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formRegistarLivro = new FormRegistarLivro())
+            { formRegistarLivro.ShowDialog(); }
+        }
+
+        private void editarLivroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formEditarLivro = new FormEditarLivro())
+            { formEditarLivro.ShowDialog(); }
+        }
+
+        private void apagarLivroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formApagarLivro = new FormApagarLivro())
+            { formApagarLivro.ShowDialog(); }
+        }
+
+        #endregion
     }
 }

@@ -36,30 +36,30 @@
             label2 = new Label();
             lblEditarLivro = new Label();
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
+            txtISBN = new TextBox();
             lblISBN = new Label();
             lblTitulo = new Label();
-            textBox2 = new TextBox();
+            txtTitulo = new TextBox();
             lblDataLanc = new Label();
             lblSinopse = new Label();
-            textBox4 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            txtSinopse = new TextBox();
+            dtpDataLancamento = new DateTimePicker();
             lblEdicao = new Label();
-            textBox3 = new TextBox();
+            txtEdicao = new TextBox();
             lblEditora = new Label();
             lblIdioma = new Label();
             lblNPaginas = new Label();
-            textBox7 = new TextBox();
+            txtNumeroPaginas = new TextBox();
             lblEstado = new Label();
             lblCodEstante = new Label();
-            textBox9 = new TextBox();
+            txtCodigoEstante = new TextBox();
             lblQuantidade = new Label();
-            textBox10 = new TextBox();
+            txtQuantidade = new TextBox();
             btnEditarLivro = new Button();
             btnLimparForm = new Button();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            txtEditora = new TextBox();
+            txtIdioma = new TextBox();
+            txtEstado = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -134,13 +134,14 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(865, 152);
             dataGridView1.TabIndex = 15;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
-            // textBox1
+            // txtISBN
             // 
-            textBox1.Location = new Point(55, 174);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 16;
+            txtISBN.Location = new Point(55, 174);
+            txtISBN.Name = "txtISBN";
+            txtISBN.Size = new Size(100, 23);
+            txtISBN.TabIndex = 16;
             // 
             // lblISBN
             // 
@@ -160,12 +161,12 @@
             lblTitulo.TabIndex = 19;
             lblTitulo.Text = "Titulo";
             // 
-            // textBox2
+            // txtTitulo
             // 
-            textBox2.Location = new Point(158, 174);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(154, 23);
-            textBox2.TabIndex = 18;
+            txtTitulo.Location = new Point(158, 174);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(154, 23);
+            txtTitulo.TabIndex = 18;
             // 
             // lblDataLanc
             // 
@@ -185,20 +186,20 @@
             lblSinopse.TabIndex = 23;
             lblSinopse.Text = "Sinopse";
             // 
-            // textBox4
+            // txtSinopse
             // 
-            textBox4.Location = new Point(55, 229);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(257, 67);
-            textBox4.TabIndex = 22;
+            txtSinopse.Location = new Point(55, 229);
+            txtSinopse.Multiline = true;
+            txtSinopse.Name = "txtSinopse";
+            txtSinopse.Size = new Size(257, 67);
+            txtSinopse.TabIndex = 22;
             // 
-            // dateTimePicker1
+            // dtpDataLancamento
             // 
-            dateTimePicker1.Location = new Point(315, 174);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(156, 23);
-            dateTimePicker1.TabIndex = 24;
+            dtpDataLancamento.Location = new Point(315, 174);
+            dtpDataLancamento.Name = "dtpDataLancamento";
+            dtpDataLancamento.Size = new Size(156, 23);
+            dtpDataLancamento.TabIndex = 24;
             // 
             // lblEdicao
             // 
@@ -209,12 +210,12 @@
             lblEdicao.TabIndex = 26;
             lblEdicao.Text = "Edição";
             // 
-            // textBox3
+            // txtEdicao
             // 
-            textBox3.Location = new Point(315, 229);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(158, 23);
-            textBox3.TabIndex = 25;
+            txtEdicao.Location = new Point(315, 229);
+            txtEdicao.Name = "txtEdicao";
+            txtEdicao.Size = new Size(158, 23);
+            txtEdicao.TabIndex = 25;
             // 
             // lblEditora
             // 
@@ -243,12 +244,12 @@
             lblNPaginas.TabIndex = 32;
             lblNPaginas.Text = "Nº Páginas";
             // 
-            // textBox7
+            // txtNumeroPaginas
             // 
-            textBox7.Location = new Point(479, 273);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(125, 23);
-            textBox7.TabIndex = 31;
+            txtNumeroPaginas.Location = new Point(479, 273);
+            txtNumeroPaginas.Name = "txtNumeroPaginas";
+            txtNumeroPaginas.Size = new Size(125, 23);
+            txtNumeroPaginas.TabIndex = 31;
             // 
             // lblEstado
             // 
@@ -268,12 +269,12 @@
             lblCodEstante.TabIndex = 36;
             lblCodEstante.Text = "Cód. Estante";
             // 
-            // textBox9
+            // txtCodigoEstante
             // 
-            textBox9.Location = new Point(610, 174);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 35;
+            txtCodigoEstante.Location = new Point(610, 174);
+            txtCodigoEstante.Name = "txtCodigoEstante";
+            txtCodigoEstante.Size = new Size(100, 23);
+            txtCodigoEstante.TabIndex = 35;
             // 
             // lblQuantidade
             // 
@@ -284,12 +285,12 @@
             lblQuantidade.TabIndex = 38;
             lblQuantidade.Text = "Quantidade";
             // 
-            // textBox10
+            // txtQuantidade
             // 
-            textBox10.Location = new Point(610, 229);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
-            textBox10.TabIndex = 37;
+            txtQuantidade.Location = new Point(610, 229);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(100, 23);
+            txtQuantidade.TabIndex = 37;
             // 
             // btnEditarLivro
             // 
@@ -301,6 +302,7 @@
             btnEditarLivro.TabIndex = 39;
             btnEditarLivro.Text = "Editar Livro";
             btnEditarLivro.UseVisualStyleBackColor = true;
+            btnEditarLivro.Click += btnEditarLivro_Click;
             // 
             // btnLimparForm
             // 
@@ -313,65 +315,63 @@
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // txtEditora
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(477, 174);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(127, 23);
-            comboBox1.TabIndex = 74;
+            txtEditora.Location = new Point(315, 273);
+            txtEditora.Name = "txtEditora";
+            txtEditora.Size = new Size(158, 23);
+            txtEditora.TabIndex = 77;
             // 
-            // comboBox2
+            // txtIdioma
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(318, 273);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(155, 23);
-            comboBox2.TabIndex = 75;
+            txtIdioma.Location = new Point(479, 229);
+            txtIdioma.Name = "txtIdioma";
+            txtIdioma.Size = new Size(125, 23);
+            txtIdioma.TabIndex = 78;
             // 
-            // comboBox3
+            // txtEstado
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(479, 229);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(125, 23);
-            comboBox3.TabIndex = 76;
+            txtEstado.Location = new Point(477, 174);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(125, 23);
+            txtEstado.TabIndex = 79;
             // 
             // FormEditarLivro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(915, 507);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(txtEstado);
+            Controls.Add(txtIdioma);
+            Controls.Add(txtEditora);
             Controls.Add(btnLimparForm);
             Controls.Add(btnEditarLivro);
             Controls.Add(lblQuantidade);
-            Controls.Add(textBox10);
+            Controls.Add(txtQuantidade);
             Controls.Add(lblCodEstante);
-            Controls.Add(textBox9);
+            Controls.Add(txtCodigoEstante);
             Controls.Add(lblEstado);
             Controls.Add(lblNPaginas);
-            Controls.Add(textBox7);
+            Controls.Add(txtNumeroPaginas);
             Controls.Add(lblIdioma);
             Controls.Add(lblEditora);
             Controls.Add(lblEdicao);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(txtEdicao);
+            Controls.Add(dtpDataLancamento);
             Controls.Add(lblSinopse);
-            Controls.Add(textBox4);
+            Controls.Add(txtSinopse);
             Controls.Add(lblDataLanc);
             Controls.Add(lblTitulo);
-            Controls.Add(textBox2);
+            Controls.Add(txtTitulo);
             Controls.Add(lblISBN);
-            Controls.Add(textBox1);
+            Controls.Add(txtISBN);
             Controls.Add(dataGridView1);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormEditarLivro";
             Text = "FormEditarLivro";
+            Load += FormEditarLivro_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -391,29 +391,29 @@
         private Label label2;
         private Label lblEditarLivro;
         private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private TextBox txtISBN;
         private Label lblISBN;
         private Label lblTitulo;
-        private TextBox textBox2;
+        private TextBox txtTitulo;
         private Label lblDataLanc;
         private Label lblSinopse;
-        private TextBox textBox4;
-        private DateTimePicker dateTimePicker1;
+        private TextBox txtSinopse;
+        private DateTimePicker dtpDataLancamento;
         private Label lblEdicao;
-        private TextBox textBox3;
+        private TextBox txtEdicao;
         private Label lblEditora;
         private Label lblIdioma;
         private Label lblNPaginas;
-        private TextBox textBox7;
+        private TextBox txtNumeroPaginas;
         private Label lblEstado;
         private Label lblCodEstante;
-        private TextBox textBox9;
+        private TextBox txtCodigoEstante;
         private Label lblQuantidade;
-        private TextBox textBox10;
+        private TextBox txtQuantidade;
         private Button btnEditarLivro;
         private Button btnLimparForm;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private TextBox txtEditora;
+        private TextBox txtIdioma;
+        private TextBox txtEstado;
     }
 }

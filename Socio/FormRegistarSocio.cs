@@ -91,7 +91,7 @@ namespace BibliotecaSkilliana_M2.Socio
 
         private void LimparCampos()
         {
-            txtNumeroSocio.Clear();
+            txtNSocio.Clear();
             txtNome.Clear();
             txtNumeroCartaoCidadao.Clear();
             txtMorada.Clear();

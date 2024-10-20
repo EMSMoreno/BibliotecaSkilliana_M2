@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApagarLivro));
             btnApagarLivro = new Button();
-            cmbSocios = new ComboBox();
+            cmbLivros = new ComboBox();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -52,16 +52,17 @@
             btnApagarLivro.TabIndex = 3;
             btnApagarLivro.Text = "Apagar Livro";
             btnApagarLivro.UseVisualStyleBackColor = true;
+            btnApagarLivro.Click += btnApagarLivro_Click;
             // 
-            // cmbSocios
+            // cmbLivros
             // 
-            cmbSocios.FlatStyle = FlatStyle.Flat;
-            cmbSocios.FormattingEnabled = true;
-            cmbSocios.Location = new Point(293, 199);
-            cmbSocios.Name = "cmbSocios";
-            cmbSocios.Size = new Size(237, 23);
-            cmbSocios.TabIndex = 2;
-            cmbSocios.Text = "Selecione o Livro a Apagar";
+            cmbLivros.FlatStyle = FlatStyle.Flat;
+            cmbLivros.FormattingEnabled = true;
+            cmbLivros.Location = new Point(293, 199);
+            cmbLivros.Name = "cmbLivros";
+            cmbLivros.Size = new Size(237, 23);
+            cmbLivros.TabIndex = 2;
+            cmbLivros.Text = "Selecione o Livro a Apagar";
             // 
             // panel1
             // 
@@ -133,9 +134,10 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(btnApagarLivro);
-            Controls.Add(cmbSocios);
+            Controls.Add(cmbLivros);
             Name = "FormApagarLivro";
             Text = "FormApagarLivro";
+            Load += FormApagarLivro_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -148,7 +150,7 @@
         #endregion
 
         private Button btnApagarLivro;
-        private ComboBox cmbSocios;
+        private ComboBox cmbLivros;
         private Panel panel1;
         private Label label1;
         private Panel panel2;

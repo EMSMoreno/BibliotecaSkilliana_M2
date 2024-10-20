@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BibliotecaSkilliana_M2.Emprestimo
 {
@@ -122,7 +114,7 @@ namespace BibliotecaSkilliana_M2.Emprestimo
                     DataTable dt = new DataTable();
                     dt.Load(reader);
 
-                    comboBoxFuncionarioID.DisplayMember = "Nome"; 
+                    comboBoxFuncionarioID.DisplayMember = "Nome";
                     comboBoxFuncionarioID.ValueMember = "ID_Funcionario";
                     comboBoxFuncionarioID.DataSource = dt;
                 }
@@ -136,7 +128,7 @@ namespace BibliotecaSkilliana_M2.Emprestimo
         private void ProcurarEmprestimo()
         {
             int numeroSocio;
-            if (int.TryParse(txtProcurarEmprestimos.Text, out numeroSocio))
+            if (int.TryParse(txtEmprestimoIDProcura.Text, out numeroSocio))
             {
                 using (SqlConnection con = new SqlConnection(cs))
                 {

@@ -43,8 +43,8 @@
             dataGridViewProcura = new DataGridView();
             lblDescricaoProcura = new Label();
             txtDescricaoProcura = new TextBox();
-            btnLimparSecao = new Button();
-            btnProcurarLivro = new Button();
+            btnLimparProcuraSecao = new Button();
+            btnProcurarSecao = new Button();
             label3 = new Label();
             btnLimparForm = new Button();
             btnRegistarSecao = new Button();
@@ -180,27 +180,27 @@
             txtDescricaoProcura.Size = new Size(171, 23);
             txtDescricaoProcura.TabIndex = 78;
             // 
-            // btnLimparSecao
+            // btnLimparProcuraSecao
             // 
-            btnLimparSecao.FlatAppearance.BorderColor = Color.Black;
-            btnLimparSecao.FlatStyle = FlatStyle.Flat;
-            btnLimparSecao.Location = new Point(33, 371);
-            btnLimparSecao.Name = "btnLimparSecao";
-            btnLimparSecao.Size = new Size(171, 30);
-            btnLimparSecao.TabIndex = 77;
-            btnLimparSecao.Text = "Limpar Form";
-            btnLimparSecao.UseVisualStyleBackColor = true;
+            btnLimparProcuraSecao.FlatAppearance.BorderColor = Color.Black;
+            btnLimparProcuraSecao.FlatStyle = FlatStyle.Flat;
+            btnLimparProcuraSecao.Location = new Point(33, 371);
+            btnLimparProcuraSecao.Name = "btnLimparProcuraSecao";
+            btnLimparProcuraSecao.Size = new Size(171, 30);
+            btnLimparProcuraSecao.TabIndex = 77;
+            btnLimparProcuraSecao.Text = "Limpar Form";
+            btnLimparProcuraSecao.UseVisualStyleBackColor = true;
             // 
-            // btnProcurarLivro
+            // btnProcurarSecao
             // 
-            btnProcurarLivro.FlatAppearance.BorderColor = Color.BlueViolet;
-            btnProcurarLivro.FlatStyle = FlatStyle.Flat;
-            btnProcurarLivro.Location = new Point(210, 371);
-            btnProcurarLivro.Name = "btnProcurarLivro";
-            btnProcurarLivro.Size = new Size(171, 30);
-            btnProcurarLivro.TabIndex = 76;
-            btnProcurarLivro.Text = "Procurar Secção";
-            btnProcurarLivro.UseVisualStyleBackColor = true;
+            btnProcurarSecao.FlatAppearance.BorderColor = Color.BlueViolet;
+            btnProcurarSecao.FlatStyle = FlatStyle.Flat;
+            btnProcurarSecao.Location = new Point(210, 371);
+            btnProcurarSecao.Name = "btnProcurarSecao";
+            btnProcurarSecao.Size = new Size(171, 30);
+            btnProcurarSecao.TabIndex = 76;
+            btnProcurarSecao.Text = "Procurar Secção";
+            btnProcurarSecao.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -241,8 +241,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lblDescricaoProcura);
             Controls.Add(txtDescricaoProcura);
-            Controls.Add(btnLimparSecao);
-            Controls.Add(btnProcurarLivro);
+            Controls.Add(btnLimparProcuraSecao);
+            Controls.Add(btnProcurarSecao);
             Controls.Add(label3);
             Controls.Add(btnLimparForm);
             Controls.Add(btnRegistarSecao);
@@ -284,8 +284,8 @@
         private DataGridView dataGridViewProcura;
         private Label lblDescricaoProcura;
         private TextBox txtDescricaoProcura;
-        private Button btnLimparSecao;
-        private Button btnProcurarLivro;
+        private Button btnLimparProcuraSecao;
+        private Button btnProcurarSecao;
         private Label label3;
         private Button btnLimparForm;
         private Button btnRegistarSecao;

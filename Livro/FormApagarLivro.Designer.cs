@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApagarLivro));
-            btnApagar = new Button();
+            btnApagarLivro = new Button();
             cmbSocios = new ComboBox();
             panel1 = new Panel();
             label1 = new Label();
@@ -42,16 +42,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // btnApagar
+            // btnApagarLivro
             // 
-            btnApagar.FlatAppearance.BorderColor = Color.Red;
-            btnApagar.FlatStyle = FlatStyle.Flat;
-            btnApagar.Location = new Point(293, 299);
-            btnApagar.Name = "btnApagar";
-            btnApagar.Size = new Size(237, 36);
-            btnApagar.TabIndex = 3;
-            btnApagar.Text = "Apagar Livro";
-            btnApagar.UseVisualStyleBackColor = true;
+            btnApagarLivro.FlatAppearance.BorderColor = Color.Red;
+            btnApagarLivro.FlatStyle = FlatStyle.Flat;
+            btnApagarLivro.Location = new Point(293, 299);
+            btnApagarLivro.Name = "btnApagarLivro";
+            btnApagarLivro.Size = new Size(237, 36);
+            btnApagarLivro.TabIndex = 3;
+            btnApagarLivro.Text = "Apagar Livro";
+            btnApagarLivro.UseVisualStyleBackColor = true;
             // 
             // cmbSocios
             // 
@@ -132,7 +132,7 @@
             Controls.Add(lblApagarLivro);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(btnApagar);
+            Controls.Add(btnApagarLivro);
             Controls.Add(cmbSocios);
             Name = "FormApagarLivro";
             Text = "FormApagarLivro";
@@ -147,7 +147,7 @@
 
         #endregion
 
-        private Button btnApagar;
+        private Button btnApagarLivro;
         private ComboBox cmbSocios;
         private Panel panel1;
         private Label label1;

@@ -43,8 +43,7 @@
             btnRegistarEmprestimo = new Button();
             btnLimparForm = new Button();
             dataGridViewProcura = new DataGridView();
-            txtProcurarEmprestimos = new TextBox();
-            btnProcurarEmprestimo = new Button();
+            btnProcuraEmprestimo = new Button();
             panel1 = new Panel();
             label8 = new Label();
             panel2 = new Panel();
@@ -53,6 +52,8 @@
             lblEditarLivro = new Label();
             label6 = new Label();
             btnLimparProcuraEmprestimo = new Button();
+            txtEmprestimoIDProcura = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmprestimos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             panel1.SuspendLayout();
@@ -180,26 +181,17 @@
             dataGridViewProcura.Size = new Size(487, 90);
             dataGridViewProcura.TabIndex = 16;
             // 
-            // txtProcurarEmprestimos
+            // btnProcuraEmprestimo
             // 
-            txtProcurarEmprestimos.Location = new Point(45, 486);
-            txtProcurarEmprestimos.Name = "txtProcurarEmprestimos";
-            txtProcurarEmprestimos.PlaceholderText = "Procura aqui o empréstimo que desejas";
-            txtProcurarEmprestimos.Size = new Size(242, 23);
-            txtProcurarEmprestimos.TabIndex = 17;
-            txtProcurarEmprestimos.TextAlign = HorizontalAlignment.Center;
-            // 
-            // btnProcurarEmprestimo
-            // 
-            btnProcurarEmprestimo.FlatAppearance.BorderColor = Color.DarkOrchid;
-            btnProcurarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnProcurarEmprestimo.Location = new Point(189, 530);
-            btnProcurarEmprestimo.Name = "btnProcurarEmprestimo";
-            btnProcurarEmprestimo.Size = new Size(154, 37);
-            btnProcurarEmprestimo.TabIndex = 18;
-            btnProcurarEmprestimo.Text = "Procurar Empréstimo";
-            btnProcurarEmprestimo.UseVisualStyleBackColor = true;
-            btnProcurarEmprestimo.Click += btnProcurarEmprestimos_Click;
+            btnProcuraEmprestimo.FlatAppearance.BorderColor = Color.DarkOrchid;
+            btnProcuraEmprestimo.FlatStyle = FlatStyle.Flat;
+            btnProcuraEmprestimo.Location = new Point(189, 530);
+            btnProcuraEmprestimo.Name = "btnProcuraEmprestimo";
+            btnProcuraEmprestimo.Size = new Size(154, 37);
+            btnProcuraEmprestimo.TabIndex = 18;
+            btnProcuraEmprestimo.Text = "Procurar Empréstimo";
+            btnProcuraEmprestimo.UseVisualStyleBackColor = true;
+            btnProcuraEmprestimo.Click += btnProcurarEmprestimos_Click;
             // 
             // panel1
             // 
@@ -282,18 +274,35 @@
             btnLimparProcuraEmprestimo.Text = "Limpar Form";
             btnLimparProcuraEmprestimo.UseVisualStyleBackColor = true;
             // 
+            // txtEmprestimoIDProcura
+            // 
+            txtEmprestimoIDProcura.Location = new Point(196, 486);
+            txtEmprestimoIDProcura.Name = "txtEmprestimoIDProcura";
+            txtEmprestimoIDProcura.Size = new Size(68, 23);
+            txtEmprestimoIDProcura.TabIndex = 59;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(98, 489);
+            label7.Name = "label7";
+            label7.Size = new Size(85, 15);
+            label7.TabIndex = 58;
+            label7.Text = "Empréstimo ID";
+            // 
             // FormRegistarEmprestimo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(881, 626);
+            Controls.Add(txtEmprestimoIDProcura);
+            Controls.Add(label7);
             Controls.Add(btnLimparProcuraEmprestimo);
             Controls.Add(label6);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(btnProcurarEmprestimo);
-            Controls.Add(txtProcurarEmprestimos);
+            Controls.Add(btnProcuraEmprestimo);
             Controls.Add(dataGridViewProcura);
             Controls.Add(btnLimparForm);
             Controls.Add(btnRegistarEmprestimo);
@@ -337,8 +346,7 @@
         private Button btnRegistarEmprestimo;
         private Button btnLimparForm;
         private DataGridView dataGridViewProcura;
-        private TextBox txtProcurarEmprestimos;
-        private Button btnProcurarEmprestimo;
+        private Button btnProcuraEmprestimo;
         private Panel panel1;
         private Label label8;
         private Panel panel2;
@@ -347,5 +355,7 @@
         private Label lblEditarLivro;
         private Label label6;
         private Button btnLimparProcuraEmprestimo;
+        private TextBox txtEmprestimoIDProcura;
+        private Label label7;
     }
 }

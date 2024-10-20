@@ -141,7 +141,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(96, 162);
+            label1.Location = new Point(99, 162);
             label1.Name = "label1";
             label1.Size = new Size(85, 15);
             label1.TabIndex = 80;
@@ -156,15 +156,15 @@
             // 
             // txtNumeroSocio
             // 
-            txtNumeroSocio.Location = new Point(112, 198);
+            txtNumeroSocio.Location = new Point(128, 200);
             txtNumeroSocio.Name = "txtNumeroSocio";
-            txtNumeroSocio.Size = new Size(146, 23);
+            txtNumeroSocio.Size = new Size(130, 23);
             txtNumeroSocio.TabIndex = 86;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(50, 203);
+            label4.Location = new Point(69, 203);
             label4.Name = "label4";
             label4.Size = new Size(53, 15);
             label4.TabIndex = 85;
@@ -182,15 +182,15 @@
             // comboBoxFuncionarioID
             // 
             comboBoxFuncionarioID.FormattingEnabled = true;
-            comboBoxFuncionarioID.Location = new Point(125, 242);
+            comboBoxFuncionarioID.Location = new Point(184, 245);
             comboBoxFuncionarioID.Name = "comboBoxFuncionarioID";
-            comboBoxFuncionarioID.Size = new Size(133, 23);
+            comboBoxFuncionarioID.Size = new Size(74, 23);
             comboBoxFuncionarioID.TabIndex = 89;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(22, 245);
+            label5.Location = new Point(94, 248);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
             label5.TabIndex = 88;

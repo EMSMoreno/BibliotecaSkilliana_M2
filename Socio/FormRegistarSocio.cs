@@ -1,14 +1,12 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace BibliotecaSkilliana_M2.Socio
 {
     public partial class FormRegistarSocio : Form
     {
-        private string cs = ConfigurationManager.ConnectionStrings["BibliotecaSkilliana"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["LibSkilliana_EduardoMoreno"].ConnectionString;
 
         public FormRegistarSocio()
         {
@@ -28,9 +26,8 @@ namespace BibliotecaSkilliana_M2.Socio
                 string email = txtEmail.Text;
                 string telefone = txtTelefone.Text;
                 DateTime dataNascimento = dtpDataNascimento.Value;
-                string estado = cmbEstado.SelectedItem.ToString(); // Obtendo o estado selecionado
+                string estado = cmbEstado.SelectedItem.ToString();
 
-                // Caso você ainda esteja usando um ID de funcionário, você pode manter esta linha
                 int idFuncionario = int.Parse(txtIDFuncionario.Text);
 
                 using (SqlConnection con = new SqlConnection(cs))
@@ -52,7 +49,7 @@ namespace BibliotecaSkilliana_M2.Socio
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Sócio registrado com sucesso!");
-                    LimparCampos(); // Chama um método para limpar os campos
+                    LimparCampos();
                 }
             }
             catch (Exception ex)

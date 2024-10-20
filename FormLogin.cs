@@ -103,8 +103,8 @@ namespace BibliotecaSkilliana_M2
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtUsernameNew.Clear();
-            txtPasswordNew.Clear();
+            txtUsername.Clear();
+            txtPassword.Clear();
         }
 
         #endregion

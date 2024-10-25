@@ -144,10 +144,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(104, 254);
+            dataGridView1.Location = new Point(104, 255);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(466, 138);
+            dataGridView1.Size = new Size(278, 138);
             dataGridView1.TabIndex = 55;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // btnLimparForm
             // 
@@ -159,6 +160,7 @@
             btnLimparForm.TabIndex = 76;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
             // btnEditarSecao
             // 
@@ -170,6 +172,7 @@
             btnEditarSecao.TabIndex = 75;
             btnEditarSecao.Text = "Editar Secção";
             btnEditarSecao.UseVisualStyleBackColor = true;
+            btnEditarSecao.Click += btnEditarSecao_Click;
             // 
             // FormEditarSecao
             // 
@@ -188,6 +191,7 @@
             Controls.Add(panel2);
             Name = "FormEditarSecao";
             Text = "FormEditarSecao";
+            Load += FormEditarSecao_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

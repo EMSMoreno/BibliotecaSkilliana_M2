@@ -1,6 +1,7 @@
 using BibliotecaSkilliana_M2.Emprestimo;
 using BibliotecaSkilliana_M2.Funcionario;
 using BibliotecaSkilliana_M2.Livro;
+using BibliotecaSkilliana_M2.Secçao;
 using BibliotecaSkilliana_M2.Socio;
 
 namespace BibliotecaSkilliana_M2
@@ -80,7 +81,7 @@ namespace BibliotecaSkilliana_M2
 
         #endregion
 
-        #region Feito Depois
+        #region Menu Strip - Livro
 
         private void registarLivroToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -101,5 +102,27 @@ namespace BibliotecaSkilliana_M2
         }
 
         #endregion
+
+        #region Menu Strip - Secção
+
+        private void registarSecçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formRegistarSecao = new FormRegistarSecao())
+            { formRegistarSecao.ShowDialog(); }
+        }
+
+        #endregion
+
+        private void editarSecçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formEditarSecao = new FormEditarSecao())
+            { formEditarSecao.ShowDialog(); }
+        }
+
+        private void apagarSecçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formApagarSecao = new FormApagarSecao())
+            { formApagarSecao.ShowDialog(); }
+        }
     }
 }

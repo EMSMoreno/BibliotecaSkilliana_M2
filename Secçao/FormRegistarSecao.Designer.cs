@@ -190,6 +190,7 @@
             btnLimparProcuraSecao.TabIndex = 77;
             btnLimparProcuraSecao.Text = "Limpar Form";
             btnLimparProcuraSecao.UseVisualStyleBackColor = true;
+            btnLimparProcuraSecao.Click += btnLimparProcuraSecao_Click;
             // 
             // btnProcurarSecao
             // 
@@ -201,6 +202,7 @@
             btnProcurarSecao.TabIndex = 76;
             btnProcurarSecao.Text = "Procurar Secção";
             btnProcurarSecao.UseVisualStyleBackColor = true;
+            btnProcurarSecao.Click += btnProcurarSecao_Click;
             // 
             // label3
             // 
@@ -222,6 +224,7 @@
             btnLimparForm.TabIndex = 74;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
             // btnRegistarSecao
             // 
@@ -233,6 +236,7 @@
             btnRegistarSecao.TabIndex = 73;
             btnRegistarSecao.Text = "Registar Secção";
             btnRegistarSecao.UseVisualStyleBackColor = true;
+            btnRegistarSecao.Click += btnRegistarSecao_Click;
             // 
             // FormRegistarSecao
             // 
@@ -257,6 +261,7 @@
             Controls.Add(panel2);
             Name = "FormRegistarSecao";
             Text = "FormRegistarSecao";
+            Load += FormRegistarSecao_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -35,7 +35,7 @@
             panel1 = new Panel();
             label1 = new Label();
             lblEditarLivro = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxSecoes = new ComboBox();
             btnApagarSecao = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -103,14 +103,14 @@
             lblEditarLivro.TabIndex = 51;
             lblEditarLivro.Text = "Menu Secção - Apagar Secção";
             // 
-            // comboBox1
+            // comboBoxSecoes
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(194, 198);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(235, 23);
-            comboBox1.TabIndex = 52;
-            comboBox1.Text = "Selecione a Secção a Apagar";
+            comboBoxSecoes.FormattingEnabled = true;
+            comboBoxSecoes.Location = new Point(194, 198);
+            comboBoxSecoes.Name = "comboBoxSecoes";
+            comboBoxSecoes.Size = new Size(235, 23);
+            comboBoxSecoes.TabIndex = 52;
+            comboBoxSecoes.Text = "Selecione a Secção a Apagar";
             // 
             // btnApagarSecao
             // 
@@ -122,6 +122,7 @@
             btnApagarSecao.TabIndex = 76;
             btnApagarSecao.Text = "Apagar Secção";
             btnApagarSecao.UseVisualStyleBackColor = true;
+            btnApagarSecao.Click += btnApagarSecao_Click;
             // 
             // FormApagarSecao
             // 
@@ -129,12 +130,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(680, 450);
             Controls.Add(btnApagarSecao);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBoxSecoes);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormApagarSecao";
             Text = "FormApagarSecao";
+            Load += FormApagarSecao_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -152,7 +154,7 @@
         private Panel panel1;
         private Label label1;
         private Label lblEditarLivro;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxSecoes;
         private Button btnApagarSecao;
     }
 }

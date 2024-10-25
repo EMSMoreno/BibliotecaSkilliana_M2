@@ -56,17 +56,17 @@
             lblEditarLivro = new Label();
             cmbTipoFunc = new ComboBox();
             dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            button1 = new Button();
+            dataGridViewProcura = new DataGridView();
+            btnLimparFormProcura = new Button();
             btnProcuraFuncionario = new Button();
             label3 = new Label();
-            textBox5 = new TextBox();
+            txtFuncionarioProcura = new TextBox();
             label4 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -309,24 +309,25 @@
             dataGridView1.Size = new Size(421, 379);
             dataGridView1.TabIndex = 102;
             // 
-            // dataGridView2
+            // dataGridViewProcura
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(395, 545);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(421, 127);
-            dataGridView2.TabIndex = 103;
+            dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewProcura.Location = new Point(395, 545);
+            dataGridViewProcura.Name = "dataGridViewProcura";
+            dataGridViewProcura.Size = new Size(421, 127);
+            dataGridViewProcura.TabIndex = 103;
             // 
-            // button1
+            // btnLimparFormProcura
             // 
-            button1.FlatAppearance.BorderColor = Color.Black;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(20, 642);
-            button1.Name = "button1";
-            button1.Size = new Size(171, 30);
-            button1.TabIndex = 105;
-            button1.Text = "Limpar Form";
-            button1.UseVisualStyleBackColor = true;
+            btnLimparFormProcura.FlatAppearance.BorderColor = Color.Black;
+            btnLimparFormProcura.FlatStyle = FlatStyle.Flat;
+            btnLimparFormProcura.Location = new Point(20, 642);
+            btnLimparFormProcura.Name = "btnLimparFormProcura";
+            btnLimparFormProcura.Size = new Size(171, 30);
+            btnLimparFormProcura.TabIndex = 105;
+            btnLimparFormProcura.Text = "Limpar Form";
+            btnLimparFormProcura.UseVisualStyleBackColor = true;
+            btnLimparFormProcura.Click += btnLimparFormProcura_Click;
             // 
             // btnProcuraFuncionario
             // 
@@ -338,6 +339,7 @@
             btnProcuraFuncionario.TabIndex = 104;
             btnProcuraFuncionario.Text = "Procurar Funcionário";
             btnProcuraFuncionario.UseVisualStyleBackColor = true;
+            btnProcuraFuncionario.Click += btnProcuraFuncionario_Click;
             // 
             // label3
             // 
@@ -348,12 +350,12 @@
             label3.TabIndex = 107;
             label3.Text = "Nome Funcionário";
             // 
-            // textBox5
+            // txtFuncionarioProcura
             // 
-            textBox5.Location = new Point(91, 596);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(226, 23);
-            textBox5.TabIndex = 106;
+            txtFuncionarioProcura.Location = new Point(91, 596);
+            txtFuncionarioProcura.Name = "txtFuncionarioProcura";
+            txtFuncionarioProcura.Size = new Size(226, 23);
+            txtFuncionarioProcura.TabIndex = 106;
             // 
             // label4
             // 
@@ -372,10 +374,10 @@
             ClientSize = new Size(828, 733);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox5);
-            Controls.Add(button1);
+            Controls.Add(txtFuncionarioProcura);
+            Controls.Add(btnLimparFormProcura);
             Controls.Add(btnProcuraFuncionario);
-            Controls.Add(dataGridView2);
+            Controls.Add(dataGridViewProcura);
             Controls.Add(dataGridView1);
             Controls.Add(cmbTipoFunc);
             Controls.Add(cmbEstadoFunc);
@@ -409,7 +411,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -446,11 +448,11 @@
         private Label lblEditarLivro;
         private ComboBox cmbTipoFunc;
         private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
-        private Button button1;
+        private DataGridView dataGridViewProcura;
+        private Button btnLimparFormProcura;
         private Button btnProcuraFuncionario;
         private Label label3;
-        private TextBox textBox5;
+        private TextBox txtFuncionarioProcura;
         private Label label4;
     }
 }

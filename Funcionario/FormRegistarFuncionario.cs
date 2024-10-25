@@ -161,5 +161,91 @@ namespace BibliotecaSkilliana_M2.Funcionario
             LimparForm();
         }
 
+        private void btnProcuraFuncionario_Click(object sender, EventArgs e)
+        {
+            string criterioBusca = txtFuncionarioProcura.Text.Trim();
+            if (string.IsNullOrEmpty(criterioBusca))
+            {
+                MessageBox.Show("Procura o funcionário através do Nome ou do ID.");
+                return;
+            }
+
+            ProcurarFuncionarios(criterioBusca);
+        }
+
+        private void ProcurarFuncionarios(string criterio)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    string query;
+
+                    if (int.TryParse(criterio, out int idFuncionario))
+                    {
+                        // Procura-se pelo ID
+                        query = @"
+                SELECT 
+                    ID_Funcionario, 
+                    Nome, 
+                    Morada, 
+                    Telefone, 
+                    Email, 
+                    Numero_Funcionario, 
+                    Tipo, 
+                    Estado 
+                FROM Funcionario 
+                WHERE 
+                    ID_Funcionario = @Criterio";
+                    }
+                    else
+                    {
+                        // Se não for um número, procura-se pelo Nome
+                        query = @"
+                SELECT 
+                    ID_Funcionario, 
+                    Nome, 
+                    Morada, 
+                    Telefone, 
+                    Email, 
+                    Numero_Funcionario, 
+                    Tipo, 
+                    Estado 
+                FROM Funcionario 
+                WHERE 
+                    Nome LIKE @Criterio";
+                    }
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Criterio", int.TryParse(criterio, out _) ? (object)idFuncionario : "%" + criterio + "%");
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    dataGridViewProcura.DataSource = dt;
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Nenhum funcionário foi encontrado.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao procurar o funcionário: " + ex.Message);
+            }
+        }
+
+        private void btnLimparFormProcura_Click(object sender, EventArgs e)
+        {
+            LimparFormProcura();
+        }
+
+        private void LimparFormProcura()
+        {
+            txtFuncionarioProcura.Clear();
+        }
     }
 }

@@ -39,21 +39,21 @@
             btnLimparForm = new Button();
             btnEditarFuncionario = new Button();
             lblNome = new Label();
-            textBox2 = new TextBox();
+            txtNomeFunc = new TextBox();
             lblIDFuncionario = new Label();
-            textBox1 = new TextBox();
+            txtIDFunc = new TextBox();
             lblMorada = new Label();
-            textBox4 = new TextBox();
+            txtMoradaFunc = new TextBox();
             lblNFuncionario = new Label();
-            textBox10 = new TextBox();
+            txtNumeroFunc = new TextBox();
             lblEmail = new Label();
-            textBox7 = new TextBox();
+            txtEmailFunc = new TextBox();
             lblTelefone = new Label();
-            textBox3 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            txtTelefoneFunc = new TextBox();
+            dtpDataNasc = new DateTimePicker();
             lblDataNasc = new Label();
-            comboBox1 = new ComboBox();
-            comboBox3 = new ComboBox();
+            cmbTipoFunc = new ComboBox();
+            cmbEstadoFunc = new ComboBox();
             lblTipo = new Label();
             lblEstado = new Label();
             panel2.SuspendLayout();
@@ -130,6 +130,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(666, 150);
             dataGridView1.TabIndex = 16;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // btnLimparForm
             // 
@@ -141,6 +142,7 @@
             btnLimparForm.TabIndex = 78;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
             // btnEditarFuncionario
             // 
@@ -152,6 +154,7 @@
             btnEditarFuncionario.TabIndex = 77;
             btnEditarFuncionario.Text = "Editar Funcionário";
             btnEditarFuncionario.UseVisualStyleBackColor = true;
+            btnEditarFuncionario.Click += btnEditarFuncionario_Click;
             // 
             // lblNome
             // 
@@ -162,12 +165,12 @@
             lblNome.TabIndex = 84;
             lblNome.Text = "Nome Funcionário";
             // 
-            // textBox2
+            // txtNomeFunc
             // 
-            textBox2.Location = new Point(170, 193);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(226, 23);
-            textBox2.TabIndex = 83;
+            txtNomeFunc.Location = new Point(170, 193);
+            txtNomeFunc.Name = "txtNomeFunc";
+            txtNomeFunc.Size = new Size(226, 23);
+            txtNomeFunc.TabIndex = 83;
             // 
             // lblIDFuncionario
             // 
@@ -178,13 +181,13 @@
             lblIDFuncionario.TabIndex = 82;
             lblIDFuncionario.Text = "ID Funcionário";
             // 
-            // textBox1
+            // txtIDFunc
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(69, 193);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(84, 23);
-            textBox1.TabIndex = 81;
+            txtIDFunc.Enabled = false;
+            txtIDFunc.Location = new Point(69, 193);
+            txtIDFunc.Name = "txtIDFunc";
+            txtIDFunc.Size = new Size(84, 23);
+            txtIDFunc.TabIndex = 81;
             // 
             // lblMorada
             // 
@@ -195,12 +198,12 @@
             lblMorada.TabIndex = 86;
             lblMorada.Text = "Morada";
             // 
-            // textBox4
+            // txtMoradaFunc
             // 
-            textBox4.Location = new Point(69, 244);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(327, 23);
-            textBox4.TabIndex = 85;
+            txtMoradaFunc.Location = new Point(69, 244);
+            txtMoradaFunc.Name = "txtMoradaFunc";
+            txtMoradaFunc.Size = new Size(327, 23);
+            txtMoradaFunc.TabIndex = 85;
             // 
             // lblNFuncionario
             // 
@@ -211,12 +214,12 @@
             lblNFuncionario.TabIndex = 103;
             lblNFuncionario.Text = "Nº Funcionário";
             // 
-            // textBox10
+            // txtNumeroFunc
             // 
-            textBox10.Location = new Point(407, 299);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(159, 23);
-            textBox10.TabIndex = 102;
+            txtNumeroFunc.Location = new Point(407, 299);
+            txtNumeroFunc.Name = "txtNumeroFunc";
+            txtNumeroFunc.Size = new Size(159, 23);
+            txtNumeroFunc.TabIndex = 102;
             // 
             // lblEmail
             // 
@@ -227,12 +230,12 @@
             lblEmail.TabIndex = 101;
             lblEmail.Text = "Email";
             // 
-            // textBox7
+            // txtEmailFunc
             // 
-            textBox7.Location = new Point(524, 193);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(210, 23);
-            textBox7.TabIndex = 100;
+            txtEmailFunc.Location = new Point(524, 193);
+            txtEmailFunc.Name = "txtEmailFunc";
+            txtEmailFunc.Size = new Size(210, 23);
+            txtEmailFunc.TabIndex = 100;
             // 
             // lblTelefone
             // 
@@ -243,19 +246,19 @@
             lblTelefone.TabIndex = 99;
             lblTelefone.Text = "Telefone";
             // 
-            // textBox3
+            // txtTelefoneFunc
             // 
-            textBox3.Location = new Point(407, 193);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(111, 23);
-            textBox3.TabIndex = 98;
+            txtTelefoneFunc.Location = new Point(407, 193);
+            txtTelefoneFunc.Name = "txtTelefoneFunc";
+            txtTelefoneFunc.Size = new Size(111, 23);
+            txtTelefoneFunc.TabIndex = 98;
             // 
-            // dateTimePicker1
+            // dtpDataNasc
             // 
-            dateTimePicker1.Location = new Point(407, 244);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(159, 23);
-            dateTimePicker1.TabIndex = 97;
+            dtpDataNasc.Location = new Point(407, 244);
+            dtpDataNasc.Name = "dtpDataNasc";
+            dtpDataNasc.Size = new Size(159, 23);
+            dtpDataNasc.TabIndex = 97;
             // 
             // lblDataNasc
             // 
@@ -266,21 +269,21 @@
             lblDataNasc.TabIndex = 96;
             lblDataNasc.Text = "Data Nascimento";
             // 
-            // comboBox1
+            // cmbTipoFunc
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(68, 299);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(162, 23);
-            comboBox1.TabIndex = 107;
+            cmbTipoFunc.FormattingEnabled = true;
+            cmbTipoFunc.Location = new Point(68, 299);
+            cmbTipoFunc.Name = "cmbTipoFunc";
+            cmbTipoFunc.Size = new Size(162, 23);
+            cmbTipoFunc.TabIndex = 107;
             // 
-            // comboBox3
+            // cmbEstadoFunc
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(245, 299);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 23);
-            comboBox3.TabIndex = 106;
+            cmbEstadoFunc.FormattingEnabled = true;
+            cmbEstadoFunc.Location = new Point(245, 299);
+            cmbEstadoFunc.Name = "cmbEstadoFunc";
+            cmbEstadoFunc.Size = new Size(151, 23);
+            cmbEstadoFunc.TabIndex = 106;
             // 
             // lblTipo
             // 
@@ -305,24 +308,24 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 534);
-            Controls.Add(comboBox1);
-            Controls.Add(comboBox3);
+            Controls.Add(cmbTipoFunc);
+            Controls.Add(cmbEstadoFunc);
             Controls.Add(lblTipo);
             Controls.Add(lblEstado);
             Controls.Add(lblNFuncionario);
-            Controls.Add(textBox10);
+            Controls.Add(txtNumeroFunc);
             Controls.Add(lblEmail);
-            Controls.Add(textBox7);
+            Controls.Add(txtEmailFunc);
             Controls.Add(lblTelefone);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(txtTelefoneFunc);
+            Controls.Add(dtpDataNasc);
             Controls.Add(lblDataNasc);
             Controls.Add(lblMorada);
-            Controls.Add(textBox4);
+            Controls.Add(txtMoradaFunc);
             Controls.Add(lblNome);
-            Controls.Add(textBox2);
+            Controls.Add(txtNomeFunc);
             Controls.Add(lblIDFuncionario);
-            Controls.Add(textBox1);
+            Controls.Add(txtIDFunc);
             Controls.Add(btnLimparForm);
             Controls.Add(btnEditarFuncionario);
             Controls.Add(dataGridView1);
@@ -331,6 +334,7 @@
             Controls.Add(panel2);
             Name = "FormEditarFuncionario";
             Text = "FormEditarFuncionario";
+            Load += FormRegistarSecao_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -353,21 +357,21 @@
         private Button btnLimparForm;
         private Button btnEditarFuncionario;
         private Label lblNome;
-        private TextBox textBox2;
+        private TextBox txtNomeFunc;
         private Label lblIDFuncionario;
-        private TextBox textBox1;
+        private TextBox txtIDFunc;
         private Label lblMorada;
-        private TextBox textBox4;
+        private TextBox txtMoradaFunc;
         private Label lblNFuncionario;
-        private TextBox textBox10;
+        private TextBox txtNumeroFunc;
         private Label lblEmail;
-        private TextBox textBox7;
+        private TextBox txtEmailFunc;
         private Label lblTelefone;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
+        private TextBox txtTelefoneFunc;
+        private DateTimePicker dtpDataNasc;
         private Label lblDataNasc;
-        private ComboBox comboBox1;
-        private ComboBox comboBox3;
+        private ComboBox cmbTipoFunc;
+        private ComboBox cmbEstadoFunc;
         private Label lblTipo;
         private Label lblEstado;
     }

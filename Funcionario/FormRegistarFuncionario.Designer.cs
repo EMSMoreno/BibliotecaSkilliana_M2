@@ -34,27 +34,27 @@
             label2 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            comboBox3 = new ComboBox();
+            cmbEstadoFunc = new ComboBox();
             btnLimparForm = new Button();
-            btnRegistarLivro = new Button();
+            btnRegistarFuncionario = new Button();
             lblNFuncionario = new Label();
-            textBox10 = new TextBox();
+            txtNumeroFunc = new TextBox();
             lblTipo = new Label();
             lblEstado = new Label();
             lblEmail = new Label();
-            textBox7 = new TextBox();
+            txtEmailFunc = new TextBox();
             lblTelefone = new Label();
-            textBox3 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            txtTelefoneFunc = new TextBox();
+            dtpDataNasc = new DateTimePicker();
             lblMorada = new Label();
-            textBox4 = new TextBox();
+            txtMoradaFunc = new TextBox();
             lblDataNasc = new Label();
             lblNome = new Label();
-            textBox2 = new TextBox();
+            txtNomeFunc = new TextBox();
             lblIDFuncionario = new Label();
-            textBox1 = new TextBox();
+            txtIDFunc = new TextBox();
             lblEditarLivro = new Label();
-            comboBox1 = new ComboBox();
+            cmbTipoFunc = new ComboBox();
             dataGridView1 = new DataGridView();
             dataGridView2 = new DataGridView();
             button1 = new Button();
@@ -120,13 +120,13 @@
             label1.TabIndex = 1;
             label1.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // comboBox3
+            // cmbEstadoFunc
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(197, 381);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(162, 23);
-            comboBox3.TabIndex = 100;
+            cmbEstadoFunc.FormattingEnabled = true;
+            cmbEstadoFunc.Location = new Point(197, 381);
+            cmbEstadoFunc.Name = "cmbEstadoFunc";
+            cmbEstadoFunc.Size = new Size(162, 23);
+            cmbEstadoFunc.TabIndex = 100;
             // 
             // btnLimparForm
             // 
@@ -138,17 +138,19 @@
             btnLimparForm.TabIndex = 97;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
-            // btnRegistarLivro
+            // btnRegistarFuncionario
             // 
-            btnRegistarLivro.FlatAppearance.BorderColor = Color.Lime;
-            btnRegistarLivro.FlatStyle = FlatStyle.Flat;
-            btnRegistarLivro.Location = new Point(197, 445);
-            btnRegistarLivro.Name = "btnRegistarLivro";
-            btnRegistarLivro.Size = new Size(171, 30);
-            btnRegistarLivro.TabIndex = 96;
-            btnRegistarLivro.Text = "Registar Funcionário";
-            btnRegistarLivro.UseVisualStyleBackColor = true;
+            btnRegistarFuncionario.FlatAppearance.BorderColor = Color.Lime;
+            btnRegistarFuncionario.FlatStyle = FlatStyle.Flat;
+            btnRegistarFuncionario.Location = new Point(197, 445);
+            btnRegistarFuncionario.Name = "btnRegistarFuncionario";
+            btnRegistarFuncionario.Size = new Size(171, 30);
+            btnRegistarFuncionario.TabIndex = 96;
+            btnRegistarFuncionario.Text = "Registar Funcionário";
+            btnRegistarFuncionario.UseVisualStyleBackColor = true;
+            btnRegistarFuncionario.Click += btnRegistarFuncionario_Click;
             // 
             // lblNFuncionario
             // 
@@ -159,12 +161,12 @@
             lblNFuncionario.TabIndex = 95;
             lblNFuncionario.Text = "Nº Funcionário";
             // 
-            // textBox10
+            // txtNumeroFunc
             // 
-            textBox10.Location = new Point(197, 324);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(162, 23);
-            textBox10.TabIndex = 94;
+            txtNumeroFunc.Location = new Point(197, 324);
+            txtNumeroFunc.Name = "txtNumeroFunc";
+            txtNumeroFunc.Size = new Size(162, 23);
+            txtNumeroFunc.TabIndex = 94;
             // 
             // lblTipo
             // 
@@ -193,12 +195,12 @@
             lblEmail.TabIndex = 90;
             lblEmail.Text = "Email";
             // 
-            // textBox7
+            // txtEmailFunc
             // 
-            textBox7.Location = new Point(149, 266);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(210, 23);
-            textBox7.TabIndex = 89;
+            txtEmailFunc.Location = new Point(149, 266);
+            txtEmailFunc.Name = "txtEmailFunc";
+            txtEmailFunc.Size = new Size(210, 23);
+            txtEmailFunc.TabIndex = 89;
             // 
             // lblTelefone
             // 
@@ -209,19 +211,19 @@
             lblTelefone.TabIndex = 86;
             lblTelefone.Text = "Telefone";
             // 
-            // textBox3
+            // txtTelefoneFunc
             // 
-            textBox3.Location = new Point(32, 266);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(111, 23);
-            textBox3.TabIndex = 85;
+            txtTelefoneFunc.Location = new Point(32, 266);
+            txtTelefoneFunc.Name = "txtTelefoneFunc";
+            txtTelefoneFunc.Size = new Size(111, 23);
+            txtTelefoneFunc.TabIndex = 85;
             // 
-            // dateTimePicker1
+            // dtpDataNasc
             // 
-            dateTimePicker1.Location = new Point(32, 324);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(159, 23);
-            dateTimePicker1.TabIndex = 84;
+            dtpDataNasc.Location = new Point(32, 324);
+            dtpDataNasc.Name = "dtpDataNasc";
+            dtpDataNasc.Size = new Size(159, 23);
+            dtpDataNasc.TabIndex = 84;
             // 
             // lblMorada
             // 
@@ -232,12 +234,12 @@
             lblMorada.TabIndex = 83;
             lblMorada.Text = "Morada";
             // 
-            // textBox4
+            // txtMoradaFunc
             // 
-            textBox4.Location = new Point(32, 220);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(327, 23);
-            textBox4.TabIndex = 82;
+            txtMoradaFunc.Location = new Point(32, 220);
+            txtMoradaFunc.Name = "txtMoradaFunc";
+            txtMoradaFunc.Size = new Size(327, 23);
+            txtMoradaFunc.TabIndex = 82;
             // 
             // lblDataNasc
             // 
@@ -257,12 +259,12 @@
             lblNome.TabIndex = 80;
             lblNome.Text = "Nome Funcionário";
             // 
-            // textBox2
+            // txtNomeFunc
             // 
-            textBox2.Location = new Point(133, 162);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(226, 23);
-            textBox2.TabIndex = 79;
+            txtNomeFunc.Location = new Point(133, 162);
+            txtNomeFunc.Name = "txtNomeFunc";
+            txtNomeFunc.Size = new Size(226, 23);
+            txtNomeFunc.TabIndex = 79;
             // 
             // lblIDFuncionario
             // 
@@ -273,13 +275,13 @@
             lblIDFuncionario.TabIndex = 78;
             lblIDFuncionario.Text = "ID Funcionário";
             // 
-            // textBox1
+            // txtIDFunc
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(32, 162);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(84, 23);
-            textBox1.TabIndex = 77;
+            txtIDFunc.Enabled = false;
+            txtIDFunc.Location = new Point(32, 162);
+            txtIDFunc.Name = "txtIDFunc";
+            txtIDFunc.Size = new Size(84, 23);
+            txtIDFunc.TabIndex = 77;
             // 
             // lblEditarLivro
             // 
@@ -291,13 +293,13 @@
             lblEditarLivro.TabIndex = 76;
             lblEditarLivro.Text = "Menu Funcionários - Registar Funcionário";
             // 
-            // comboBox1
+            // cmbTipoFunc
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(32, 381);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(162, 23);
-            comboBox1.TabIndex = 101;
+            cmbTipoFunc.FormattingEnabled = true;
+            cmbTipoFunc.Location = new Point(32, 381);
+            cmbTipoFunc.Name = "cmbTipoFunc";
+            cmbTipoFunc.Size = new Size(162, 23);
+            cmbTipoFunc.TabIndex = 101;
             // 
             // dataGridView1
             // 
@@ -375,31 +377,32 @@
             Controls.Add(btnProcuraFuncionario);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
-            Controls.Add(comboBox1);
-            Controls.Add(comboBox3);
+            Controls.Add(cmbTipoFunc);
+            Controls.Add(cmbEstadoFunc);
             Controls.Add(btnLimparForm);
-            Controls.Add(btnRegistarLivro);
+            Controls.Add(btnRegistarFuncionario);
             Controls.Add(lblNFuncionario);
-            Controls.Add(textBox10);
+            Controls.Add(txtNumeroFunc);
             Controls.Add(lblTipo);
             Controls.Add(lblEstado);
             Controls.Add(lblEmail);
-            Controls.Add(textBox7);
+            Controls.Add(txtEmailFunc);
             Controls.Add(lblTelefone);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(txtTelefoneFunc);
+            Controls.Add(dtpDataNasc);
             Controls.Add(lblMorada);
-            Controls.Add(textBox4);
+            Controls.Add(txtMoradaFunc);
             Controls.Add(lblDataNasc);
             Controls.Add(lblNome);
-            Controls.Add(textBox2);
+            Controls.Add(txtNomeFunc);
             Controls.Add(lblIDFuncionario);
-            Controls.Add(textBox1);
+            Controls.Add(txtIDFunc);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormRegistarFuncionario";
             Text = "FormRegistarFuncionario";
+            Load += FormRegistarFuncionario_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -418,30 +421,30 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
-        private ComboBox comboBox3;
+        private ComboBox cmbEstadoFunc;
         private ComboBox comboBox2;
         private Button btnLimparForm;
-        private Button btnRegistarLivro;
+        private Button btnRegistarFuncionario;
         private Label lblNFuncionario;
-        private TextBox textBox10;
+        private TextBox txtNumeroFunc;
         private Label lblTipo;
         private Label lblEstado;
         private Label lblEmail;
-        private TextBox textBox7;
+        private TextBox txtEmailFunc;
         private Label lblIdioma;
         private Label lblEditora;
         private Label lblTelefone;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
+        private TextBox txtTelefoneFunc;
+        private DateTimePicker dtpDataNasc;
         private Label lblMorada;
-        private TextBox textBox4;
+        private TextBox txtMoradaFunc;
         private Label lblDataNasc;
         private Label lblNome;
-        private TextBox textBox2;
+        private TextBox txtNomeFunc;
         private Label lblIDFuncionario;
-        private TextBox textBox1;
+        private TextBox txtIDFunc;
         private Label lblEditarLivro;
-        private ComboBox comboBox1;
+        private ComboBox cmbTipoFunc;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
         private Button button1;

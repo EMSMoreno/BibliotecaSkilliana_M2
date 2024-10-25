@@ -13,7 +13,7 @@ namespace BibliotecaSkilliana_M2
             InitializeComponent();
         }
 
-        //fazer primeiros 4 CRUDS
+        // Chamar os CRUDS
 
         #region Menu Strip - Empréstimo
 
@@ -111,8 +111,6 @@ namespace BibliotecaSkilliana_M2
             { formRegistarSecao.ShowDialog(); }
         }
 
-        #endregion
-
         private void editarSecçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var formEditarSecao = new FormEditarSecao())
@@ -124,5 +122,7 @@ namespace BibliotecaSkilliana_M2
             using (var formApagarSecao = new FormApagarSecao())
             { formApagarSecao.ShowDialog(); }
         }
+
+        #endregion
     }
 }

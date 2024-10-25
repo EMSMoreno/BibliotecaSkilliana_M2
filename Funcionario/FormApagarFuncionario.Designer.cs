@@ -35,7 +35,7 @@
             panel1 = new Panel();
             label1 = new Label();
             lblEditarLivro = new Label();
-            comboBox1 = new ComboBox();
+            cmbFuncionarios = new ComboBox();
             btnApagarFuncionario = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -103,14 +103,14 @@
             lblEditarLivro.TabIndex = 77;
             lblEditarLivro.Text = "Menu Funcionários - Apagar Funcionário";
             // 
-            // comboBox1
+            // cmbFuncionarios
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(247, 197);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(300, 23);
-            comboBox1.TabIndex = 78;
-            comboBox1.Text = "Selecione o Funcionário a Apagar";
+            cmbFuncionarios.FormattingEnabled = true;
+            cmbFuncionarios.Location = new Point(247, 197);
+            cmbFuncionarios.Name = "cmbFuncionarios";
+            cmbFuncionarios.Size = new Size(300, 23);
+            cmbFuncionarios.TabIndex = 78;
+            cmbFuncionarios.Text = "Selecione o Funcionário a Apagar";
             // 
             // btnApagarFuncionario
             // 
@@ -122,6 +122,7 @@
             btnApagarFuncionario.TabIndex = 97;
             btnApagarFuncionario.Text = "Apagar Funcionário";
             btnApagarFuncionario.UseVisualStyleBackColor = true;
+            btnApagarFuncionario.Click += btnApagarFuncionario_Click;
             // 
             // FormApagarFuncionario
             // 
@@ -129,12 +130,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnApagarFuncionario);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbFuncionarios);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormApagarFuncionario";
             Text = "FormApagarFuncionario";
+            Load += FormRegistarSecao_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -152,7 +154,7 @@
         private Panel panel1;
         private Label label1;
         private Label lblEditarLivro;
-        private ComboBox comboBox1;
+        private ComboBox cmbFuncionarios;
         private Button btnApagarFuncionario;
     }
 }

@@ -85,6 +85,7 @@ namespace BibliotecaSkilliana_M2.Livro
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Livro registado com sucesso!");
+                    LoadLivros();
                     LimparForm();
                 }
             }
@@ -96,6 +97,7 @@ namespace BibliotecaSkilliana_M2.Livro
 
         private void LimparForm()
         {
+            txtISBN.Clear();
             txtTitulo.Clear();
             dtpDataLancamento.Value = DateTime.Now;
             txtSinopse.Clear();
@@ -111,6 +113,69 @@ namespace BibliotecaSkilliana_M2.Livro
         private void btnLimparForm_Click(object sender, EventArgs e)
         {
             LimparForm();
+        }
+
+        private void btnProcurarLivro_Click(object sender, EventArgs e)
+        {
+            string criterioBusca = txtTituloProcura.Text.Trim();
+            if (string.IsNullOrEmpty(criterioBusca))
+            {
+                MessageBox.Show("Procura aqui o livro através do Título ou do ISBN");
+                return;
+            }
+
+            ProcurarLivros(criterioBusca);
+        }
+
+        private void ProcurarLivros(string criterio)
+        {
+            try
+            {
+                using (con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    string query = @"
+            SELECT 
+                ISBN, 
+                Titulo, 
+                Data_Lancamento, 
+                Sinopse, 
+                Edicao, 
+                Editora, 
+                Idioma, 
+                Numero_Paginas, 
+                Estado, 
+                Codigo_Estante, 
+                Quantidade 
+            FROM Livro 
+            WHERE 
+                Titulo LIKE @Criterio 
+                OR ISBN = TRY_CONVERT(int, @Criterio)";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Criterio", "%" + criterio + "%");
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    dataGridViewProcura.DataSource = dt;
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Nenhum livro foi encontrado.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao procurar o livro: " + ex.Message);
+            }
+        }
+
+        private void btnLimparProcura_Click(object sender, EventArgs e)
+        {
+            txtTituloProcura.Clear();
         }
     }
 }

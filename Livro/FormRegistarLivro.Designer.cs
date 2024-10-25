@@ -350,6 +350,7 @@
             btnProcurarLivro.TabIndex = 69;
             btnProcurarLivro.Text = "Procurar Livro";
             btnProcurarLivro.UseVisualStyleBackColor = true;
+            btnProcurarLivro.Click += btnProcurarLivro_Click;
             // 
             // btnLimparProcura
             // 
@@ -361,6 +362,7 @@
             btnLimparProcura.TabIndex = 70;
             btnLimparProcura.Text = "Limpar Form";
             btnLimparProcura.UseVisualStyleBackColor = true;
+            btnLimparProcura.Click += btnLimparProcura_Click;
             // 
             // lblTituloProcura
             // 

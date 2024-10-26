@@ -1,12 +1,17 @@
 ﻿using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using System.Drawing;
 
 namespace BibliotecaSkilliana_M2.Autor
 {
     public partial class FormRegistarAutor : Form
     {
         string cs = ConfigurationManager.ConnectionStrings["LibSkilliana_EduardoMoreno"].ConnectionString;
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataAdapter adapter;
+        DataTable dt;
 
         public FormRegistarAutor()
         {
@@ -119,7 +124,7 @@ namespace BibliotecaSkilliana_M2.Autor
             cmbCodSecao.SelectedIndex = -1;
         }
 
-#endregion
+        #endregion
 
         #region UI
 
@@ -133,6 +138,59 @@ namespace BibliotecaSkilliana_M2.Autor
             LimparForm();
         }
 
-#endregion
+        #endregion
+
+        private void btnProcuraAutor_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNomeAutorProcura.Text))
+            {
+                MessageBox.Show("Por favor, insira um nome para buscar.");
+                return;
+            }
+
+            ProcurarAutores(txtNomeAutorProcura.Text);
+            LimparFormProcura();
+        }
+
+        private void ProcurarAutores(string nomeAutor)
+        {
+            try
+            {
+                using (con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    string query = "SELECT Nome, Data_Nascimento, Biografia, Facebook, Instagram, X_Twitter FROM Autor WHERE Nome LIKE @Nome";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Nome", "%" + nomeAutor + "%");
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Nenhum autor encontrado.");
+                    }
+                    else
+                    {
+                        dataGridViewProcura.DataSource = dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao procurar autor: " + ex.Message);
+            }
+        }
+
+        private void btnLimparFormProcura_Click(object sender, EventArgs e)
+        {
+            LimparFormProcura();
+        }
+
+        private void LimparFormProcura()
+        {
+            txtNomeAutorProcura.Clear();
+        }
     }
 }

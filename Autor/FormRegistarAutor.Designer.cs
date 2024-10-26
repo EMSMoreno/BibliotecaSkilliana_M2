@@ -291,6 +291,7 @@
             btnLimparFormProcura.TabIndex = 80;
             btnLimparFormProcura.Text = "Limpar Form";
             btnLimparFormProcura.UseVisualStyleBackColor = true;
+            btnLimparFormProcura.Click += btnLimparFormProcura_Click;
             // 
             // btnProcuraAutor
             // 
@@ -302,6 +303,7 @@
             btnProcuraAutor.TabIndex = 79;
             btnProcuraAutor.Text = "Procurar Autor";
             btnProcuraAutor.UseVisualStyleBackColor = true;
+            btnProcuraAutor.Click += btnProcuraAutor_Click;
             // 
             // txtNomeAutorProcura
             // 

@@ -35,7 +35,7 @@
             panel1 = new Panel();
             label8 = new Label();
             btnApagarEmprestimo = new Button();
-            comboBox1 = new ComboBox();
+            comboBoxEmprestimos = new ComboBox();
             lblEditarLivro = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -103,15 +103,16 @@
             btnApagarEmprestimo.TabIndex = 100;
             btnApagarEmprestimo.Text = "Apagar Empréstimo";
             btnApagarEmprestimo.UseVisualStyleBackColor = true;
+            btnApagarEmprestimo.Click += btnApagarEmprestimo_Click;
             // 
-            // comboBox1
+            // comboBoxEmprestimos
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(247, 204);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(300, 23);
-            comboBox1.TabIndex = 99;
-            comboBox1.Text = "Selecione o Empréstimo a Apagar";
+            comboBoxEmprestimos.FormattingEnabled = true;
+            comboBoxEmprestimos.Location = new Point(247, 204);
+            comboBoxEmprestimos.Name = "comboBoxEmprestimos";
+            comboBoxEmprestimos.Size = new Size(300, 23);
+            comboBoxEmprestimos.TabIndex = 99;
+            comboBoxEmprestimos.Text = "Selecione o Empréstimo a Apagar";
             // 
             // lblEditarLivro
             // 
@@ -129,13 +130,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnApagarEmprestimo);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBoxEmprestimos);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormApagarEmprestimo";
             Text = "FormApagarEmprestimo";
+            Load += FormEditarEmprestimo_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -153,7 +155,7 @@
         private Panel panel1;
         private Label label8;
         private Button btnApagarEmprestimo;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxEmprestimos;
         private Label lblEditarLivro;
     }
 }

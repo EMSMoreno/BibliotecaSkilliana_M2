@@ -6,7 +6,7 @@ namespace BibliotecaSkilliana_M2.Emprestimo
 {
     public partial class FormRegistarEmprestimo : Form
     {
-        string cs = ConfigurationManager.ConnectionStrings["BibliotecaSkilliana"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["LibSkilliana_EduardoMoreno"].ConnectionString;
         SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter adapter;
@@ -15,6 +15,10 @@ namespace BibliotecaSkilliana_M2.Emprestimo
         public FormRegistarEmprestimo()
         {
             InitializeComponent();
+        }
+
+        private void FormRegistarEmprestimo_Load(object sender, EventArgs e)
+        {
             CarregarEmprestimos();
             CarregarFuncionarios();
         }
@@ -23,10 +27,16 @@ namespace BibliotecaSkilliana_M2.Emprestimo
 
         private void RegistarEmprestimo()
         {
-            // Verifica se um funcionário foi selecionado
             if (comboBoxFuncionarioID.SelectedValue == null)
             {
-                MessageBox.Show("Por favor, selecione um funcionário.");
+                MessageBox.Show("Por favor, seleciona um Funcionário.");
+                return;
+            }
+
+            int numeroSocio;
+            if (!int.TryParse(txtNumeroSocio.Text, out numeroSocio))
+            {
+                MessageBox.Show("Por favor, insira um número de sócio válido.");
                 return;
             }
 
@@ -40,18 +50,23 @@ namespace BibliotecaSkilliana_M2.Emprestimo
 
                     cmd.Parameters.AddWithValue("@dataRegistro", DateTime.Now);
                     cmd.Parameters.AddWithValue("@dataPrevistaDevolucao", dateTimePickerDataDevolucao.Value);
-                    cmd.Parameters.AddWithValue("@numeroSocio", txtNumeroSocio.Text);
-                    cmd.Parameters.AddWithValue("@idFuncionario", comboBoxFuncionarioID.SelectedValue); // Use o ID do funcionário selecionado
+                    cmd.Parameters.AddWithValue("@numeroSocio", numeroSocio);
+                    cmd.Parameters.AddWithValue("@idFuncionario", Convert.ToInt32(comboBoxFuncionarioID.SelectedValue));
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Empréstimo registrado com sucesso!");
 
-                    CarregarEmprestimos(); // Atualiza o DataGridView com os novos dados
+                    CarregarEmprestimos();
+                    LimparForm();
                 }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show("Erro ao registar o Empréstimo: " + sqlEx.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao registrar empréstimo: " + ex.Message);
+                MessageBox.Show("Erro inesperado: " + ex.Message);
             }
         }
 
@@ -90,7 +105,6 @@ namespace BibliotecaSkilliana_M2.Emprestimo
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // Update DataGrid
                     dataGridViewEmprestimos.DataSource = dt;
                 }
             }
@@ -107,7 +121,7 @@ namespace BibliotecaSkilliana_M2.Emprestimo
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     con.Open();
-                    string query = "SELECT ID_Funcionario, Nome FROM Funcionario"; // Supondo que você tenha uma tabela Funcionario
+                    string query = "SELECT ID_Funcionario, Nome FROM Funcionario";
                     SqlCommand cmd = new SqlCommand(query, con);
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -141,7 +155,6 @@ namespace BibliotecaSkilliana_M2.Emprestimo
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // Exibe os resultados no DataGridViewProcurarEmprestimos
                     dataGridViewProcura.DataSource = dt;
 
                     if (dt.Rows.Count > 0)

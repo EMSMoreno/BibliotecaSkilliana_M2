@@ -36,9 +36,7 @@
             label6 = new Label();
             lblEditarLivro = new Label();
             dateTimePickerDataRegisto = new DateTimePicker();
-            txtEmprestimoID = new TextBox();
             label2 = new Label();
-            label1 = new Label();
             dateTimePickerDataDevolucao = new DateTimePicker();
             txtNumeroSocio = new TextBox();
             label4 = new Label();
@@ -47,11 +45,11 @@
             label5 = new Label();
             btnLimparForm = new Button();
             btnEditarEmprestimo = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewEmprestimos = new DataGridView();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEmprestimos).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -117,54 +115,38 @@
             // 
             // dateTimePickerDataRegisto
             // 
-            dateTimePickerDataRegisto.Location = new Point(355, 179);
+            dateTimePickerDataRegisto.Location = new Point(157, 164);
             dateTimePickerDataRegisto.Name = "dateTimePickerDataRegisto";
-            dateTimePickerDataRegisto.Size = new Size(200, 23);
+            dateTimePickerDataRegisto.Size = new Size(170, 23);
             dateTimePickerDataRegisto.TabIndex = 83;
-            // 
-            // txtEmprestimoID
-            // 
-            txtEmprestimoID.Location = new Point(190, 159);
-            txtEmprestimoID.Name = "txtEmprestimoID";
-            txtEmprestimoID.Size = new Size(68, 23);
-            txtEmprestimoID.TabIndex = 82;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(267, 185);
+            label2.Location = new Point(69, 170);
             label2.Name = "label2";
             label2.Size = new Size(73, 15);
             label2.TabIndex = 81;
             label2.Text = "Data Registo";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(99, 162);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 15);
-            label1.TabIndex = 80;
-            label1.Text = "Empréstimo ID";
-            // 
             // dateTimePickerDataDevolucao
             // 
-            dateTimePickerDataDevolucao.Location = new Point(355, 221);
+            dateTimePickerDataDevolucao.Location = new Point(157, 206);
             dateTimePickerDataDevolucao.Name = "dateTimePickerDataDevolucao";
-            dateTimePickerDataDevolucao.Size = new Size(200, 23);
+            dateTimePickerDataDevolucao.Size = new Size(170, 23);
             dateTimePickerDataDevolucao.TabIndex = 87;
             // 
             // txtNumeroSocio
             // 
-            txtNumeroSocio.Location = new Point(128, 200);
+            txtNumeroSocio.Location = new Point(428, 203);
             txtNumeroSocio.Name = "txtNumeroSocio";
-            txtNumeroSocio.Size = new Size(130, 23);
+            txtNumeroSocio.Size = new Size(56, 23);
             txtNumeroSocio.TabIndex = 86;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(69, 203);
+            label4.Location = new Point(369, 206);
             label4.Name = "label4";
             label4.Size = new Size(53, 15);
             label4.TabIndex = 85;
@@ -173,7 +155,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(267, 214);
+            label3.Location = new Point(69, 199);
             label3.Name = "label3";
             label3.Size = new Size(78, 30);
             label3.TabIndex = 84;
@@ -182,15 +164,15 @@
             // comboBoxFuncionarioID
             // 
             comboBoxFuncionarioID.FormattingEnabled = true;
-            comboBoxFuncionarioID.Location = new Point(184, 245);
+            comboBoxFuncionarioID.Location = new Point(428, 164);
             comboBoxFuncionarioID.Name = "comboBoxFuncionarioID";
-            comboBoxFuncionarioID.Size = new Size(74, 23);
+            comboBoxFuncionarioID.Size = new Size(160, 23);
             comboBoxFuncionarioID.TabIndex = 89;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(94, 248);
+            label5.Location = new Point(338, 167);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
             label5.TabIndex = 88;
@@ -199,38 +181,41 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(572, 234);
+            btnLimparForm.Location = new Point(600, 234);
             btnLimparForm.Name = "btnLimparForm";
-            btnLimparForm.Size = new Size(154, 37);
+            btnLimparForm.Size = new Size(126, 37);
             btnLimparForm.TabIndex = 91;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
             // btnEditarEmprestimo
             // 
             btnEditarEmprestimo.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnEditarEmprestimo.Location = new Point(572, 192);
+            btnEditarEmprestimo.Location = new Point(600, 192);
             btnEditarEmprestimo.Name = "btnEditarEmprestimo";
-            btnEditarEmprestimo.Size = new Size(154, 37);
+            btnEditarEmprestimo.Size = new Size(126, 37);
             btnEditarEmprestimo.TabIndex = 90;
             btnEditarEmprestimo.Text = "Editar Empréstimo";
             btnEditarEmprestimo.UseVisualStyleBackColor = true;
+            btnEditarEmprestimo.Click += btnEditarEmprestimo_Click;
             // 
-            // dataGridView1
+            // dataGridViewEmprestimos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(34, 277);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(692, 127);
-            dataGridView1.TabIndex = 92;
+            dataGridViewEmprestimos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEmprestimos.Location = new Point(34, 277);
+            dataGridViewEmprestimos.Name = "dataGridViewEmprestimos";
+            dataGridViewEmprestimos.Size = new Size(692, 127);
+            dataGridViewEmprestimos.TabIndex = 92;
+            dataGridViewEmprestimos.CellClick += dataGridViewEmprestimos_CellClick;
             // 
             // FormEditarEmprestimo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewEmprestimos);
             Controls.Add(btnLimparForm);
             Controls.Add(btnEditarEmprestimo);
             Controls.Add(comboBoxFuncionarioID);
@@ -240,21 +225,20 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(dateTimePickerDataRegisto);
-            Controls.Add(txtEmprestimoID);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormEditarEmprestimo";
             Text = "FormEditarEmprestimo";
+            Load += FormEditarEmprestimo_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEmprestimos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -268,9 +252,7 @@
         private Label label6;
         private Label lblEditarLivro;
         private DateTimePicker dateTimePickerDataRegisto;
-        private TextBox txtEmprestimoID;
         private Label label2;
-        private Label label1;
         private DateTimePicker dateTimePickerDataDevolucao;
         private TextBox txtNumeroSocio;
         private Label label4;
@@ -279,6 +261,6 @@
         private Label label5;
         private Button btnLimparForm;
         private Button btnEditarEmprestimo;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewEmprestimos;
     }
 }

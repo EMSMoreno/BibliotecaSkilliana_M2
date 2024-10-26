@@ -51,9 +51,9 @@
             cmbEstado = new ComboBox();
             panel1 = new Panel();
             label6 = new Label();
-            textBox1 = new TextBox();
+            textBoxSociosProcura = new TextBox();
             label13 = new Label();
-            button1 = new Button();
+            btnLimparFormProcura = new Button();
             label7 = new Label();
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
@@ -76,6 +76,7 @@
             btnProcurarSocio.TabIndex = 37;
             btnProcurarSocio.Text = "Procurar Sócio";
             btnProcurarSocio.UseVisualStyleBackColor = true;
+            btnProcurarSocio.Click += btnProcurarSocio_Click;
             // 
             // dataGridViewPesquisaSocios
             // 
@@ -257,12 +258,12 @@
             label6.TabIndex = 1;
             label6.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // textBox1
+            // textBoxSociosProcura
             // 
-            textBox1.Location = new Point(86, 589);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(178, 23);
-            textBox1.TabIndex = 52;
+            textBoxSociosProcura.Location = new Point(86, 589);
+            textBoxSociosProcura.Name = "textBoxSociosProcura";
+            textBoxSociosProcura.Size = new Size(178, 23);
+            textBoxSociosProcura.TabIndex = 52;
             // 
             // label13
             // 
@@ -273,15 +274,16 @@
             label13.TabIndex = 51;
             label13.Text = "Nome:";
             // 
-            // button1
+            // btnLimparFormProcura
             // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(21, 629);
-            button1.Name = "button1";
-            button1.Size = new Size(154, 37);
-            button1.TabIndex = 53;
-            button1.Text = "Limpar Form";
-            button1.UseVisualStyleBackColor = true;
+            btnLimparFormProcura.FlatStyle = FlatStyle.Flat;
+            btnLimparFormProcura.Location = new Point(21, 629);
+            btnLimparFormProcura.Name = "btnLimparFormProcura";
+            btnLimparFormProcura.Size = new Size(154, 37);
+            btnLimparFormProcura.TabIndex = 53;
+            btnLimparFormProcura.Text = "Limpar Form";
+            btnLimparFormProcura.UseVisualStyleBackColor = true;
+            btnLimparFormProcura.Click += btnLimparFormProcura_Click;
             // 
             // label7
             // 
@@ -340,8 +342,8 @@
             Controls.Add(cmbFuncionario);
             Controls.Add(panel2);
             Controls.Add(label7);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(btnLimparFormProcura);
+            Controls.Add(textBoxSociosProcura);
             Controls.Add(label13);
             Controls.Add(panel1);
             Controls.Add(cmbEstado);
@@ -402,9 +404,9 @@
         private ComboBox cmbEstado;
         private Panel panel1;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox textBoxSociosProcura;
         private Label label13;
-        private Button button1;
+        private Button btnLimparFormProcura;
         private Label label7;
         private Panel panel2;
         private PictureBox pictureBox2;

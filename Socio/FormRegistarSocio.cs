@@ -77,12 +77,12 @@ namespace BibliotecaSkilliana_M2.Socio
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     con.Open();
-                    string query = "SELECT * FROM Socio"; // Ajuste a consulta conforme necessário
+                    string query = "SELECT * FROM Socio";
                     SqlCommand cmd = new SqlCommand(query, con);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    dataGridViewSocios.DataSource = dt; // Atribui o DataTable como fonte de dados
+                    dataGridViewSocios.DataSource = dt;
                 }
             }
             catch (Exception ex)
@@ -95,7 +95,7 @@ namespace BibliotecaSkilliana_M2.Socio
         {
             cmbEstado.Items.Add("Ativo");
             cmbEstado.Items.Add("Inativo");
-            cmbEstado.SelectedIndex = 0; // Seleciona "Ativo" por padrão
+            cmbEstado.SelectedIndex = 0;
         }
 
         private void CarregarFuncionarios()
@@ -134,9 +134,52 @@ namespace BibliotecaSkilliana_M2.Socio
             txtMorada.Clear();
             txtEmail.Clear();
             txtTelefone.Clear();
-            dtpDataNascimento.Value = DateTime.Now; // Define a data atual
-            cmbEstado.SelectedIndex = 0; // Retorna para "Ativo" por padrão
+            dtpDataNascimento.Value = DateTime.Now;
+            cmbEstado.SelectedIndex = 0;
             cmbFuncionario.SelectedIndex = 0;
+        }
+
+        private void btnProcurarSocio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string criterio = textBoxSociosProcura.Text.Trim();
+
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    string query = "SELECT * FROM Socio WHERE Nome LIKE @Criterio OR Numero_Cartao_Cidadao LIKE @Criterio";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Criterio", "%" + criterio + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridViewPesquisaSocios.DataSource = dt;
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Nenhum sócio foi encontrado com base nesse critério. Tenta novamente.");
+                    }
+
+                    LimparCamposProcura();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao procurar sócios: " + ex.Message);
+            }
+        }
+
+        private void btnLimparFormProcura_Click(object sender, EventArgs e)
+        {
+            LimparCamposProcura();
+        }
+
+        private void LimparCamposProcura()
+        {
+            textBoxSociosProcura.Clear();
         }
     }
 }

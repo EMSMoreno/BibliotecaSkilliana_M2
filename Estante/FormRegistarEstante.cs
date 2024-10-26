@@ -49,7 +49,7 @@ namespace BibliotecaSkilliana_M2.Estante
             }
         }
 
-        private void CarregarEstantes()
+        private void CarregarEstantes(string busca = null)
         {
             try
             {
@@ -57,10 +57,30 @@ namespace BibliotecaSkilliana_M2.Estante
                 {
                     con.Open();
                     string query = "SELECT * FROM Estante";
+
+                    if (!string.IsNullOrEmpty(busca))
+                    {
+                        query += " WHERE Descricao LIKE @busca";
+                    }
+
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
+
+                    if (!string.IsNullOrEmpty(busca))
+                    {
+                        da.SelectCommand.Parameters.AddWithValue("@busca", "%" + busca + "%");
+                    }
+
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    dataGridViewEstantes.DataSource = dt;
+
+                    if (string.IsNullOrEmpty(busca))
+                    {
+                        dataGridViewEstantes.DataSource = dt;
+                    }
+                    else
+                    {
+                        dataGridViewProcura.DataSource = dt;
+                    }
 
                     if (dt.Rows.Count == 0)
                     {
@@ -111,6 +131,12 @@ namespace BibliotecaSkilliana_M2.Estante
             comboBoxSecao.SelectedIndex = -1;
         }
 
+        private void LimparFormProcura()
+        {
+            txtProcuraDescricao.Clear();
+            comboBoxSecao.SelectedIndex = -1;
+        }
+
         #endregion
 
         #region UI
@@ -123,6 +149,22 @@ namespace BibliotecaSkilliana_M2.Estante
         private void btnLimparForm_Click(object sender, EventArgs e)
         {
             LimparForm();
+        }
+
+        private void btnProcuraEstante_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtProcuraDescricao.Text))
+            {
+                MessageBox.Show("Por favor, insira uma descrição para procurar.");
+                return;
+            }
+
+            CarregarEstantes(txtProcuraDescricao.Text);
+        }
+
+        private void btnLimparFormProcura_Click(object sender, EventArgs e)
+        {
+            LimparFormProcura();
         }
 
         #endregion

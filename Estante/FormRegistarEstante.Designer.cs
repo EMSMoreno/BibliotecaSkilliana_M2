@@ -117,9 +117,9 @@
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(459, 344);
+            dataGridViewProcura.Location = new Point(459, 314);
             dataGridViewProcura.Name = "dataGridViewProcura";
-            dataGridViewProcura.Size = new Size(329, 71);
+            dataGridViewProcura.Size = new Size(329, 101);
             dataGridViewProcura.TabIndex = 59;
             // 
             // label6
@@ -199,6 +199,7 @@
             btnLimparFormProcura.TabIndex = 71;
             btnLimparFormProcura.Text = "Limpar Form";
             btnLimparFormProcura.UseVisualStyleBackColor = true;
+            btnLimparFormProcura.Click += btnLimparFormProcura_Click;
             // 
             // btnProcuraEstante
             // 
@@ -210,6 +211,7 @@
             btnProcuraEstante.TabIndex = 70;
             btnProcuraEstante.Text = "Procurar Estante";
             btnProcuraEstante.UseVisualStyleBackColor = true;
+            btnProcuraEstante.Click += btnProcuraEstante_Click;
             // 
             // txtProcuraDescricao
             // 

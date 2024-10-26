@@ -35,8 +35,8 @@
             panel1 = new Panel();
             label8 = new Label();
             lblEditarLivro = new Label();
-            comboBox1 = new ComboBox();
-            btnApagarEstante = new Button();
+            cmbAutores = new ComboBox();
+            btnApagarAutor = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -103,39 +103,41 @@
             lblEditarLivro.TabIndex = 61;
             lblEditarLivro.Text = "Menu Autores - Apagar Autor";
             // 
-            // comboBox1
+            // cmbAutores
             // 
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(254, 196);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(233, 23);
-            comboBox1.TabIndex = 62;
-            comboBox1.Text = "Selecione o Autor a Apagar";
+            cmbAutores.FlatStyle = FlatStyle.Flat;
+            cmbAutores.FormattingEnabled = true;
+            cmbAutores.Location = new Point(254, 196);
+            cmbAutores.Name = "cmbAutores";
+            cmbAutores.Size = new Size(233, 23);
+            cmbAutores.TabIndex = 62;
+            cmbAutores.Text = "Selecione o Autor a Apagar";
             // 
-            // btnApagarEstante
+            // btnApagarAutor
             // 
-            btnApagarEstante.FlatAppearance.BorderColor = Color.Red;
-            btnApagarEstante.FlatStyle = FlatStyle.Flat;
-            btnApagarEstante.Location = new Point(254, 285);
-            btnApagarEstante.Name = "btnApagarEstante";
-            btnApagarEstante.Size = new Size(233, 36);
-            btnApagarEstante.TabIndex = 63;
-            btnApagarEstante.Text = "Apagar Estante";
-            btnApagarEstante.UseVisualStyleBackColor = true;
+            btnApagarAutor.FlatAppearance.BorderColor = Color.Red;
+            btnApagarAutor.FlatStyle = FlatStyle.Flat;
+            btnApagarAutor.Location = new Point(254, 285);
+            btnApagarAutor.Name = "btnApagarAutor";
+            btnApagarAutor.Size = new Size(233, 36);
+            btnApagarAutor.TabIndex = 63;
+            btnApagarAutor.Text = "Apagar Autor";
+            btnApagarAutor.UseVisualStyleBackColor = true;
+            btnApagarAutor.Click += btnApagarAutor_Click;
             // 
             // FormApagarAutor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnApagarEstante);
-            Controls.Add(comboBox1);
+            Controls.Add(btnApagarAutor);
+            Controls.Add(cmbAutores);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormApagarAutor";
             Text = "FormApagarAutor";
+            Load += FormApagarAutor_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -153,7 +155,7 @@
         private Panel panel1;
         private Label label8;
         private Label lblEditarLivro;
-        private ComboBox comboBox1;
-        private Button btnApagarEstante;
+        private ComboBox cmbAutores;
+        private Button btnApagarAutor;
     }
 }

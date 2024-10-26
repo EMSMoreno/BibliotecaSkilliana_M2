@@ -34,16 +34,14 @@
             label9 = new Label();
             panel1 = new Panel();
             label8 = new Label();
-            dataGridView1 = new DataGridView();
+            dataGridViewAutores = new DataGridView();
             dataGridViewProcura = new DataGridView();
             lblEditarLivro = new Label();
-            txtEmprestimoID = new TextBox();
-            lblIDAutor = new Label();
-            textBox1 = new TextBox();
+            txtNomeAutor = new TextBox();
             label1 = new Label();
             lblDataNasc = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            textBox2 = new TextBox();
+            dtpDataNasc = new DateTimePicker();
+            txtBiografia = new TextBox();
             lblBio = new Label();
             txtFacebook = new TextBox();
             lblFacebook = new Label();
@@ -52,7 +50,7 @@
             txtTwitter = new TextBox();
             lblTwitter = new Label();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            cmbCodSecao = new ComboBox();
             btnLimparForm = new Button();
             btnRegistarAutor = new Button();
             btnLimparFormProcura = new Button();
@@ -63,7 +61,7 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAutores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             SuspendLayout();
             // 
@@ -74,7 +72,7 @@
             panel2.Controls.Add(label9);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(803, 64);
+            panel2.Size = new Size(893, 64);
             panel2.TabIndex = 56;
             // 
             // pictureBox2
@@ -102,9 +100,9 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label8);
-            panel1.Location = new Point(0, 735);
+            panel1.Location = new Point(0, 694);
             panel1.Name = "panel1";
-            panel1.Size = new Size(803, 41);
+            panel1.Size = new Size(893, 41);
             panel1.TabIndex = 57;
             // 
             // label8
@@ -112,26 +110,26 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(169, 14);
+            label8.Location = new Point(212, 15);
             label8.Name = "label8";
             label8.Size = new Size(446, 17);
             label8.TabIndex = 1;
             label8.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // dataGridView1
+            // dataGridViewAutores
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(396, 100);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(392, 429);
-            dataGridView1.TabIndex = 58;
+            dataGridViewAutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAutores.Location = new Point(396, 100);
+            dataGridViewAutores.Name = "dataGridViewAutores";
+            dataGridViewAutores.Size = new Size(472, 410);
+            dataGridViewAutores.TabIndex = 58;
             // 
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(396, 592);
+            dataGridViewProcura.Location = new Point(396, 554);
             dataGridViewProcura.Name = "dataGridViewProcura";
-            dataGridViewProcura.Size = new Size(392, 120);
+            dataGridViewProcura.Size = new Size(472, 120);
             dataGridViewProcura.TabIndex = 59;
             // 
             // lblEditarLivro
@@ -144,34 +142,17 @@
             lblEditarLivro.TabIndex = 60;
             lblEditarLivro.Text = "Menu Autores - Registar Autor";
             // 
-            // txtEmprestimoID
+            // txtNomeAutor
             // 
-            txtEmprestimoID.Enabled = false;
-            txtEmprestimoID.Location = new Point(144, 145);
-            txtEmprestimoID.Name = "txtEmprestimoID";
-            txtEmprestimoID.Size = new Size(68, 23);
-            txtEmprestimoID.TabIndex = 62;
-            // 
-            // lblIDAutor
-            // 
-            lblIDAutor.AutoSize = true;
-            lblIDAutor.Location = new Point(87, 148);
-            lblIDAutor.Name = "lblIDAutor";
-            lblIDAutor.Size = new Size(51, 15);
-            lblIDAutor.TabIndex = 61;
-            lblIDAutor.Text = "ID Autor";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(144, 183);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 23);
-            textBox1.TabIndex = 64;
+            txtNomeAutor.Location = new Point(144, 146);
+            txtNomeAutor.Name = "txtNomeAutor";
+            txtNomeAutor.Size = new Size(200, 23);
+            txtNomeAutor.TabIndex = 64;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(62, 186);
+            label1.Location = new Point(62, 149);
             label1.Name = "label1";
             label1.Size = new Size(73, 15);
             label1.TabIndex = 63;
@@ -180,31 +161,31 @@
             // lblDataNasc
             // 
             lblDataNasc.AutoSize = true;
-            lblDataNasc.Location = new Point(40, 227);
+            lblDataNasc.Location = new Point(40, 190);
             lblDataNasc.Name = "lblDataNasc";
             lblDataNasc.Size = new Size(98, 15);
             lblDataNasc.TabIndex = 65;
             lblDataNasc.Text = "Data Nascimento";
             // 
-            // dateTimePicker1
+            // dtpDataNasc
             // 
-            dateTimePicker1.Location = new Point(144, 221);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 66;
+            dtpDataNasc.Location = new Point(144, 184);
+            dtpDataNasc.Name = "dtpDataNasc";
+            dtpDataNasc.Size = new Size(200, 23);
+            dtpDataNasc.TabIndex = 66;
             // 
-            // textBox2
+            // txtBiografia
             // 
-            textBox2.Location = new Point(144, 263);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 74);
-            textBox2.TabIndex = 68;
+            txtBiografia.Location = new Point(144, 226);
+            txtBiografia.Multiline = true;
+            txtBiografia.Name = "txtBiografia";
+            txtBiografia.Size = new Size(200, 74);
+            txtBiografia.TabIndex = 68;
             // 
             // lblBio
             // 
             lblBio.AutoSize = true;
-            lblBio.Location = new Point(81, 266);
+            lblBio.Location = new Point(81, 229);
             lblBio.Name = "lblBio";
             lblBio.Size = new Size(54, 15);
             lblBio.TabIndex = 67;
@@ -212,16 +193,16 @@
             // 
             // txtFacebook
             // 
-            txtFacebook.Location = new Point(144, 343);
+            txtFacebook.Location = new Point(144, 306);
             txtFacebook.Name = "txtFacebook";
-            txtFacebook.PlaceholderText = "facebook.com/escreve_assim";
+            txtFacebook.PlaceholderText = "facebook.com/nome_autor";
             txtFacebook.Size = new Size(200, 23);
             txtFacebook.TabIndex = 70;
             // 
             // lblFacebook
             // 
             lblFacebook.AutoSize = true;
-            lblFacebook.Location = new Point(62, 346);
+            lblFacebook.Location = new Point(62, 309);
             lblFacebook.Name = "lblFacebook";
             lblFacebook.Size = new Size(58, 15);
             lblFacebook.TabIndex = 69;
@@ -229,16 +210,16 @@
             // 
             // txtInstagram
             // 
-            txtInstagram.Location = new Point(144, 376);
+            txtInstagram.Location = new Point(144, 339);
             txtInstagram.Name = "txtInstagram";
-            txtInstagram.PlaceholderText = "instagram.com/escreve_assim";
+            txtInstagram.PlaceholderText = "instagram.com/nome_autor";
             txtInstagram.Size = new Size(200, 23);
             txtInstagram.TabIndex = 72;
             // 
             // lblInstagram
             // 
             lblInstagram.AutoSize = true;
-            lblInstagram.Location = new Point(62, 379);
+            lblInstagram.Location = new Point(62, 342);
             lblInstagram.Name = "lblInstagram";
             lblInstagram.Size = new Size(60, 15);
             lblInstagram.TabIndex = 71;
@@ -246,16 +227,16 @@
             // 
             // txtTwitter
             // 
-            txtTwitter.Location = new Point(144, 408);
+            txtTwitter.Location = new Point(144, 371);
             txtTwitter.Name = "txtTwitter";
-            txtTwitter.PlaceholderText = "twitter.com/escreve_assim";
+            txtTwitter.PlaceholderText = "twitter.com/nome_autor";
             txtTwitter.Size = new Size(200, 23);
             txtTwitter.TabIndex = 74;
             // 
             // lblTwitter
             // 
             lblTwitter.AutoSize = true;
-            lblTwitter.Location = new Point(62, 411);
+            lblTwitter.Location = new Point(62, 374);
             lblTwitter.Name = "lblTwitter";
             lblTwitter.Size = new Size(54, 15);
             lblTwitter.TabIndex = 73;
@@ -264,45 +245,47 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(52, 456);
+            label2.Location = new Point(52, 419);
             label2.Name = "label2";
             label2.Size = new Size(86, 15);
             label2.TabIndex = 75;
             label2.Text = "Código Secção";
             // 
-            // comboBox1
+            // cmbCodSecao
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(144, 453);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(183, 23);
-            comboBox1.TabIndex = 76;
+            cmbCodSecao.FormattingEnabled = true;
+            cmbCodSecao.Location = new Point(144, 416);
+            cmbCodSecao.Name = "cmbCodSecao";
+            cmbCodSecao.Size = new Size(183, 23);
+            cmbCodSecao.TabIndex = 76;
             // 
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(47, 492);
+            btnLimparForm.Location = new Point(47, 473);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 78;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
             // btnRegistarAutor
             // 
             btnRegistarAutor.FlatAppearance.BorderColor = Color.LimeGreen;
             btnRegistarAutor.FlatStyle = FlatStyle.Flat;
-            btnRegistarAutor.Location = new Point(212, 492);
+            btnRegistarAutor.Location = new Point(212, 473);
             btnRegistarAutor.Name = "btnRegistarAutor";
             btnRegistarAutor.Size = new Size(154, 37);
             btnRegistarAutor.TabIndex = 77;
             btnRegistarAutor.Text = "Registar Autor";
             btnRegistarAutor.UseVisualStyleBackColor = true;
+            btnRegistarAutor.Click += btnRegistarAutor_Click;
             // 
             // btnLimparFormProcura
             // 
             btnLimparFormProcura.FlatStyle = FlatStyle.Flat;
-            btnLimparFormProcura.Location = new Point(47, 675);
+            btnLimparFormProcura.Location = new Point(47, 637);
             btnLimparFormProcura.Name = "btnLimparFormProcura";
             btnLimparFormProcura.Size = new Size(154, 37);
             btnLimparFormProcura.TabIndex = 80;
@@ -313,7 +296,7 @@
             // 
             btnProcuraAutor.FlatAppearance.BorderColor = Color.DarkViolet;
             btnProcuraAutor.FlatStyle = FlatStyle.Flat;
-            btnProcuraAutor.Location = new Point(212, 675);
+            btnProcuraAutor.Location = new Point(212, 637);
             btnProcuraAutor.Name = "btnProcuraAutor";
             btnProcuraAutor.Size = new Size(154, 37);
             btnProcuraAutor.TabIndex = 79;
@@ -322,7 +305,7 @@
             // 
             // txtNomeAutorProcura
             // 
-            txtNomeAutorProcura.Location = new Point(144, 637);
+            txtNomeAutorProcura.Location = new Point(144, 599);
             txtNomeAutorProcura.Name = "txtNomeAutorProcura";
             txtNomeAutorProcura.Size = new Size(200, 23);
             txtNomeAutorProcura.TabIndex = 82;
@@ -330,7 +313,7 @@
             // lblNomeAutorProcura
             // 
             lblNomeAutorProcura.AutoSize = true;
-            lblNomeAutorProcura.Location = new Point(62, 640);
+            lblNomeAutorProcura.Location = new Point(62, 602);
             lblNomeAutorProcura.Name = "lblNomeAutorProcura";
             lblNomeAutorProcura.Size = new Size(73, 15);
             lblNomeAutorProcura.TabIndex = 81;
@@ -340,7 +323,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label4.Location = new Point(81, 581);
+            label4.Location = new Point(81, 543);
             label4.Name = "label4";
             label4.Size = new Size(243, 21);
             label4.TabIndex = 83;
@@ -350,7 +333,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 776);
+            ClientSize = new Size(893, 735);
             Controls.Add(label4);
             Controls.Add(txtNomeAutorProcura);
             Controls.Add(lblNomeAutorProcura);
@@ -358,7 +341,7 @@
             Controls.Add(btnProcuraAutor);
             Controls.Add(btnLimparForm);
             Controls.Add(btnRegistarAutor);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbCodSecao);
             Controls.Add(label2);
             Controls.Add(txtTwitter);
             Controls.Add(lblTwitter);
@@ -366,27 +349,26 @@
             Controls.Add(lblInstagram);
             Controls.Add(txtFacebook);
             Controls.Add(lblFacebook);
-            Controls.Add(textBox2);
+            Controls.Add(txtBiografia);
             Controls.Add(lblBio);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpDataNasc);
             Controls.Add(lblDataNasc);
-            Controls.Add(textBox1);
+            Controls.Add(txtNomeAutor);
             Controls.Add(label1);
-            Controls.Add(txtEmprestimoID);
-            Controls.Add(lblIDAutor);
             Controls.Add(lblEditarLivro);
             Controls.Add(dataGridViewProcura);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewAutores);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormRegistarAutor";
             Text = "FormRegistarAutor";
+            Load += FormRegistarAutor_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAutores).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -399,16 +381,14 @@
         private Label label9;
         private Panel panel1;
         private Label label8;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewAutores;
         private DataGridView dataGridViewProcura;
         private Label lblEditarLivro;
-        private TextBox txtEmprestimoID;
-        private Label lblIDAutor;
-        private TextBox textBox1;
+        private TextBox txtNomeAutor;
         private Label label1;
         private Label lblDataNasc;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
+        private DateTimePicker dtpDataNasc;
+        private TextBox txtBiografia;
         private Label lblBio;
         private TextBox txtFacebook;
         private Label lblFacebook;
@@ -417,7 +397,7 @@
         private TextBox txtTwitter;
         private Label lblTwitter;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cmbCodSecao;
         private Button btnLimparForm;
         private Button btnRegistarAutor;
         private Button btnLimparFormProcura;

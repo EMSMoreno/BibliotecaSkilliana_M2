@@ -1,3 +1,4 @@
+using BibliotecaSkilliana_M2.Autor;
 using BibliotecaSkilliana_M2.Emprestimo;
 using BibliotecaSkilliana_M2.Estante;
 using BibliotecaSkilliana_M2.Funcionario;
@@ -144,6 +145,28 @@ namespace BibliotecaSkilliana_M2
         {
             using (var formApagarEstante = new FormApagarEstante())
             { formApagarEstante.ShowDialog(); }
+        }
+
+        #endregion
+
+        #region Menu Strip - Autor
+
+        private void registarAutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formRegistarAutor = new FormRegistarAutor())
+            { formRegistarAutor.ShowDialog(); }
+        }
+
+        private void editarAutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formEditarAutor = new FormEditarAutor())
+            { formEditarAutor.ShowDialog(); }
+        }
+
+        private void apagarAutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formApagarAutor = new FormApagarAutor())
+            { formApagarAutor.ShowDialog(); }
         }
 
         #endregion

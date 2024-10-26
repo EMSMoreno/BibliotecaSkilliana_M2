@@ -35,14 +35,12 @@
             panel1 = new Panel();
             label8 = new Label();
             lblEditarLivro = new Label();
-            dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
+            dataGridViewAutores = new DataGridView();
+            txtNomeAutor = new TextBox();
             label1 = new Label();
-            txtEmprestimoID = new TextBox();
-            lblIDAutor = new Label();
-            textBox2 = new TextBox();
+            txtBiografia = new TextBox();
             lblBio = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpDataNasc = new DateTimePicker();
             lblDataNasc = new Label();
             txtTwitter = new TextBox();
             lblTwitter = new Label();
@@ -50,14 +48,14 @@
             lblInstagram = new Label();
             txtFacebook = new TextBox();
             lblFacebook = new Label();
-            comboBox1 = new ComboBox();
+            cmbCodSecao = new ComboBox();
             label2 = new Label();
             btnLimparForm = new Button();
             btnEditarAutor = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAutores).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -121,54 +119,38 @@
             lblEditarLivro.TabIndex = 61;
             lblEditarLivro.Text = "Menu Autores - Editar Autor";
             // 
-            // dataGridView1
+            // dataGridViewAutores
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(69, 329);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(734, 181);
-            dataGridView1.TabIndex = 62;
+            dataGridViewAutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAutores.Location = new Point(69, 329);
+            dataGridViewAutores.Name = "dataGridViewAutores";
+            dataGridViewAutores.Size = new Size(734, 181);
+            dataGridViewAutores.TabIndex = 62;
+            dataGridViewAutores.CellClick += dataGridViewAutores_CellClick;
             // 
-            // textBox1
+            // txtNomeAutor
             // 
-            textBox1.Location = new Point(294, 161);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 23);
-            textBox1.TabIndex = 68;
+            txtNomeAutor.Location = new Point(146, 161);
+            txtNomeAutor.Name = "txtNomeAutor";
+            txtNomeAutor.Size = new Size(183, 23);
+            txtNomeAutor.TabIndex = 68;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(212, 164);
+            label1.Location = new Point(64, 164);
             label1.Name = "label1";
             label1.Size = new Size(73, 15);
             label1.TabIndex = 67;
             label1.Text = "Nome Autor";
             // 
-            // txtEmprestimoID
+            // txtBiografia
             // 
-            txtEmprestimoID.Enabled = false;
-            txtEmprestimoID.Location = new Point(129, 161);
-            txtEmprestimoID.Name = "txtEmprestimoID";
-            txtEmprestimoID.Size = new Size(68, 23);
-            txtEmprestimoID.TabIndex = 66;
-            // 
-            // lblIDAutor
-            // 
-            lblIDAutor.AutoSize = true;
-            lblIDAutor.Location = new Point(72, 164);
-            lblIDAutor.Name = "lblIDAutor";
-            lblIDAutor.Size = new Size(51, 15);
-            lblIDAutor.TabIndex = 65;
-            lblIDAutor.Text = "ID Autor";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(129, 238);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 85);
-            textBox2.TabIndex = 72;
+            txtBiografia.Location = new Point(129, 238);
+            txtBiografia.Multiline = true;
+            txtBiografia.Name = "txtBiografia";
+            txtBiografia.Size = new Size(200, 85);
+            txtBiografia.TabIndex = 72;
             // 
             // lblBio
             // 
@@ -179,12 +161,12 @@
             lblBio.TabIndex = 71;
             lblBio.Text = "Biografia";
             // 
-            // dateTimePicker1
+            // dtpDataNasc
             // 
-            dateTimePicker1.Location = new Point(164, 200);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(165, 23);
-            dateTimePicker1.TabIndex = 70;
+            dtpDataNasc.Location = new Point(164, 200);
+            dtpDataNasc.Name = "dtpDataNasc";
+            dtpDataNasc.Size = new Size(165, 23);
+            dtpDataNasc.TabIndex = 70;
             // 
             // lblDataNasc
             // 
@@ -197,7 +179,7 @@
             // 
             // txtTwitter
             // 
-            txtTwitter.Location = new Point(424, 263);
+            txtTwitter.Location = new Point(426, 249);
             txtTwitter.Name = "txtTwitter";
             txtTwitter.PlaceholderText = "twitter.com/escreve_assim";
             txtTwitter.Size = new Size(200, 23);
@@ -206,7 +188,7 @@
             // lblTwitter
             // 
             lblTwitter.AutoSize = true;
-            lblTwitter.Location = new Point(342, 266);
+            lblTwitter.Location = new Point(344, 252);
             lblTwitter.Name = "lblTwitter";
             lblTwitter.Size = new Size(54, 15);
             lblTwitter.TabIndex = 79;
@@ -214,7 +196,7 @@
             // 
             // txtInstagram
             // 
-            txtInstagram.Location = new Point(424, 231);
+            txtInstagram.Location = new Point(426, 205);
             txtInstagram.Name = "txtInstagram";
             txtInstagram.PlaceholderText = "instagram.com/escreve_assim";
             txtInstagram.Size = new Size(200, 23);
@@ -223,7 +205,7 @@
             // lblInstagram
             // 
             lblInstagram.AutoSize = true;
-            lblInstagram.Location = new Point(342, 234);
+            lblInstagram.Location = new Point(344, 208);
             lblInstagram.Name = "lblInstagram";
             lblInstagram.Size = new Size(60, 15);
             lblInstagram.TabIndex = 77;
@@ -231,7 +213,7 @@
             // 
             // txtFacebook
             // 
-            txtFacebook.Location = new Point(424, 198);
+            txtFacebook.Location = new Point(426, 161);
             txtFacebook.Name = "txtFacebook";
             txtFacebook.PlaceholderText = "facebook.com/escreve_assim";
             txtFacebook.Size = new Size(200, 23);
@@ -240,24 +222,24 @@
             // lblFacebook
             // 
             lblFacebook.AutoSize = true;
-            lblFacebook.Location = new Point(342, 201);
+            lblFacebook.Location = new Point(344, 164);
             lblFacebook.Name = "lblFacebook";
             lblFacebook.Size = new Size(58, 15);
             lblFacebook.TabIndex = 75;
             lblFacebook.Text = "Facebook";
             // 
-            // comboBox1
+            // cmbCodSecao
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(424, 292);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(87, 23);
-            comboBox1.TabIndex = 82;
+            cmbCodSecao.FormattingEnabled = true;
+            cmbCodSecao.Location = new Point(427, 289);
+            cmbCodSecao.Name = "cmbCodSecao";
+            cmbCodSecao.Size = new Size(200, 23);
+            cmbCodSecao.TabIndex = 82;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(332, 298);
+            label2.Location = new Point(335, 295);
             label2.Name = "label2";
             label2.Size = new Size(86, 15);
             label2.TabIndex = 81;
@@ -272,6 +254,7 @@
             btnLimparForm.TabIndex = 84;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
             // btnEditarAutor
             // 
@@ -283,6 +266,7 @@
             btnEditarAutor.TabIndex = 83;
             btnEditarAutor.Text = "Editar Autor";
             btnEditarAutor.UseVisualStyleBackColor = true;
+            btnEditarAutor.Click += btnEditarAutor_Click;
             // 
             // FormEditarAutor
             // 
@@ -291,7 +275,7 @@
             ClientSize = new Size(819, 570);
             Controls.Add(btnLimparForm);
             Controls.Add(btnEditarAutor);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbCodSecao);
             Controls.Add(label2);
             Controls.Add(txtTwitter);
             Controls.Add(lblTwitter);
@@ -299,26 +283,25 @@
             Controls.Add(lblInstagram);
             Controls.Add(txtFacebook);
             Controls.Add(lblFacebook);
-            Controls.Add(textBox2);
+            Controls.Add(txtBiografia);
             Controls.Add(lblBio);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpDataNasc);
             Controls.Add(lblDataNasc);
-            Controls.Add(textBox1);
+            Controls.Add(txtNomeAutor);
             Controls.Add(label1);
-            Controls.Add(txtEmprestimoID);
-            Controls.Add(lblIDAutor);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewAutores);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormEditarAutor";
             Text = "FormEditarAutor";
+            Load += FormEditarAutor_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAutores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -331,14 +314,12 @@
         private Panel panel1;
         private Label label8;
         private Label lblEditarLivro;
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private DataGridView dataGridViewAutores;
+        private TextBox txtNomeAutor;
         private Label label1;
-        private TextBox txtEmprestimoID;
-        private Label lblIDAutor;
-        private TextBox textBox2;
+        private TextBox txtBiografia;
         private Label lblBio;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpDataNasc;
         private Label lblDataNasc;
         private TextBox txtTwitter;
         private Label lblTwitter;
@@ -346,7 +327,7 @@
         private Label lblInstagram;
         private TextBox txtFacebook;
         private Label lblFacebook;
-        private ComboBox comboBox1;
+        private ComboBox cmbCodSecao;
         private Label label2;
         private Button btnLimparForm;
         private Button btnEditarAutor;

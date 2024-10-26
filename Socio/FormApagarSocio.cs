@@ -7,12 +7,16 @@ namespace BibliotecaSkilliana_M2.Socio
 {
     public partial class FormApagarSocio : Form
     {
-        private string cs = ConfigurationManager.ConnectionStrings["BibliotecaSkilliana"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["LibSkilliana_EduardoMoreno"].ConnectionString;
 
         public FormApagarSocio()
         {
             InitializeComponent();
-            CarregarSocios(); // Carrega os sócios ao inicializar o formulário
+        }
+
+        private void FormApagarSocio_Load(object sender, EventArgs e)
+        {
+            CarregarSocios();
         }
 
         private void CarregarSocios()
@@ -22,13 +26,13 @@ namespace BibliotecaSkilliana_M2.Socio
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     con.Open();
-                    string query = "SELECT Nome FROM Socio"; // Ajuste conforme necessário
+                    string query = "SELECT Nome FROM Socio";
                     SqlCommand cmd = new SqlCommand(query, con);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        cmbSocios.Items.Add(reader["Nome"].ToString()); // Adiciona os nomes dos sócios à ComboBox
+                        cmbSocios.Items.Add(reader["Nome"].ToString());
                     }
                 }
             }
@@ -42,7 +46,7 @@ namespace BibliotecaSkilliana_M2.Socio
         {
             try
             {
-                string nomeSocio = cmbSocios.SelectedItem?.ToString(); // Obtém o nome do sócio selecionado
+                string nomeSocio = cmbSocios.SelectedItem?.ToString();
 
                 if (string.IsNullOrEmpty(nomeSocio))
                 {
@@ -53,7 +57,7 @@ namespace BibliotecaSkilliana_M2.Socio
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     con.Open();
-                    string query = "DELETE FROM Socio WHERE Nome = @Nome"; // Ajuste a condição conforme necessário
+                    string query = "DELETE FROM Socio WHERE Nome = @Nome";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Nome", nomeSocio);
 
@@ -61,11 +65,11 @@ namespace BibliotecaSkilliana_M2.Socio
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Sócio apagado com sucesso!");
-                        cmbSocios.Items.Remove(nomeSocio); // Remove o sócio da lista
+                        cmbSocios.Items.Remove(nomeSocio);
                     }
                     else
                     {
-                        MessageBox.Show("Sócio não encontrado.");
+                        MessageBox.Show("Sócio não encontrado. Tenta novamente.");
                     }
                 }
             }

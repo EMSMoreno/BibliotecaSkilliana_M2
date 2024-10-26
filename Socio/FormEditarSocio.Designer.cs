@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarSocio));
             cmbEstado = new ComboBox();
             label12 = new Label();
-            txtIDFuncionario = new TextBox();
             txtTelefone = new TextBox();
             txtEmail = new TextBox();
             txtMorada = new TextBox();
@@ -45,17 +44,16 @@
             btnEditarSocio = new Button();
             dataGridViewSocios = new DataGridView();
             dtpDataNascimento = new DateTimePicker();
-            txtNSocio = new TextBox();
-            label5 = new Label();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
             panel1 = new Panel();
             label6 = new Label();
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             label7 = new Label();
             lblEditarLivro = new Label();
+            label5 = new Label();
+            cmbFuncionario = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSocios).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -65,7 +63,7 @@
             // cmbEstado
             // 
             cmbEstado.FormattingEnabled = true;
-            cmbEstado.Location = new Point(289, 321);
+            cmbEstado.Location = new Point(429, 240);
             cmbEstado.Name = "cmbEstado";
             cmbEstado.Size = new Size(172, 23);
             cmbEstado.TabIndex = 74;
@@ -73,29 +71,22 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(238, 327);
+            label12.Location = new Point(378, 246);
             label12.Name = "label12";
             label12.Size = new Size(42, 15);
             label12.TabIndex = 73;
             label12.Text = "Estado";
             // 
-            // txtIDFuncionario
-            // 
-            txtIDFuncionario.Location = new Point(149, 321);
-            txtIDFuncionario.Name = "txtIDFuncionario";
-            txtIDFuncionario.Size = new Size(83, 23);
-            txtIDFuncionario.TabIndex = 72;
-            // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(429, 286);
+            txtTelefone.Location = new Point(429, 202);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(172, 23);
             txtTelefone.TabIndex = 71;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(429, 243);
+            txtEmail.Location = new Point(429, 162);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(172, 23);
             txtEmail.TabIndex = 70;
@@ -110,7 +101,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(369, 289);
+            label11.Location = new Point(369, 205);
             label11.Name = "label11";
             label11.Size = new Size(51, 15);
             label11.TabIndex = 68;
@@ -119,7 +110,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(379, 246);
+            label10.Location = new Point(379, 165);
             label10.Name = "label10";
             label10.Size = new Size(41, 15);
             label10.TabIndex = 67;
@@ -152,62 +143,49 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(289, 159);
+            txtNome.Location = new Point(110, 162);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(312, 23);
+            txtNome.Size = new Size(248, 23);
             txtNome.TabIndex = 63;
             // 
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(654, 278);
+            btnLimparForm.Location = new Point(647, 222);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 62;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
+            btnLimparForm.Click += btnLimparForm_Click;
             // 
             // btnEditarSocio
             // 
             btnEditarSocio.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarSocio.FlatStyle = FlatStyle.Flat;
-            btnEditarSocio.Location = new Point(654, 321);
+            btnEditarSocio.Location = new Point(647, 265);
             btnEditarSocio.Name = "btnEditarSocio";
             btnEditarSocio.Size = new Size(154, 37);
             btnEditarSocio.TabIndex = 61;
             btnEditarSocio.Text = "Editar Sócio";
             btnEditarSocio.UseVisualStyleBackColor = true;
+            btnEditarSocio.Click += btnEditar_Click;
             // 
             // dataGridViewSocios
             // 
             dataGridViewSocios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewSocios.Location = new Point(39, 364);
+            dataGridViewSocios.Location = new Point(30, 319);
             dataGridViewSocios.Name = "dataGridViewSocios";
-            dataGridViewSocios.Size = new Size(771, 168);
+            dataGridViewSocios.Size = new Size(771, 221);
             dataGridViewSocios.TabIndex = 59;
+            dataGridViewSocios.CellClick += dataGridViewSocios_CellClick;
             // 
             // dtpDataNascimento
             // 
             dtpDataNascimento.Location = new Point(158, 281);
             dtpDataNascimento.Name = "dtpDataNascimento";
-            dtpDataNascimento.Size = new Size(200, 23);
+            dtpDataNascimento.Size = new Size(178, 23);
             dtpDataNascimento.TabIndex = 58;
-            // 
-            // txtNSocio
-            // 
-            txtNSocio.Location = new Point(158, 159);
-            txtNSocio.Name = "txtNSocio";
-            txtNSocio.Size = new Size(68, 23);
-            txtNSocio.TabIndex = 56;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(56, 324);
-            label5.Name = "label5";
-            label5.Size = new Size(84, 15);
-            label5.TabIndex = 55;
-            label5.Text = "Funcionário ID";
             // 
             // label3
             // 
@@ -221,20 +199,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(240, 162);
+            label2.Location = new Point(61, 165);
             label2.Name = "label2";
             label2.Size = new Size(43, 15);
             label2.TabIndex = 52;
             label2.Text = "Nome:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(66, 162);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 15);
-            label1.TabIndex = 51;
-            label1.Text = "Nº Sócio:";
             // 
             // panel1
             // 
@@ -297,17 +266,34 @@
             lblEditarLivro.TabIndex = 77;
             lblEditarLivro.Text = "Menu Sócios - Editar Sócio";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(358, 287);
+            label5.Name = "label5";
+            label5.Size = new Size(84, 15);
+            label5.TabIndex = 55;
+            label5.Text = "Funcionário ID";
+            // 
+            // cmbFuncionario
+            // 
+            cmbFuncionario.FormattingEnabled = true;
+            cmbFuncionario.Location = new Point(448, 279);
+            cmbFuncionario.Name = "cmbFuncionario";
+            cmbFuncionario.Size = new Size(153, 23);
+            cmbFuncionario.TabIndex = 78;
+            // 
             // FormEditarSocio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(841, 606);
+            Controls.Add(cmbFuncionario);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(cmbEstado);
             Controls.Add(label12);
-            Controls.Add(txtIDFuncionario);
             Controls.Add(txtTelefone);
             Controls.Add(txtEmail);
             Controls.Add(txtMorada);
@@ -321,13 +307,12 @@
             Controls.Add(btnEditarSocio);
             Controls.Add(dataGridViewSocios);
             Controls.Add(dtpDataNascimento);
-            Controls.Add(txtNSocio);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "FormEditarSocio";
             Text = "FormEditarSocio";
+            Load += FormEditarSocio_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewSocios).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -342,7 +327,6 @@
 
         private ComboBox cmbEstado;
         private Label label12;
-        private TextBox txtIDFuncionario;
         private TextBox txtTelefone;
         private TextBox txtEmail;
         private TextBox txtMorada;
@@ -356,16 +340,15 @@
         private Button btnEditarSocio;
         private DataGridView dataGridViewSocios;
         private DateTimePicker dtpDataNascimento;
-        private TextBox txtNSocio;
-        private Label label5;
         private Label label3;
         private Label label2;
-        private Label label1;
         private Panel panel1;
         private Label label6;
         private Panel panel2;
         private PictureBox pictureBox2;
         private Label label7;
         private Label lblEditarLivro;
+        private Label label5;
+        private ComboBox cmbFuncionario;
     }
 }

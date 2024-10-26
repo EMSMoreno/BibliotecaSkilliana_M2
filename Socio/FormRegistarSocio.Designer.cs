@@ -35,11 +35,9 @@
             btnRegistarSocio = new Button();
             dataGridViewSocios = new DataGridView();
             dtpDataNascimento = new DateTimePicker();
-            txtNSocio = new TextBox();
             label5 = new Label();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
             txtNome = new TextBox();
             txtNumeroCartaoCidadao = new TextBox();
             label8 = new Label();
@@ -49,7 +47,6 @@
             txtMorada = new TextBox();
             txtEmail = new TextBox();
             txtTelefone = new TextBox();
-            txtIDFuncionario = new TextBox();
             label12 = new Label();
             cmbEstado = new ComboBox();
             panel1 = new Panel();
@@ -61,6 +58,7 @@
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             label14 = new Label();
+            cmbFuncionario = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPesquisaSocios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSocios).BeginInit();
             panel1.SuspendLayout();
@@ -119,22 +117,15 @@
             // 
             // dtpDataNascimento
             // 
-            dtpDataNascimento.Location = new Point(140, 326);
+            dtpDataNascimento.Location = new Point(140, 307);
             dtpDataNascimento.Name = "dtpDataNascimento";
             dtpDataNascimento.Size = new Size(200, 23);
             dtpDataNascimento.TabIndex = 29;
             // 
-            // txtNSocio
-            // 
-            txtNSocio.Location = new Point(99, 82);
-            txtNSocio.Name = "txtNSocio";
-            txtNSocio.Size = new Size(68, 23);
-            txtNSocio.TabIndex = 25;
-            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(36, 412);
+            label5.Location = new Point(36, 395);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
             label5.TabIndex = 24;
@@ -143,7 +134,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(37, 168);
+            label3.Location = new Point(37, 144);
             label3.Name = "label3";
             label3.Size = new Size(106, 15);
             label3.TabIndex = 22;
@@ -152,39 +143,30 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(37, 128);
+            label2.Location = new Point(37, 104);
             label2.Name = "label2";
             label2.Size = new Size(40, 15);
             label2.TabIndex = 21;
             label2.Text = "Nome";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(37, 85);
-            label1.Name = "label1";
-            label1.Size = new Size(53, 15);
-            label1.TabIndex = 20;
-            label1.Text = "Nº Sócio";
-            // 
             // txtNome
             // 
-            txtNome.Location = new Point(86, 125);
+            txtNome.Location = new Point(83, 101);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(254, 23);
+            txtNome.Size = new Size(257, 23);
             txtNome.TabIndex = 38;
             // 
             // txtNumeroCartaoCidadao
             // 
-            txtNumeroCartaoCidadao.Location = new Point(152, 165);
+            txtNumeroCartaoCidadao.Location = new Point(152, 141);
             txtNumeroCartaoCidadao.Name = "txtNumeroCartaoCidadao";
-            txtNumeroCartaoCidadao.Size = new Size(158, 23);
+            txtNumeroCartaoCidadao.Size = new Size(146, 23);
             txtNumeroCartaoCidadao.TabIndex = 39;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(37, 332);
+            label8.Location = new Point(37, 313);
             label8.Name = "label8";
             label8.Size = new Size(98, 15);
             label8.TabIndex = 40;
@@ -193,7 +175,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(35, 209);
+            label9.Location = new Point(35, 185);
             label9.Name = "label9";
             label9.Size = new Size(48, 15);
             label9.TabIndex = 41;
@@ -202,7 +184,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(37, 248);
+            label10.Location = new Point(37, 230);
             label10.Name = "label10";
             label10.Size = new Size(36, 15);
             label10.TabIndex = 42;
@@ -211,7 +193,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(36, 292);
+            label11.Location = new Point(37, 271);
             label11.Name = "label11";
             label11.Size = new Size(51, 15);
             label11.TabIndex = 43;
@@ -219,36 +201,29 @@
             // 
             // txtMorada
             // 
-            txtMorada.Location = new Point(92, 206);
+            txtMorada.Location = new Point(92, 182);
             txtMorada.Name = "txtMorada";
             txtMorada.Size = new Size(248, 23);
             txtMorada.TabIndex = 44;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(92, 245);
+            txtEmail.Location = new Point(92, 227);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(248, 23);
             txtEmail.TabIndex = 45;
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(96, 289);
+            txtTelefone.Location = new Point(94, 268);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(145, 23);
             txtTelefone.TabIndex = 46;
             // 
-            // txtIDFuncionario
-            // 
-            txtIDFuncionario.Location = new Point(140, 412);
-            txtIDFuncionario.Name = "txtIDFuncionario";
-            txtIDFuncionario.Size = new Size(200, 23);
-            txtIDFuncionario.TabIndex = 47;
-            // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(37, 377);
+            label12.Location = new Point(37, 353);
             label12.Name = "label12";
             label12.Size = new Size(42, 15);
             label12.TabIndex = 48;
@@ -257,7 +232,7 @@
             // cmbEstado
             // 
             cmbEstado.FormattingEnabled = true;
-            cmbEstado.Location = new Point(140, 374);
+            cmbEstado.Location = new Point(140, 350);
             cmbEstado.Name = "cmbEstado";
             cmbEstado.Size = new Size(200, 23);
             cmbEstado.TabIndex = 49;
@@ -349,11 +324,20 @@
             label14.TabIndex = 0;
             label14.Text = "Bem-vindos à Livraria Skilliana";
             // 
+            // cmbFuncionario
+            // 
+            cmbFuncionario.FormattingEnabled = true;
+            cmbFuncionario.Location = new Point(140, 392);
+            cmbFuncionario.Name = "cmbFuncionario";
+            cmbFuncionario.Size = new Size(200, 23);
+            cmbFuncionario.TabIndex = 71;
+            // 
             // FormRegistarSocio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(810, 724);
+            Controls.Add(cmbFuncionario);
             Controls.Add(panel2);
             Controls.Add(label7);
             Controls.Add(button1);
@@ -362,7 +346,6 @@
             Controls.Add(panel1);
             Controls.Add(cmbEstado);
             Controls.Add(label12);
-            Controls.Add(txtIDFuncionario);
             Controls.Add(txtTelefone);
             Controls.Add(txtEmail);
             Controls.Add(txtMorada);
@@ -378,13 +361,12 @@
             Controls.Add(btnRegistarSocio);
             Controls.Add(dataGridViewSocios);
             Controls.Add(dtpDataNascimento);
-            Controls.Add(txtNSocio);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "FormRegistarSocio";
             Text = "FormRegistarSocio";
+            Load += FormRegistarSocio_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewPesquisaSocios).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSocios).EndInit();
             panel1.ResumeLayout(false);
@@ -404,11 +386,9 @@
         private Button btnRegistarSocio;
         private DataGridView dataGridViewSocios;
         private DateTimePicker dtpDataNascimento;
-        private TextBox txtNSocio;
         private Label label5;
         private Label label3;
         private Label label2;
-        private Label label1;
         private TextBox txtNome;
         private TextBox txtNumeroCartaoCidadao;
         private Label label8;
@@ -418,7 +398,6 @@
         private TextBox txtMorada;
         private TextBox txtEmail;
         private TextBox txtTelefone;
-        private TextBox txtIDFuncionario;
         private Label label12;
         private ComboBox cmbEstado;
         private Panel panel1;
@@ -430,5 +409,6 @@
         private Panel panel2;
         private PictureBox pictureBox2;
         private Label label14;
+        private ComboBox cmbFuncionario;
     }
 }

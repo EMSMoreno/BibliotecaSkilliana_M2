@@ -122,6 +122,7 @@
             btnApagarSocio.TabIndex = 77;
             btnApagarSocio.Text = "Apagar Sócio";
             btnApagarSocio.UseVisualStyleBackColor = true;
+            btnApagarSocio.Click += btnApagar_Click;
             // 
             // FormApagarSocio
             // 
@@ -135,6 +136,7 @@
             Controls.Add(cmbSocios);
             Name = "FormApagarSocio";
             Text = "FormApagarSocio";
+            Load += FormApagarSocio_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

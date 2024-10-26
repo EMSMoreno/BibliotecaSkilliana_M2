@@ -11,15 +11,19 @@ namespace BibliotecaSkilliana_M2.Socio
         public FormRegistarSocio()
         {
             InitializeComponent();
+        }
+
+        private void FormRegistarSocio_Load(object sender, EventArgs e)
+        {
             CarregarEstados();
             CarregarSocios();
+            CarregarFuncionarios();
         }
 
         private void btnRegistarSocio_Click(object sender, EventArgs e)
         {
             try
             {
-                // Obter os valores dos campos
                 string nome = txtNome.Text;
                 string numeroCartaoCidadao = txtNumeroCartaoCidadao.Text;
                 string morada = txtMorada.Text;
@@ -28,12 +32,17 @@ namespace BibliotecaSkilliana_M2.Socio
                 DateTime dataNascimento = dtpDataNascimento.Value;
                 string estado = cmbEstado.SelectedItem.ToString();
 
-                int idFuncionario = int.Parse(txtIDFuncionario.Text);
+                if (cmbFuncionario.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleciona um funcionário.");
+                    return;
+                }
+
+                int idFuncionario = ((KeyValuePair<int, string>)cmbFuncionario.SelectedItem).Key;
 
                 using (SqlConnection con = new SqlConnection(cs))
                 {
                     con.Open();
-                    // Omita a coluna de identidade da instrução INSERT
                     string query = "INSERT INTO Socio (Nome, Numero_Cartao_Cidadao, Morada, Email, Telefone, Data_Nascimento, Estado, ID_Funcionario) " +
                                    "VALUES (@Nome, @Numero_Cartao_Cidadao, @Morada, @Email, @Telefone, @Data_Nascimento, @Estado, @ID_Funcionario)";
 
@@ -44,17 +53,20 @@ namespace BibliotecaSkilliana_M2.Socio
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Telefone", telefone);
                     cmd.Parameters.AddWithValue("@Data_Nascimento", dataNascimento);
-                    cmd.Parameters.AddWithValue("@Estado", estado); // Armazena o estado como string
+                    cmd.Parameters.AddWithValue("@Estado", estado);
                     cmd.Parameters.AddWithValue("@ID_Funcionario", idFuncionario);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Sócio registrado com sucesso!");
+                    MessageBox.Show("Sócio registado com sucesso!");
                     LimparCampos();
+                    CarregarEstados();
+                    CarregarSocios();
+                    CarregarFuncionarios();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao registrar sócio: " + ex.Message);
+                MessageBox.Show("Erro ao registar Sócio: " + ex.Message);
             }
         }
 
@@ -81,17 +93,42 @@ namespace BibliotecaSkilliana_M2.Socio
 
         private void CarregarEstados()
         {
-            // Adiciona as opções de estado diretamente
             cmbEstado.Items.Add("Ativo");
             cmbEstado.Items.Add("Inativo");
-
-            // Define o estado padrão
             cmbEstado.SelectedIndex = 0; // Seleciona "Ativo" por padrão
+        }
+
+        private void CarregarFuncionarios()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cs))
+                {
+                    con.Open();
+                    string query = "SELECT ID_Funcionario, Nome FROM Funcionario";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    Dictionary<int, string> funcionarios = new Dictionary<int, string>();
+
+                    while (reader.Read())
+                    {
+                        funcionarios.Add(reader.GetInt32(0), reader.GetString(1));
+                    }
+
+                    cmbFuncionario.DataSource = new BindingSource(funcionarios, null);
+                    cmbFuncionario.DisplayMember = "Value";
+                    cmbFuncionario.ValueMember = "Key";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar funcionários: " + ex.Message);
+            }
         }
 
         private void LimparCampos()
         {
-            txtNSocio.Clear();
             txtNome.Clear();
             txtNumeroCartaoCidadao.Clear();
             txtMorada.Clear();
@@ -99,7 +136,7 @@ namespace BibliotecaSkilliana_M2.Socio
             txtTelefone.Clear();
             dtpDataNascimento.Value = DateTime.Now; // Define a data atual
             cmbEstado.SelectedIndex = 0; // Retorna para "Ativo" por padrão
-            txtIDFuncionario.Clear();
+            cmbFuncionario.SelectedIndex = 0;
         }
     }
 }

@@ -157,13 +157,9 @@ namespace BibliotecaSkilliana_M2.Emprestimo
 
                     dataGridViewProcura.DataSource = dt;
 
-                    if (dt.Rows.Count > 0)
+                    if (dt.Rows.Count == 0)
                     {
-                        MessageBox.Show("Empréstimo encontrado!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Empréstimo não encontrado.");
+                        MessageBox.Show("Empréstimo não encontrado!");
                     }
                 }
             }

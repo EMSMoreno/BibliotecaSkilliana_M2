@@ -1,4 +1,5 @@
 using BibliotecaSkilliana_M2.Emprestimo;
+using BibliotecaSkilliana_M2.Estante;
 using BibliotecaSkilliana_M2.Funcionario;
 using BibliotecaSkilliana_M2.Livro;
 using BibliotecaSkilliana_M2.Secçao;
@@ -121,6 +122,28 @@ namespace BibliotecaSkilliana_M2
         {
             using (var formApagarSecao = new FormApagarSecao())
             { formApagarSecao.ShowDialog(); }
+        }
+
+        #endregion
+
+        #region Menu Strip - Estante
+
+        private void registarEstanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formRegistarEstante = new FormRegistarEstante())
+            { formRegistarEstante.ShowDialog(); }
+        }
+
+        private void editarEstanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formEditarEstante = new FormEditarEstante())
+            { formEditarEstante.ShowDialog(); }
+        }
+
+        private void apagarEstanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var formApagarEstante = new FormApagarEstante())
+            { formApagarEstante.ShowDialog(); }
         }
 
         #endregion

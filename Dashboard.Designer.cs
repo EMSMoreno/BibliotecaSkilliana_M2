@@ -124,20 +124,23 @@
             // registarEstanteToolStripMenuItem
             // 
             registarEstanteToolStripMenuItem.Name = "registarEstanteToolStripMenuItem";
-            registarEstanteToolStripMenuItem.Size = new Size(157, 22);
+            registarEstanteToolStripMenuItem.Size = new Size(180, 22);
             registarEstanteToolStripMenuItem.Text = "Registar Estante";
+            registarEstanteToolStripMenuItem.Click += registarEstanteToolStripMenuItem_Click;
             // 
             // editarEstanteToolStripMenuItem
             // 
             editarEstanteToolStripMenuItem.Name = "editarEstanteToolStripMenuItem";
-            editarEstanteToolStripMenuItem.Size = new Size(157, 22);
+            editarEstanteToolStripMenuItem.Size = new Size(180, 22);
             editarEstanteToolStripMenuItem.Text = "Editar Estante";
+            editarEstanteToolStripMenuItem.Click += editarEstanteToolStripMenuItem_Click;
             // 
             // apagarEstanteToolStripMenuItem
             // 
             apagarEstanteToolStripMenuItem.Name = "apagarEstanteToolStripMenuItem";
-            apagarEstanteToolStripMenuItem.Size = new Size(157, 22);
+            apagarEstanteToolStripMenuItem.Size = new Size(180, 22);
             apagarEstanteToolStripMenuItem.Text = "Apagar Estante";
+            apagarEstanteToolStripMenuItem.Click += apagarEstanteToolStripMenuItem_Click;
             // 
             // secçãoToolStripMenuItem
             // 
@@ -149,21 +152,21 @@
             // registarSecçãoToolStripMenuItem
             // 
             registarSecçãoToolStripMenuItem.Name = "registarSecçãoToolStripMenuItem";
-            registarSecçãoToolStripMenuItem.Size = new Size(180, 22);
+            registarSecçãoToolStripMenuItem.Size = new Size(156, 22);
             registarSecçãoToolStripMenuItem.Text = "Registar Secção";
             registarSecçãoToolStripMenuItem.Click += registarSecçãoToolStripMenuItem_Click;
             // 
             // editarSecçãoToolStripMenuItem
             // 
             editarSecçãoToolStripMenuItem.Name = "editarSecçãoToolStripMenuItem";
-            editarSecçãoToolStripMenuItem.Size = new Size(180, 22);
+            editarSecçãoToolStripMenuItem.Size = new Size(156, 22);
             editarSecçãoToolStripMenuItem.Text = "Editar Secção";
             editarSecçãoToolStripMenuItem.Click += editarSecçãoToolStripMenuItem_Click;
             // 
             // apagarSecçãoToolStripMenuItem
             // 
             apagarSecçãoToolStripMenuItem.Name = "apagarSecçãoToolStripMenuItem";
-            apagarSecçãoToolStripMenuItem.Size = new Size(180, 22);
+            apagarSecçãoToolStripMenuItem.Size = new Size(156, 22);
             apagarSecçãoToolStripMenuItem.Text = "Apagar Secção";
             apagarSecçãoToolStripMenuItem.Click += apagarSecçãoToolStripMenuItem_Click;
             // 

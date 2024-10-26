@@ -36,7 +36,7 @@
             label8 = new Label();
             lblApagarLivro = new Label();
             btnApagarEstante = new Button();
-            cmbSocios = new ComboBox();
+            comboBoxEstantes = new ComboBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -113,16 +113,17 @@
             btnApagarEstante.TabIndex = 60;
             btnApagarEstante.Text = "Apagar Estante";
             btnApagarEstante.UseVisualStyleBackColor = true;
+            btnApagarEstante.Click += btnApagarEstante_Click;
             // 
-            // cmbSocios
+            // comboBoxEstantes
             // 
-            cmbSocios.FlatStyle = FlatStyle.Flat;
-            cmbSocios.FormattingEnabled = true;
-            cmbSocios.Location = new Point(293, 196);
-            cmbSocios.Name = "cmbSocios";
-            cmbSocios.Size = new Size(237, 23);
-            cmbSocios.TabIndex = 59;
-            cmbSocios.Text = "Selecione a Estante a Apagar";
+            comboBoxEstantes.FlatStyle = FlatStyle.Flat;
+            comboBoxEstantes.FormattingEnabled = true;
+            comboBoxEstantes.Location = new Point(293, 196);
+            comboBoxEstantes.Name = "comboBoxEstantes";
+            comboBoxEstantes.Size = new Size(237, 23);
+            comboBoxEstantes.TabIndex = 59;
+            comboBoxEstantes.Text = "Selecione a Estante a Apagar";
             // 
             // FormApagarEstante
             // 
@@ -131,11 +132,12 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lblApagarLivro);
             Controls.Add(btnApagarEstante);
-            Controls.Add(cmbSocios);
+            Controls.Add(comboBoxEstantes);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormApagarEstante";
             Text = "FormApagarEstante";
+            Load += FormApagarEstante_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -154,6 +156,6 @@
         private Label label8;
         private Label lblApagarLivro;
         private Button btnApagarEstante;
-        private ComboBox cmbSocios;
+        private ComboBox comboBoxEstantes;
     }
 }

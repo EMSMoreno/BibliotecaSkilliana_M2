@@ -16,7 +16,6 @@ namespace BibliotecaSkilliana_M2.Socio
         private void FormRegistarSocio_Load(object sender, EventArgs e)
         {
             CarregarEstados();
-            CarregarSocios();
             CarregarFuncionarios();
         }
 
@@ -60,34 +59,12 @@ namespace BibliotecaSkilliana_M2.Socio
                     MessageBox.Show("Sócio registado com sucesso!");
                     LimparCampos();
                     CarregarEstados();
-                    CarregarSocios();
                     CarregarFuncionarios();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao registar Sócio: " + ex.Message);
-            }
-        }
-
-        private void CarregarSocios()
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(cs))
-                {
-                    con.Open();
-                    string query = "SELECT * FROM Socio";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dataGridViewSocios.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar sócios: " + ex.Message);
             }
         }
 

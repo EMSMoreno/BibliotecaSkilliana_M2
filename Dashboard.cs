@@ -170,5 +170,29 @@ namespace BibliotecaSkilliana_M2
         }
 
         #endregion
+
+        private void btnGestãoLivro_Click(object sender, EventArgs e)
+        {
+            using (FormVerLivro formVerLivro = new FormVerLivro())
+            { formVerLivro.ShowDialog(); }
+        }
+
+        private void btnGestãoSócio_Click(object sender, EventArgs e)
+        {
+            using (FormVerSocio formVerSocio = new FormVerSocio())
+            { formVerSocio.ShowDialog(); }
+        }
+
+        private void btnGestaoEmprestimo_Click(object sender, EventArgs e)
+        {
+            using (FormVerEmprestimo formVerEmprestimo = new FormVerEmprestimo())
+            { formVerEmprestimo.ShowDialog(); }
+        }
+
+        private void btnGestaoFuncionário_Click(object sender, EventArgs e)
+        {
+            using (FormVerFuncionario formVerFuncionario = new FormVerFuncionario())
+            { formVerFuncionario.ShowDialog(); }
+        }
     }
 }

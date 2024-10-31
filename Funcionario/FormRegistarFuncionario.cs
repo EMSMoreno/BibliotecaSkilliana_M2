@@ -16,40 +16,8 @@ namespace BibliotecaSkilliana_M2.Funcionario
 
         private void FormRegistarFuncionario_Load(object sender, EventArgs e)
         {
-            LoadFuncionarios();
             LoadTipoFuncionario();
             LoadEstadoFuncionario();
-        }
-
-        private void LoadFuncionarios()
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(cs))
-                {
-                    con.Open();
-                    string query = @"
-                    SELECT 
-                        ID_Funcionario, 
-                        Nome, 
-                        Morada, 
-                        Telefone, 
-                        Email, 
-                        Data_Nascimento, 
-                        Numero_Funcionario, 
-                        Tipo, 
-                        Estado 
-                    FROM Funcionario";
-                    SqlDataAdapter da = new SqlDataAdapter(query, con);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar os Funcionários: " + ex.Message);
-            }
         }
 
         private void LoadTipoFuncionario()
@@ -129,7 +97,6 @@ namespace BibliotecaSkilliana_M2.Funcionario
                     {
                         MessageBox.Show("Funcionário registado com sucesso!");
                         LimparForm();
-                        LoadFuncionarios();
                     }
                     else
                     {

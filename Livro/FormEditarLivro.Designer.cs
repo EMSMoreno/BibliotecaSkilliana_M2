@@ -70,7 +70,7 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 467);
+            panel1.Location = new Point(0, 589);
             panel1.Name = "panel1";
             panel1.Size = new Size(916, 41);
             panel1.TabIndex = 5;
@@ -132,7 +132,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(38, 309);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(865, 152);
+            dataGridView1.Size = new Size(865, 274);
             dataGridView1.TabIndex = 15;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -340,7 +340,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(915, 507);
+            ClientSize = new Size(915, 630);
             Controls.Add(txtEstado);
             Controls.Add(txtIdioma);
             Controls.Add(txtEditora);

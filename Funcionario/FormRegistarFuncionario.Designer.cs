@@ -55,7 +55,6 @@
             txtIDFunc = new TextBox();
             lblEditarLivro = new Label();
             cmbTipoFunc = new ComboBox();
-            dataGridView1 = new DataGridView();
             dataGridViewProcura = new DataGridView();
             btnLimparFormProcura = new Button();
             btnProcuraFuncionario = new Button();
@@ -65,7 +64,6 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             SuspendLayout();
             // 
@@ -104,7 +102,7 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(1, 692);
+            panel1.Location = new Point(1, 589);
             panel1.Name = "panel1";
             panel1.Size = new Size(828, 41);
             panel1.TabIndex = 9;
@@ -123,16 +121,16 @@
             // cmbEstadoFunc
             // 
             cmbEstadoFunc.FormattingEnabled = true;
-            cmbEstadoFunc.Location = new Point(197, 381);
+            cmbEstadoFunc.Location = new Point(412, 307);
             cmbEstadoFunc.Name = "cmbEstadoFunc";
-            cmbEstadoFunc.Size = new Size(162, 23);
+            cmbEstadoFunc.Size = new Size(159, 23);
             cmbEstadoFunc.TabIndex = 100;
             // 
             // btnLimparForm
             // 
             btnLimparForm.FlatAppearance.BorderColor = Color.Black;
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(33, 445);
+            btnLimparForm.Location = new Point(248, 365);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(158, 30);
             btnLimparForm.TabIndex = 97;
@@ -144,7 +142,7 @@
             // 
             btnRegistarFuncionario.FlatAppearance.BorderColor = Color.Lime;
             btnRegistarFuncionario.FlatStyle = FlatStyle.Flat;
-            btnRegistarFuncionario.Location = new Point(197, 445);
+            btnRegistarFuncionario.Location = new Point(412, 365);
             btnRegistarFuncionario.Name = "btnRegistarFuncionario";
             btnRegistarFuncionario.Size = new Size(171, 30);
             btnRegistarFuncionario.TabIndex = 96;
@@ -155,7 +153,7 @@
             // lblNFuncionario
             // 
             lblNFuncionario.AutoSize = true;
-            lblNFuncionario.Location = new Point(197, 306);
+            lblNFuncionario.Location = new Point(577, 219);
             lblNFuncionario.Name = "lblNFuncionario";
             lblNFuncionario.Size = new Size(87, 15);
             lblNFuncionario.TabIndex = 95;
@@ -163,7 +161,7 @@
             // 
             // txtNumeroFunc
             // 
-            txtNumeroFunc.Location = new Point(197, 324);
+            txtNumeroFunc.Location = new Point(577, 237);
             txtNumeroFunc.Name = "txtNumeroFunc";
             txtNumeroFunc.Size = new Size(162, 23);
             txtNumeroFunc.TabIndex = 94;
@@ -171,7 +169,7 @@
             // lblTipo
             // 
             lblTipo.AutoSize = true;
-            lblTipo.Location = new Point(33, 363);
+            lblTipo.Location = new Point(149, 289);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(96, 15);
             lblTipo.TabIndex = 93;
@@ -180,7 +178,7 @@
             // lblEstado
             // 
             lblEstado.AutoSize = true;
-            lblEstado.Location = new Point(197, 363);
+            lblEstado.Location = new Point(412, 289);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(42, 15);
             lblEstado.TabIndex = 91;
@@ -189,7 +187,7 @@
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(149, 248);
+            lblEmail.Location = new Point(149, 219);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(36, 15);
             lblEmail.TabIndex = 90;
@@ -197,7 +195,7 @@
             // 
             // txtEmailFunc
             // 
-            txtEmailFunc.Location = new Point(149, 266);
+            txtEmailFunc.Location = new Point(149, 237);
             txtEmailFunc.Name = "txtEmailFunc";
             txtEmailFunc.Size = new Size(210, 23);
             txtEmailFunc.TabIndex = 89;
@@ -205,7 +203,7 @@
             // lblTelefone
             // 
             lblTelefone.AutoSize = true;
-            lblTelefone.Location = new Point(32, 248);
+            lblTelefone.Location = new Point(32, 219);
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(51, 15);
             lblTelefone.TabIndex = 86;
@@ -213,14 +211,14 @@
             // 
             // txtTelefoneFunc
             // 
-            txtTelefoneFunc.Location = new Point(32, 266);
+            txtTelefoneFunc.Location = new Point(32, 237);
             txtTelefoneFunc.Name = "txtTelefoneFunc";
             txtTelefoneFunc.Size = new Size(111, 23);
             txtTelefoneFunc.TabIndex = 85;
             // 
             // dtpDataNasc
             // 
-            dtpDataNasc.Location = new Point(32, 324);
+            dtpDataNasc.Location = new Point(412, 237);
             dtpDataNasc.Name = "dtpDataNasc";
             dtpDataNasc.Size = new Size(159, 23);
             dtpDataNasc.TabIndex = 84;
@@ -228,7 +226,7 @@
             // lblMorada
             // 
             lblMorada.AutoSize = true;
-            lblMorada.Location = new Point(32, 202);
+            lblMorada.Location = new Point(412, 144);
             lblMorada.Name = "lblMorada";
             lblMorada.Size = new Size(48, 15);
             lblMorada.TabIndex = 83;
@@ -236,7 +234,7 @@
             // 
             // txtMoradaFunc
             // 
-            txtMoradaFunc.Location = new Point(32, 220);
+            txtMoradaFunc.Location = new Point(412, 162);
             txtMoradaFunc.Name = "txtMoradaFunc";
             txtMoradaFunc.Size = new Size(327, 23);
             txtMoradaFunc.TabIndex = 82;
@@ -244,7 +242,7 @@
             // lblDataNasc
             // 
             lblDataNasc.AutoSize = true;
-            lblDataNasc.Location = new Point(32, 306);
+            lblDataNasc.Location = new Point(412, 219);
             lblDataNasc.Name = "lblDataNasc";
             lblDataNasc.Size = new Size(98, 15);
             lblDataNasc.TabIndex = 81;
@@ -296,23 +294,15 @@
             // cmbTipoFunc
             // 
             cmbTipoFunc.FormattingEnabled = true;
-            cmbTipoFunc.Location = new Point(32, 381);
+            cmbTipoFunc.Location = new Point(149, 307);
             cmbTipoFunc.Name = "cmbTipoFunc";
-            cmbTipoFunc.Size = new Size(162, 23);
+            cmbTipoFunc.Size = new Size(210, 23);
             cmbTipoFunc.TabIndex = 101;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(395, 96);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(421, 379);
-            dataGridView1.TabIndex = 102;
             // 
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(395, 545);
+            dataGridViewProcura.Location = new Point(395, 443);
             dataGridViewProcura.Name = "dataGridViewProcura";
             dataGridViewProcura.Size = new Size(421, 127);
             dataGridViewProcura.TabIndex = 103;
@@ -321,7 +311,7 @@
             // 
             btnLimparFormProcura.FlatAppearance.BorderColor = Color.Black;
             btnLimparFormProcura.FlatStyle = FlatStyle.Flat;
-            btnLimparFormProcura.Location = new Point(20, 642);
+            btnLimparFormProcura.Location = new Point(20, 540);
             btnLimparFormProcura.Name = "btnLimparFormProcura";
             btnLimparFormProcura.Size = new Size(171, 30);
             btnLimparFormProcura.TabIndex = 105;
@@ -333,7 +323,7 @@
             // 
             btnProcuraFuncionario.FlatAppearance.BorderColor = Color.Lime;
             btnProcuraFuncionario.FlatStyle = FlatStyle.Flat;
-            btnProcuraFuncionario.Location = new Point(197, 642);
+            btnProcuraFuncionario.Location = new Point(197, 540);
             btnProcuraFuncionario.Name = "btnProcuraFuncionario";
             btnProcuraFuncionario.Size = new Size(171, 30);
             btnProcuraFuncionario.TabIndex = 104;
@@ -344,7 +334,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(88, 578);
+            label3.Location = new Point(88, 476);
             label3.Name = "label3";
             label3.Size = new Size(106, 15);
             label3.TabIndex = 107;
@@ -352,7 +342,7 @@
             // 
             // txtFuncionarioProcura
             // 
-            txtFuncionarioProcura.Location = new Point(91, 596);
+            txtFuncionarioProcura.Location = new Point(91, 494);
             txtFuncionarioProcura.Name = "txtFuncionarioProcura";
             txtFuncionarioProcura.Size = new Size(226, 23);
             txtFuncionarioProcura.TabIndex = 106;
@@ -361,7 +351,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label4.Location = new Point(45, 533);
+            label4.Location = new Point(45, 431);
             label4.Name = "label4";
             label4.Size = new Size(330, 21);
             label4.TabIndex = 108;
@@ -371,14 +361,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 733);
+            ClientSize = new Size(828, 630);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtFuncionarioProcura);
             Controls.Add(btnLimparFormProcura);
             Controls.Add(btnProcuraFuncionario);
             Controls.Add(dataGridViewProcura);
-            Controls.Add(dataGridView1);
             Controls.Add(cmbTipoFunc);
             Controls.Add(cmbEstadoFunc);
             Controls.Add(btnLimparForm);
@@ -410,7 +399,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -447,7 +435,6 @@
         private TextBox txtIDFunc;
         private Label lblEditarLivro;
         private ComboBox cmbTipoFunc;
-        private DataGridView dataGridView1;
         private DataGridView dataGridViewProcura;
         private Button btnLimparFormProcura;
         private Button btnProcuraFuncionario;

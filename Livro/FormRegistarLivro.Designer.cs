@@ -55,7 +55,6 @@
             txtTitulo = new TextBox();
             lblISBN = new Label();
             txtISBN = new TextBox();
-            dataGridView1 = new DataGridView();
             lblEditarLivro = new Label();
             dataGridViewProcura = new DataGridView();
             label3 = new Label();
@@ -69,7 +68,6 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             SuspendLayout();
             // 
@@ -80,7 +78,7 @@
             panel2.Controls.Add(label2);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(918, 64);
+            panel2.Size = new Size(849, 64);
             panel2.TabIndex = 7;
             // 
             // pictureBox2
@@ -108,9 +106,9 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 722);
+            panel1.Location = new Point(0, 663);
             panel1.Name = "panel1";
-            panel1.Size = new Size(918, 41);
+            panel1.Size = new Size(849, 41);
             panel1.TabIndex = 8;
             // 
             // label1
@@ -118,7 +116,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(172, 15);
+            label1.Location = new Point(235, 15);
             label1.Name = "label1";
             label1.Size = new Size(446, 17);
             label1.TabIndex = 1;
@@ -128,7 +126,7 @@
             // 
             btnLimparForm.FlatAppearance.BorderColor = Color.Black;
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(31, 514);
+            btnLimparForm.Location = new Point(32, 433);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(159, 30);
             btnLimparForm.TabIndex = 66;
@@ -140,7 +138,7 @@
             // 
             btnRegistarLivro.FlatAppearance.BorderColor = Color.Lime;
             btnRegistarLivro.FlatStyle = FlatStyle.Flat;
-            btnRegistarLivro.Location = new Point(199, 514);
+            btnRegistarLivro.Location = new Point(200, 433);
             btnRegistarLivro.Name = "btnRegistarLivro";
             btnRegistarLivro.Size = new Size(159, 30);
             btnRegistarLivro.TabIndex = 65;
@@ -151,7 +149,7 @@
             // lblQuantidade
             // 
             lblQuantidade.AutoSize = true;
-            lblQuantidade.Location = new Point(31, 449);
+            lblQuantidade.Location = new Point(409, 349);
             lblQuantidade.Name = "lblQuantidade";
             lblQuantidade.Size = new Size(69, 15);
             lblQuantidade.TabIndex = 64;
@@ -159,7 +157,7 @@
             // 
             // txtQuantidade
             // 
-            txtQuantidade.Location = new Point(31, 467);
+            txtQuantidade.Location = new Point(409, 367);
             txtQuantidade.Name = "txtQuantidade";
             txtQuantidade.Size = new Size(159, 23);
             txtQuantidade.TabIndex = 63;
@@ -167,7 +165,7 @@
             // lblCodEstante
             // 
             lblCodEstante.AutoSize = true;
-            lblCodEstante.Location = new Point(200, 449);
+            lblCodEstante.Location = new Point(578, 349);
             lblCodEstante.Name = "lblCodEstante";
             lblCodEstante.Size = new Size(73, 15);
             lblCodEstante.TabIndex = 62;
@@ -175,7 +173,7 @@
             // 
             // txtCodigoEstante
             // 
-            txtCodigoEstante.Location = new Point(200, 467);
+            txtCodigoEstante.Location = new Point(578, 367);
             txtCodigoEstante.Name = "txtCodigoEstante";
             txtCodigoEstante.Size = new Size(158, 23);
             txtCodigoEstante.TabIndex = 61;
@@ -183,7 +181,7 @@
             // lblEstado
             // 
             lblEstado.AutoSize = true;
-            lblEstado.Location = new Point(31, 346);
+            lblEstado.Location = new Point(31, 278);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(42, 15);
             lblEstado.TabIndex = 60;
@@ -192,7 +190,7 @@
             // lblNPaginas
             // 
             lblNPaginas.AutoSize = true;
-            lblNPaginas.Location = new Point(200, 399);
+            lblNPaginas.Location = new Point(200, 349);
             lblNPaginas.Name = "lblNPaginas";
             lblNPaginas.Size = new Size(65, 15);
             lblNPaginas.TabIndex = 58;
@@ -200,7 +198,7 @@
             // 
             // txtNumeroPaginas
             // 
-            txtNumeroPaginas.Location = new Point(200, 417);
+            txtNumeroPaginas.Location = new Point(200, 367);
             txtNumeroPaginas.Name = "txtNumeroPaginas";
             txtNumeroPaginas.Size = new Size(158, 23);
             txtNumeroPaginas.TabIndex = 57;
@@ -208,7 +206,7 @@
             // lblIdioma
             // 
             lblIdioma.AutoSize = true;
-            lblIdioma.Location = new Point(31, 399);
+            lblIdioma.Location = new Point(31, 349);
             lblIdioma.Name = "lblIdioma";
             lblIdioma.Size = new Size(44, 15);
             lblIdioma.TabIndex = 56;
@@ -217,7 +215,7 @@
             // lblEditora
             // 
             lblEditora.AutoSize = true;
-            lblEditora.Location = new Point(200, 346);
+            lblEditora.Location = new Point(200, 278);
             lblEditora.Name = "lblEditora";
             lblEditora.Size = new Size(44, 15);
             lblEditora.TabIndex = 54;
@@ -226,7 +224,7 @@
             // lblEdicao
             // 
             lblEdicao.AutoSize = true;
-            lblEdicao.Location = new Point(200, 291);
+            lblEdicao.Location = new Point(200, 198);
             lblEdicao.Name = "lblEdicao";
             lblEdicao.Size = new Size(42, 15);
             lblEdicao.TabIndex = 52;
@@ -234,14 +232,14 @@
             // 
             // txtEdicao
             // 
-            txtEdicao.Location = new Point(200, 309);
+            txtEdicao.Location = new Point(200, 216);
             txtEdicao.Name = "txtEdicao";
             txtEdicao.Size = new Size(158, 23);
             txtEdicao.TabIndex = 51;
             // 
             // dtpDataLancamento
             // 
-            dtpDataLancamento.Location = new Point(31, 309);
+            dtpDataLancamento.Location = new Point(31, 216);
             dtpDataLancamento.Name = "dtpDataLancamento";
             dtpDataLancamento.Size = new Size(159, 23);
             dtpDataLancamento.TabIndex = 50;
@@ -249,7 +247,7 @@
             // lblSinopse
             // 
             lblSinopse.AutoSize = true;
-            lblSinopse.Location = new Point(31, 187);
+            lblSinopse.Location = new Point(409, 129);
             lblSinopse.Name = "lblSinopse";
             lblSinopse.Size = new Size(48, 15);
             lblSinopse.TabIndex = 49;
@@ -257,16 +255,16 @@
             // 
             // txtSinopse
             // 
-            txtSinopse.Location = new Point(31, 205);
+            txtSinopse.Location = new Point(409, 147);
             txtSinopse.Multiline = true;
             txtSinopse.Name = "txtSinopse";
-            txtSinopse.Size = new Size(327, 67);
+            txtSinopse.Size = new Size(391, 172);
             txtSinopse.TabIndex = 48;
             // 
             // lblDataLanc
             // 
             lblDataLanc.AutoSize = true;
-            lblDataLanc.Location = new Point(31, 291);
+            lblDataLanc.Location = new Point(31, 198);
             lblDataLanc.Name = "lblDataLanc";
             lblDataLanc.Size = new Size(100, 15);
             lblDataLanc.TabIndex = 47;
@@ -304,14 +302,6 @@
             txtISBN.Size = new Size(159, 23);
             txtISBN.TabIndex = 43;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(399, 83);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(489, 461);
-            dataGridView1.TabIndex = 42;
-            // 
             // lblEditarLivro
             // 
             lblEditarLivro.AutoSize = true;
@@ -325,16 +315,16 @@
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(399, 595);
+            dataGridViewProcura.Location = new Point(389, 499);
             dataGridViewProcura.Name = "dataGridViewProcura";
-            dataGridViewProcura.Size = new Size(489, 109);
+            dataGridViewProcura.Size = new Size(411, 130);
             dataGridViewProcura.TabIndex = 67;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(69, 574);
+            label3.Location = new Point(59, 499);
             label3.Name = "label3";
             label3.Size = new Size(224, 21);
             label3.TabIndex = 68;
@@ -344,7 +334,7 @@
             // 
             btnProcurarLivro.FlatAppearance.BorderColor = Color.BlueViolet;
             btnProcurarLivro.FlatStyle = FlatStyle.Flat;
-            btnProcurarLivro.Location = new Point(208, 674);
+            btnProcurarLivro.Location = new Point(198, 599);
             btnProcurarLivro.Name = "btnProcurarLivro";
             btnProcurarLivro.Size = new Size(171, 30);
             btnProcurarLivro.TabIndex = 69;
@@ -356,7 +346,7 @@
             // 
             btnLimparProcura.FlatAppearance.BorderColor = Color.Black;
             btnLimparProcura.FlatStyle = FlatStyle.Flat;
-            btnLimparProcura.Location = new Point(31, 674);
+            btnLimparProcura.Location = new Point(21, 599);
             btnLimparProcura.Name = "btnLimparProcura";
             btnLimparProcura.Size = new Size(171, 30);
             btnLimparProcura.TabIndex = 70;
@@ -367,7 +357,7 @@
             // lblTituloProcura
             // 
             lblTituloProcura.AutoSize = true;
-            lblTituloProcura.Location = new Point(99, 613);
+            lblTituloProcura.Location = new Point(89, 538);
             lblTituloProcura.Name = "lblTituloProcura";
             lblTituloProcura.Size = new Size(37, 15);
             lblTituloProcura.TabIndex = 72;
@@ -375,28 +365,28 @@
             // 
             // txtTituloProcura
             // 
-            txtTituloProcura.Location = new Point(102, 631);
+            txtTituloProcura.Location = new Point(92, 556);
             txtTituloProcura.Name = "txtTituloProcura";
             txtTituloProcura.Size = new Size(171, 23);
             txtTituloProcura.TabIndex = 71;
             // 
             // txtEditora
             // 
-            txtEditora.Location = new Point(200, 364);
+            txtEditora.Location = new Point(200, 296);
             txtEditora.Name = "txtEditora";
             txtEditora.Size = new Size(158, 23);
             txtEditora.TabIndex = 73;
             // 
             // txtIdioma
             // 
-            txtIdioma.Location = new Point(31, 417);
+            txtIdioma.Location = new Point(31, 367);
             txtIdioma.Name = "txtIdioma";
             txtIdioma.Size = new Size(158, 23);
             txtIdioma.TabIndex = 74;
             // 
             // txtEstado
             // 
-            txtEstado.Location = new Point(31, 364);
+            txtEstado.Location = new Point(31, 296);
             txtEstado.Name = "txtEstado";
             txtEstado.Size = new Size(158, 23);
             txtEstado.TabIndex = 75;
@@ -405,7 +395,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(918, 763);
+            ClientSize = new Size(848, 704);
             Controls.Add(txtEstado);
             Controls.Add(txtIdioma);
             Controls.Add(txtEditora);
@@ -436,19 +426,16 @@
             Controls.Add(txtTitulo);
             Controls.Add(lblISBN);
             Controls.Add(txtISBN);
-            Controls.Add(dataGridView1);
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormRegistarLivro";
             Text = "FormRegistarLivro";
-            Load += FormRegistarLivro_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -482,7 +469,6 @@
         private TextBox txtTitulo;
         private Label lblISBN;
         private TextBox txtISBN;
-        private DataGridView dataGridView1;
         private Label lblEditarLivro;
         private DataGridView dataGridViewProcura;
         private Label label3;

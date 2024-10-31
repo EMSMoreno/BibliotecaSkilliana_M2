@@ -33,7 +33,6 @@
             dataGridViewPesquisaSocios = new DataGridView();
             btnLimparForm = new Button();
             btnRegistarSocio = new Button();
-            dataGridViewSocios = new DataGridView();
             dtpDataNascimento = new DateTimePicker();
             label5 = new Label();
             label3 = new Label();
@@ -60,7 +59,6 @@
             label14 = new Label();
             cmbFuncionario = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPesquisaSocios).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewSocios).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -70,7 +68,7 @@
             // 
             btnProcurarSocio.FlatAppearance.BorderColor = Color.DarkOrchid;
             btnProcurarSocio.FlatStyle = FlatStyle.Flat;
-            btnProcurarSocio.Location = new Point(181, 629);
+            btnProcurarSocio.Location = new Point(172, 570);
             btnProcurarSocio.Name = "btnProcurarSocio";
             btnProcurarSocio.Size = new Size(154, 37);
             btnProcurarSocio.TabIndex = 37;
@@ -81,15 +79,15 @@
             // dataGridViewPesquisaSocios
             // 
             dataGridViewPesquisaSocios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPesquisaSocios.Location = new Point(359, 549);
+            dataGridViewPesquisaSocios.Location = new Point(356, 450);
             dataGridViewPesquisaSocios.Name = "dataGridViewPesquisaSocios";
-            dataGridViewPesquisaSocios.Size = new Size(439, 117);
+            dataGridViewPesquisaSocios.Size = new Size(439, 157);
             dataGridViewPesquisaSocios.TabIndex = 35;
             // 
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(22, 457);
+            btnLimparForm.Location = new Point(211, 365);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 33;
@@ -100,7 +98,7 @@
             // 
             btnRegistarSocio.FlatAppearance.BorderColor = Color.LimeGreen;
             btnRegistarSocio.FlatStyle = FlatStyle.Flat;
-            btnRegistarSocio.Location = new Point(186, 457);
+            btnRegistarSocio.Location = new Point(375, 365);
             btnRegistarSocio.Name = "btnRegistarSocio";
             btnRegistarSocio.Size = new Size(154, 37);
             btnRegistarSocio.TabIndex = 32;
@@ -108,25 +106,17 @@
             btnRegistarSocio.UseVisualStyleBackColor = true;
             btnRegistarSocio.Click += btnRegistarSocio_Click;
             // 
-            // dataGridViewSocios
-            // 
-            dataGridViewSocios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewSocios.Location = new Point(359, 101);
-            dataGridViewSocios.Name = "dataGridViewSocios";
-            dataGridViewSocios.Size = new Size(439, 393);
-            dataGridViewSocios.TabIndex = 30;
-            // 
             // dtpDataNascimento
             // 
-            dtpDataNascimento.Location = new Point(140, 307);
+            dtpDataNascimento.Location = new Point(460, 229);
             dtpDataNascimento.Name = "dtpDataNascimento";
-            dtpDataNascimento.Size = new Size(200, 23);
+            dtpDataNascimento.Size = new Size(218, 23);
             dtpDataNascimento.TabIndex = 29;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(36, 395);
+            label5.Location = new Point(356, 288);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
             label5.TabIndex = 24;
@@ -135,7 +125,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(37, 144);
+            label3.Location = new Point(388, 104);
             label3.Name = "label3";
             label3.Size = new Size(106, 15);
             label3.TabIndex = 22;
@@ -159,7 +149,7 @@
             // 
             // txtNumeroCartaoCidadao
             // 
-            txtNumeroCartaoCidadao.Location = new Point(152, 141);
+            txtNumeroCartaoCidadao.Location = new Point(503, 101);
             txtNumeroCartaoCidadao.Name = "txtNumeroCartaoCidadao";
             txtNumeroCartaoCidadao.Size = new Size(146, 23);
             txtNumeroCartaoCidadao.TabIndex = 39;
@@ -167,7 +157,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(37, 313);
+            label8.Location = new Point(356, 234);
             label8.Name = "label8";
             label8.Size = new Size(98, 15);
             label8.TabIndex = 40;
@@ -176,7 +166,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(35, 185);
+            label9.Location = new Point(26, 167);
             label9.Name = "label9";
             label9.Size = new Size(48, 15);
             label9.TabIndex = 41;
@@ -185,7 +175,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(37, 230);
+            label10.Location = new Point(375, 167);
             label10.Name = "label10";
             label10.Size = new Size(36, 15);
             label10.TabIndex = 42;
@@ -194,7 +184,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(37, 271);
+            label11.Location = new Point(26, 229);
             label11.Name = "label11";
             label11.Size = new Size(51, 15);
             label11.TabIndex = 43;
@@ -202,21 +192,21 @@
             // 
             // txtMorada
             // 
-            txtMorada.Location = new Point(92, 182);
+            txtMorada.Location = new Point(83, 164);
             txtMorada.Name = "txtMorada";
-            txtMorada.Size = new Size(248, 23);
+            txtMorada.Size = new Size(257, 23);
             txtMorada.TabIndex = 44;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(92, 227);
+            txtEmail.Location = new Point(430, 164);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(248, 23);
             txtEmail.TabIndex = 45;
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(94, 268);
+            txtTelefone.Location = new Point(83, 226);
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(145, 23);
             txtTelefone.TabIndex = 46;
@@ -224,7 +214,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(37, 353);
+            label12.Location = new Point(32, 285);
             label12.Name = "label12";
             label12.Size = new Size(42, 15);
             label12.TabIndex = 48;
@@ -233,16 +223,16 @@
             // cmbEstado
             // 
             cmbEstado.FormattingEnabled = true;
-            cmbEstado.Location = new Point(140, 350);
+            cmbEstado.Location = new Point(83, 282);
             cmbEstado.Name = "cmbEstado";
-            cmbEstado.Size = new Size(200, 23);
+            cmbEstado.Size = new Size(257, 23);
             cmbEstado.TabIndex = 49;
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label6);
-            panel1.Location = new Point(0, 683);
+            panel1.Location = new Point(0, 629);
             panel1.Name = "panel1";
             panel1.Size = new Size(810, 41);
             panel1.TabIndex = 50;
@@ -260,7 +250,7 @@
             // 
             // textBoxSociosProcura
             // 
-            textBoxSociosProcura.Location = new Point(86, 589);
+            textBoxSociosProcura.Location = new Point(83, 507);
             textBoxSociosProcura.Name = "textBoxSociosProcura";
             textBoxSociosProcura.Size = new Size(178, 23);
             textBoxSociosProcura.TabIndex = 52;
@@ -268,7 +258,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(86, 571);
+            label13.Location = new Point(83, 489);
             label13.Name = "label13";
             label13.Size = new Size(43, 15);
             label13.TabIndex = 51;
@@ -277,7 +267,7 @@
             // btnLimparFormProcura
             // 
             btnLimparFormProcura.FlatStyle = FlatStyle.Flat;
-            btnLimparFormProcura.Location = new Point(21, 629);
+            btnLimparFormProcura.Location = new Point(12, 570);
             btnLimparFormProcura.Name = "btnLimparFormProcura";
             btnLimparFormProcura.Size = new Size(154, 37);
             btnLimparFormProcura.TabIndex = 53;
@@ -289,7 +279,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label7.Location = new Point(66, 526);
+            label7.Location = new Point(63, 427);
             label7.Name = "label7";
             label7.Size = new Size(232, 21);
             label7.TabIndex = 69;
@@ -329,16 +319,16 @@
             // cmbFuncionario
             // 
             cmbFuncionario.FormattingEnabled = true;
-            cmbFuncionario.Location = new Point(140, 392);
+            cmbFuncionario.Location = new Point(460, 285);
             cmbFuncionario.Name = "cmbFuncionario";
-            cmbFuncionario.Size = new Size(200, 23);
+            cmbFuncionario.Size = new Size(218, 23);
             cmbFuncionario.TabIndex = 71;
             // 
             // FormRegistarSocio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(810, 724);
+            ClientSize = new Size(810, 670);
             Controls.Add(cmbFuncionario);
             Controls.Add(panel2);
             Controls.Add(label7);
@@ -361,7 +351,6 @@
             Controls.Add(dataGridViewPesquisaSocios);
             Controls.Add(btnLimparForm);
             Controls.Add(btnRegistarSocio);
-            Controls.Add(dataGridViewSocios);
             Controls.Add(dtpDataNascimento);
             Controls.Add(label5);
             Controls.Add(label3);
@@ -370,7 +359,6 @@
             Text = "FormRegistarSocio";
             Load += FormRegistarSocio_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewPesquisaSocios).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewSocios).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -386,7 +374,6 @@
         private DataGridView dataGridViewPesquisaSocios;
         private Button btnLimparForm;
         private Button btnRegistarSocio;
-        private DataGridView dataGridViewSocios;
         private DateTimePicker dtpDataNascimento;
         private Label label5;
         private Label label3;

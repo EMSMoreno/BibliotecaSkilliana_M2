@@ -17,12 +17,6 @@ namespace BibliotecaSkilliana_M2.Emprestimo
             InitializeComponent();
         }
 
-        private void FormRegistarEmprestimo_Load(object sender, EventArgs e)
-        {
-            CarregarEmprestimos();
-            CarregarFuncionarios();
-        }
-
         #region Métodos
 
         private void RegistarEmprestimo()
@@ -56,7 +50,6 @@ namespace BibliotecaSkilliana_M2.Emprestimo
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Empréstimo registrado com sucesso!");
 
-                    CarregarEmprestimos();
                     LimparForm();
                 }
             }
@@ -92,52 +85,6 @@ namespace BibliotecaSkilliana_M2.Emprestimo
             }
         }
 
-        private void CarregarEmprestimos()
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(cs))
-                {
-                    con.Open();
-                    string query = "SELECT * FROM Emprestimo";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    dataGridViewEmprestimos.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar empréstimos: " + ex.Message);
-            }
-        }
-
-        private void CarregarFuncionarios()
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(cs))
-                {
-                    con.Open();
-                    string query = "SELECT ID_Funcionario, Nome FROM Funcionario";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    DataTable dt = new DataTable();
-                    dt.Load(reader);
-
-                    comboBoxFuncionarioID.DisplayMember = "Nome";
-                    comboBoxFuncionarioID.ValueMember = "ID_Funcionario";
-                    comboBoxFuncionarioID.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar funcionários: " + ex.Message);
-            }
-        }
 
         private void ProcurarEmprestimo()
         {

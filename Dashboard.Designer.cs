@@ -60,12 +60,16 @@
             apagarFuncionárioToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
             label2 = new Label();
-            btnRegistarLivro = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnGestãoLivro = new Button();
+            btnGestãoSócio = new Button();
+            btnGestaoEmprestimo = new Button();
+            btnGestaoFuncionário = new Button();
+            label3 = new Label();
+            label4 = new Label();
+            groupBox1 = new GroupBox();
             menuStrip2.SuspendLayout();
             panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -180,21 +184,21 @@
             // registarAutorToolStripMenuItem
             // 
             registarAutorToolStripMenuItem.Name = "registarAutorToolStripMenuItem";
-            registarAutorToolStripMenuItem.Size = new Size(180, 22);
+            registarAutorToolStripMenuItem.Size = new Size(149, 22);
             registarAutorToolStripMenuItem.Text = "Registar Autor";
             registarAutorToolStripMenuItem.Click += registarAutorToolStripMenuItem_Click;
             // 
             // editarAutorToolStripMenuItem
             // 
             editarAutorToolStripMenuItem.Name = "editarAutorToolStripMenuItem";
-            editarAutorToolStripMenuItem.Size = new Size(180, 22);
+            editarAutorToolStripMenuItem.Size = new Size(149, 22);
             editarAutorToolStripMenuItem.Text = "Editar Autor";
             editarAutorToolStripMenuItem.Click += editarAutorToolStripMenuItem_Click;
             // 
             // apagarAutorToolStripMenuItem
             // 
             apagarAutorToolStripMenuItem.Name = "apagarAutorToolStripMenuItem";
-            apagarAutorToolStripMenuItem.Size = new Size(180, 22);
+            apagarAutorToolStripMenuItem.Size = new Size(149, 22);
             apagarAutorToolStripMenuItem.Text = "Apagar Autor";
             apagarAutorToolStripMenuItem.Click += apagarAutorToolStripMenuItem_Click;
             // 
@@ -302,63 +306,96 @@
             label2.TabIndex = 1;
             label2.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // btnRegistarLivro
+            // btnGestãoLivro
             // 
-            btnRegistarLivro.FlatAppearance.BorderColor = Color.DodgerBlue;
-            btnRegistarLivro.FlatStyle = FlatStyle.Flat;
-            btnRegistarLivro.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRegistarLivro.Location = new Point(202, 160);
-            btnRegistarLivro.Name = "btnRegistarLivro";
-            btnRegistarLivro.Size = new Size(171, 77);
-            btnRegistarLivro.TabIndex = 66;
-            btnRegistarLivro.Text = "Livros 📖";
-            btnRegistarLivro.UseVisualStyleBackColor = true;
+            btnGestãoLivro.FlatAppearance.BorderColor = Color.DodgerBlue;
+            btnGestãoLivro.FlatStyle = FlatStyle.Flat;
+            btnGestãoLivro.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGestãoLivro.Location = new Point(177, 160);
+            btnGestãoLivro.Name = "btnGestãoLivro";
+            btnGestãoLivro.Size = new Size(196, 77);
+            btnGestãoLivro.TabIndex = 66;
+            btnGestãoLivro.Text = "Gestão de Livros 📖";
+            btnGestãoLivro.UseVisualStyleBackColor = true;
+            btnGestãoLivro.Click += btnGestãoLivro_Click;
             // 
-            // button1
+            // btnGestãoSócio
             // 
-            button1.FlatAppearance.BorderColor = Color.Lime;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(202, 266);
-            button1.Name = "button1";
-            button1.Size = new Size(171, 77);
-            button1.TabIndex = 67;
-            button1.Text = "Sócios 👔";
-            button1.UseVisualStyleBackColor = true;
+            btnGestãoSócio.FlatAppearance.BorderColor = Color.Lime;
+            btnGestãoSócio.FlatStyle = FlatStyle.Flat;
+            btnGestãoSócio.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGestãoSócio.Location = new Point(177, 266);
+            btnGestãoSócio.Name = "btnGestãoSócio";
+            btnGestãoSócio.Size = new Size(196, 77);
+            btnGestãoSócio.TabIndex = 67;
+            btnGestãoSócio.Text = "Gestão de Sócios 👔";
+            btnGestãoSócio.UseVisualStyleBackColor = true;
+            btnGestãoSócio.Click += btnGestãoSócio_Click;
             // 
-            // button2
+            // btnGestaoEmprestimo
             // 
-            button2.FlatAppearance.BorderColor = Color.Gold;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(413, 160);
-            button2.Name = "button2";
-            button2.Size = new Size(171, 77);
-            button2.TabIndex = 68;
-            button2.Text = "Empréstimos 📚";
-            button2.UseVisualStyleBackColor = true;
+            btnGestaoEmprestimo.FlatAppearance.BorderColor = Color.Gold;
+            btnGestaoEmprestimo.FlatStyle = FlatStyle.Flat;
+            btnGestaoEmprestimo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGestaoEmprestimo.Location = new Point(413, 160);
+            btnGestaoEmprestimo.Name = "btnGestaoEmprestimo";
+            btnGestaoEmprestimo.Size = new Size(195, 77);
+            btnGestaoEmprestimo.TabIndex = 68;
+            btnGestaoEmprestimo.Text = "Gestão de Empréstimos 📚";
+            btnGestaoEmprestimo.UseVisualStyleBackColor = true;
+            btnGestaoEmprestimo.Click += btnGestaoEmprestimo_Click;
             // 
-            // button3
+            // btnGestaoFuncionário
             // 
-            button3.FlatAppearance.BorderColor = Color.Crimson;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(413, 266);
-            button3.Name = "button3";
-            button3.Size = new Size(171, 77);
-            button3.TabIndex = 69;
-            button3.Text = "Colaboradores \U0001f9cd";
-            button3.UseVisualStyleBackColor = true;
+            btnGestaoFuncionário.FlatAppearance.BorderColor = Color.Crimson;
+            btnGestaoFuncionário.FlatStyle = FlatStyle.Flat;
+            btnGestaoFuncionário.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGestaoFuncionário.Location = new Point(413, 266);
+            btnGestaoFuncionário.Name = "btnGestaoFuncionário";
+            btnGestaoFuncionário.Size = new Size(195, 77);
+            btnGestaoFuncionário.TabIndex = 69;
+            btnGestaoFuncionário.Text = "Gestão de Funcionários \U0001f9cd";
+            btnGestaoFuncionário.UseVisualStyleBackColor = true;
+            btnGestaoFuncionário.Click += btnGestaoFuncionário_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 58);
+            label3.Name = "label3";
+            label3.Size = new Size(223, 90);
+            label3.TabIndex = 70;
+            label3.Text = "Datagrid no botao azul e dps por \r\nbaixo 3 btns add, edit, \r\ndelete, qando clico vai para o formulário.\r\nRetirar datagrids no adicionar.\r\nAdd filtros pelos q estao por entregar.\r\n\r\n";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(54, 43);
+            label4.Name = "label4";
+            label4.Size = new Size(87, 15);
+            label4.TabIndex = 71;
+            label4.Text = "label é os cards";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(label4);
+            groupBox1.Location = new Point(588, 27);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(200, 100);
+            groupBox1.TabIndex = 72;
+            groupBox1.TabStop = false;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(btnRegistarLivro);
+            Controls.Add(groupBox1);
+            Controls.Add(label3);
+            Controls.Add(btnGestaoFuncionário);
+            Controls.Add(btnGestaoEmprestimo);
+            Controls.Add(btnGestãoSócio);
+            Controls.Add(btnGestãoLivro);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(menuStrip2);
@@ -369,6 +406,8 @@
             menuStrip2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -407,9 +446,12 @@
         private ToolStripMenuItem apagarFuncionárioToolStripMenuItem;
         private Panel panel1;
         private Label label2;
-        private Button btnRegistarLivro;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnGestãoLivro;
+        private Button btnGestãoSócio;
+        private Button btnGestaoEmprestimo;
+        private Button btnGestaoFuncionário;
+        private Label label3;
+        private Label label4;
+        private GroupBox groupBox1;
     }
 }

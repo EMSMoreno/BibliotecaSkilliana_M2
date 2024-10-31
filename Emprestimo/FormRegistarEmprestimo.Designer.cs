@@ -37,7 +37,6 @@
             comboBoxFuncionarioID = new ComboBox();
             dateTimePickerDataRegisto = new DateTimePicker();
             dateTimePickerDataDevolucao = new DateTimePicker();
-            dataGridViewEmprestimos = new DataGridView();
             btnRegistarEmprestimo = new Button();
             btnLimparForm = new Button();
             dataGridViewProcura = new DataGridView();
@@ -52,7 +51,6 @@
             btnLimparProcuraEmprestimo = new Button();
             txtEmprestimoIDProcura = new TextBox();
             label7 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewEmprestimos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -62,7 +60,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(50, 150);
+            label2.Location = new Point(400, 143);
             label2.Name = "label2";
             label2.Size = new Size(73, 15);
             label2.TabIndex = 2;
@@ -71,7 +69,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(50, 190);
+            label3.Location = new Point(400, 183);
             label3.Name = "label3";
             label3.Size = new Size(78, 30);
             label3.TabIndex = 3;
@@ -80,7 +78,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(50, 245);
+            label4.Location = new Point(77, 148);
             label4.Name = "label4";
             label4.Size = new Size(53, 15);
             label4.TabIndex = 4;
@@ -89,7 +87,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(50, 290);
+            label5.Location = new Point(77, 193);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
             label5.TabIndex = 5;
@@ -97,7 +95,7 @@
             // 
             // txtNumeroSocio
             // 
-            txtNumeroSocio.Location = new Point(140, 242);
+            txtNumeroSocio.Location = new Point(167, 145);
             txtNumeroSocio.Name = "txtNumeroSocio";
             txtNumeroSocio.Size = new Size(43, 23);
             txtNumeroSocio.TabIndex = 7;
@@ -105,38 +103,30 @@
             // comboBoxFuncionarioID
             // 
             comboBoxFuncionarioID.FormattingEnabled = true;
-            comboBoxFuncionarioID.Location = new Point(140, 287);
+            comboBoxFuncionarioID.Location = new Point(167, 190);
             comboBoxFuncionarioID.Name = "comboBoxFuncionarioID";
             comboBoxFuncionarioID.Size = new Size(176, 23);
             comboBoxFuncionarioID.TabIndex = 8;
             // 
             // dateTimePickerDataRegisto
             // 
-            dateTimePickerDataRegisto.Location = new Point(140, 144);
+            dateTimePickerDataRegisto.Location = new Point(490, 137);
             dateTimePickerDataRegisto.Name = "dateTimePickerDataRegisto";
             dateTimePickerDataRegisto.Size = new Size(176, 23);
             dateTimePickerDataRegisto.TabIndex = 9;
             // 
             // dateTimePickerDataDevolucao
             // 
-            dateTimePickerDataDevolucao.Location = new Point(140, 197);
+            dateTimePickerDataDevolucao.Location = new Point(490, 190);
             dateTimePickerDataDevolucao.Name = "dateTimePickerDataDevolucao";
             dateTimePickerDataDevolucao.Size = new Size(176, 23);
             dateTimePickerDataDevolucao.TabIndex = 10;
-            // 
-            // dataGridViewEmprestimos
-            // 
-            dataGridViewEmprestimos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewEmprestimos.Location = new Point(378, 85);
-            dataGridViewEmprestimos.Name = "dataGridViewEmprestimos";
-            dataGridViewEmprestimos.Size = new Size(487, 296);
-            dataGridViewEmprestimos.TabIndex = 11;
             // 
             // btnRegistarEmprestimo
             // 
             btnRegistarEmprestimo.FlatAppearance.BorderColor = Color.LimeGreen;
             btnRegistarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnRegistarEmprestimo.Location = new Point(189, 344);
+            btnRegistarEmprestimo.Location = new Point(378, 265);
             btnRegistarEmprestimo.Name = "btnRegistarEmprestimo";
             btnRegistarEmprestimo.Size = new Size(154, 37);
             btnRegistarEmprestimo.TabIndex = 13;
@@ -147,7 +137,7 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(24, 344);
+            btnLimparForm.Location = new Point(213, 265);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 14;
@@ -158,16 +148,16 @@
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(378, 452);
+            dataGridViewProcura.Location = new Point(378, 393);
             dataGridViewProcura.Name = "dataGridViewProcura";
-            dataGridViewProcura.Size = new Size(487, 90);
+            dataGridViewProcura.Size = new Size(404, 90);
             dataGridViewProcura.TabIndex = 16;
             // 
             // btnProcuraEmprestimo
             // 
             btnProcuraEmprestimo.FlatAppearance.BorderColor = Color.DarkOrchid;
             btnProcuraEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnProcuraEmprestimo.Location = new Point(189, 505);
+            btnProcuraEmprestimo.Location = new Point(189, 446);
             btnProcuraEmprestimo.Name = "btnProcuraEmprestimo";
             btnProcuraEmprestimo.Size = new Size(154, 37);
             btnProcuraEmprestimo.TabIndex = 18;
@@ -179,9 +169,9 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label8);
-            panel1.Location = new Point(0, 561);
+            panel1.Location = new Point(0, 510);
             panel1.Name = "panel1";
-            panel1.Size = new Size(881, 41);
+            panel1.Size = new Size(782, 41);
             panel1.TabIndex = 54;
             // 
             // label8
@@ -202,7 +192,7 @@
             panel2.Controls.Add(label9);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(881, 64);
+            panel2.Size = new Size(782, 64);
             panel2.TabIndex = 55;
             // 
             // pictureBox2
@@ -240,7 +230,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label6.Location = new Point(45, 418);
+            label6.Location = new Point(45, 359);
             label6.Name = "label6";
             label6.Size = new Size(332, 21);
             label6.TabIndex = 56;
@@ -249,7 +239,7 @@
             // btnLimparProcuraEmprestimo
             // 
             btnLimparProcuraEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnLimparProcuraEmprestimo.Location = new Point(29, 505);
+            btnLimparProcuraEmprestimo.Location = new Point(29, 446);
             btnLimparProcuraEmprestimo.Name = "btnLimparProcuraEmprestimo";
             btnLimparProcuraEmprestimo.Size = new Size(154, 37);
             btnLimparProcuraEmprestimo.TabIndex = 57;
@@ -258,7 +248,7 @@
             // 
             // txtEmprestimoIDProcura
             // 
-            txtEmprestimoIDProcura.Location = new Point(196, 461);
+            txtEmprestimoIDProcura.Location = new Point(196, 402);
             txtEmprestimoIDProcura.Name = "txtEmprestimoIDProcura";
             txtEmprestimoIDProcura.Size = new Size(68, 23);
             txtEmprestimoIDProcura.TabIndex = 59;
@@ -266,7 +256,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(98, 464);
+            label7.Location = new Point(98, 405);
             label7.Name = "label7";
             label7.Size = new Size(85, 15);
             label7.TabIndex = 58;
@@ -276,7 +266,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(881, 602);
+            ClientSize = new Size(782, 551);
             Controls.Add(txtEmprestimoIDProcura);
             Controls.Add(label7);
             Controls.Add(btnLimparProcuraEmprestimo);
@@ -288,7 +278,6 @@
             Controls.Add(dataGridViewProcura);
             Controls.Add(btnLimparForm);
             Controls.Add(btnRegistarEmprestimo);
-            Controls.Add(dataGridViewEmprestimos);
             Controls.Add(dateTimePickerDataDevolucao);
             Controls.Add(dateTimePickerDataRegisto);
             Controls.Add(comboBoxFuncionarioID);
@@ -300,8 +289,6 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormRegistarEmprestimo";
             Text = "FormRegistarEmprestimo";
-            Load += FormRegistarEmprestimo_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewEmprestimos).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -321,7 +308,6 @@
         private ComboBox comboBoxFuncionarioID;
         private DateTimePicker dateTimePickerDataRegisto;
         private DateTimePicker dateTimePickerDataDevolucao;
-        private DataGridView dataGridViewEmprestimos;
         private Button btnRegistarEmprestimo;
         private Button btnLimparForm;
         private DataGridView dataGridViewProcura;

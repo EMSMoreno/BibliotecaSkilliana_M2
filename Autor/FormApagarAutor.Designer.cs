@@ -135,6 +135,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormApagarAutor";
             Text = "FormApagarAutor";
             Load += FormApagarAutor_Load;

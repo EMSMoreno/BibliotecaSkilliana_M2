@@ -135,6 +135,7 @@
             Controls.Add(comboBoxEstantes);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormApagarEstante";
             Text = "FormApagarEstante";
             Load += FormApagarEstante_Load;

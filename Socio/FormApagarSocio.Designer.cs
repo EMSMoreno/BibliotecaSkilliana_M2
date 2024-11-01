@@ -134,6 +134,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel2);
             Controls.Add(cmbSocios);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormApagarSocio";
             Text = "FormApagarSocio";
             Load += FormApagarSocio_Load;

@@ -332,6 +332,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormEditarFuncionario";
             Text = "FormEditarFuncionario";
             Load += FormRegistarSecao_Load;

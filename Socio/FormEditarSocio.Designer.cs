@@ -310,6 +310,7 @@
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormEditarSocio";
             Text = "FormEditarSocio";
             Load += FormEditarSocio_Load;

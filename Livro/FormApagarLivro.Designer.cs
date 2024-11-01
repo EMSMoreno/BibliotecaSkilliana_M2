@@ -135,6 +135,7 @@
             Controls.Add(panel1);
             Controls.Add(btnApagarLivro);
             Controls.Add(cmbLivros);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormApagarLivro";
             Text = "FormApagarLivro";
             Load += FormApagarLivro_Load;

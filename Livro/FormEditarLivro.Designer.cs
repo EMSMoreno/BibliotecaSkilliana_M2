@@ -369,6 +369,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormEditarLivro";
             Text = "FormEditarLivro";
             Load += FormEditarLivro_Load;

@@ -1,6 +1,6 @@
-﻿namespace BibliotecaSkilliana_M2.Emprestimo
+﻿namespace BibliotecaSkilliana_M2.Estante
 {
-    partial class FormVerEmprestimo
+    partial class FormVerEstante
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerEmprestimo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerEstante));
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            btnApagarEmprestimo = new Button();
             lblEditarLivro = new Label();
-            btnEditarEmprestimo = new Button();
-            btnAdicionarEmprestimo = new Button();
+            btnApagarEstante = new Button();
+            btnEditarEstante = new Button();
+            btnAdicionarEstante = new Button();
             dataGridView1 = new DataGridView();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -53,7 +53,7 @@
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(806, 64);
-            panel2.TabIndex = 45;
+            panel2.TabIndex = 44;
             // 
             // pictureBox2
             // 
@@ -80,92 +80,93 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 487);
+            panel1.Location = new Point(0, 589);
             panel1.Name = "panel1";
-            panel1.Size = new Size(806, 41);
-            panel1.TabIndex = 46;
+            panel1.Size = new Size(800, 41);
+            panel1.TabIndex = 45;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(128, 14);
+            label1.Location = new Point(186, 12);
             label1.Name = "label1";
             label1.Size = new Size(446, 17);
             label1.TabIndex = 1;
             label1.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // btnApagarEmprestimo
-            // 
-            btnApagarEmprestimo.FlatAppearance.BorderColor = Color.Red;
-            btnApagarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnApagarEmprestimo.Location = new Point(550, 386);
-            btnApagarEmprestimo.Name = "btnApagarEmprestimo";
-            btnApagarEmprestimo.Size = new Size(135, 48);
-            btnApagarEmprestimo.TabIndex = 55;
-            btnApagarEmprestimo.Text = "Apagar Empréstimo";
-            btnApagarEmprestimo.UseVisualStyleBackColor = true;
-            btnApagarEmprestimo.Click += btnApagarEmprestimo_Click;
-            // 
             // lblEditarLivro
             // 
             lblEditarLivro.AutoSize = true;
             lblEditarLivro.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblEditarLivro.Location = new Point(12, 95);
+            lblEditarLivro.Location = new Point(12, 94);
             lblEditarLivro.Name = "lblEditarLivro";
-            lblEditarLivro.Size = new Size(299, 21);
-            lblEditarLivro.TabIndex = 54;
-            lblEditarLivro.Text = "Menu Empréstimos - Ver Empréstimos";
+            lblEditarLivro.Size = new Size(227, 21);
+            lblEditarLivro.TabIndex = 50;
+            lblEditarLivro.Text = "Menu Estantes - Ver Estantes";
             // 
-            // btnEditarEmprestimo
+            // btnApagarEstante
             // 
-            btnEditarEmprestimo.FlatAppearance.BorderColor = Color.Yellow;
-            btnEditarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnEditarEmprestimo.Location = new Point(333, 386);
-            btnEditarEmprestimo.Name = "btnEditarEmprestimo";
-            btnEditarEmprestimo.Size = new Size(135, 48);
-            btnEditarEmprestimo.TabIndex = 53;
-            btnEditarEmprestimo.Text = "Editar Empréstimo";
-            btnEditarEmprestimo.UseVisualStyleBackColor = true;
-            btnEditarEmprestimo.Click += btnEditarEmprestimo_Click;
+            btnApagarEstante.FlatAppearance.BorderColor = Color.Red;
+            btnApagarEstante.FlatStyle = FlatStyle.Flat;
+            btnApagarEstante.Location = new Point(600, 484);
+            btnApagarEstante.Name = "btnApagarEstante";
+            btnApagarEstante.Size = new Size(135, 48);
+            btnApagarEstante.TabIndex = 49;
+            btnApagarEstante.Text = "Apagar Estante";
+            btnApagarEstante.UseVisualStyleBackColor = true;
+            btnApagarEstante.Click += btnApagarEstante_Click;
             // 
-            // btnAdicionarEmprestimo
+            // btnEditarEstante
             // 
-            btnAdicionarEmprestimo.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
-            btnAdicionarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnAdicionarEmprestimo.Location = new Point(114, 386);
-            btnAdicionarEmprestimo.Name = "btnAdicionarEmprestimo";
-            btnAdicionarEmprestimo.Size = new Size(135, 48);
-            btnAdicionarEmprestimo.TabIndex = 52;
-            btnAdicionarEmprestimo.Text = "Adicionar Empréstimo";
-            btnAdicionarEmprestimo.UseVisualStyleBackColor = true;
-            btnAdicionarEmprestimo.Click += btnAdicionarEmprestimo_Click;
+            btnEditarEstante.FlatAppearance.BorderColor = Color.Yellow;
+            btnEditarEstante.FlatStyle = FlatStyle.Flat;
+            btnEditarEstante.Location = new Point(324, 484);
+            btnEditarEstante.Name = "btnEditarEstante";
+            btnEditarEstante.Size = new Size(135, 48);
+            btnEditarEstante.TabIndex = 48;
+            btnEditarEstante.Text = "Editar Estante";
+            btnEditarEstante.UseVisualStyleBackColor = true;
+            btnEditarEstante.Click += btnEditarEstante_Click;
+            // 
+            // btnAdicionarEstante
+            // 
+            btnAdicionarEstante.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
+            btnAdicionarEstante.FlatStyle = FlatStyle.Flat;
+            btnAdicionarEstante.Location = new Point(71, 484);
+            btnAdicionarEstante.Name = "btnAdicionarEstante";
+            btnAdicionarEstante.Size = new Size(135, 48);
+            btnAdicionarEstante.TabIndex = 47;
+            btnAdicionarEstante.Text = "Adicionar Estante";
+            btnAdicionarEstante.UseVisualStyleBackColor = true;
+            btnAdicionarEstante.Click += btnAdicionarEstante_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(84, 159);
+            dataGridView1.Location = new Point(210, 154);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(636, 196);
-            dataGridView1.TabIndex = 51;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(388, 314);
+            dataGridView1.TabIndex = 46;
             // 
-            // FormVerEmprestimo
+            // FormVerEstante
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 527);
-            Controls.Add(btnApagarEmprestimo);
+            ClientSize = new Size(800, 627);
             Controls.Add(lblEditarLivro);
-            Controls.Add(btnEditarEmprestimo);
-            Controls.Add(btnAdicionarEmprestimo);
+            Controls.Add(btnApagarEstante);
+            Controls.Add(btnEditarEstante);
+            Controls.Add(btnAdicionarEstante);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "FormVerEmprestimo";
-            Text = "FormVerEmprestimo";
-            Load += FormRegistarEmprestimo_Load;
+            Name = "FormVerEstante";
+            Text = "FormVerEstante";
+            Load += FormRegistarEstante_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -183,10 +184,10 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
-        private Button btnApagarEmprestimo;
         private Label lblEditarLivro;
-        private Button btnEditarEmprestimo;
-        private Button btnAdicionarEmprestimo;
+        private Button btnApagarEstante;
+        private Button btnEditarEstante;
+        private Button btnAdicionarEstante;
         private DataGridView dataGridView1;
     }
 }

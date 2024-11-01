@@ -34,7 +34,6 @@
             label9 = new Label();
             panel1 = new Panel();
             label8 = new Label();
-            dataGridViewAutores = new DataGridView();
             dataGridViewProcura = new DataGridView();
             lblEditarLivro = new Label();
             txtNomeAutor = new TextBox();
@@ -61,7 +60,6 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAutores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             SuspendLayout();
             // 
@@ -100,7 +98,7 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label8);
-            panel1.Location = new Point(0, 694);
+            panel1.Location = new Point(0, 632);
             panel1.Name = "panel1";
             panel1.Size = new Size(893, 41);
             panel1.TabIndex = 57;
@@ -116,20 +114,12 @@
             label8.TabIndex = 1;
             label8.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // dataGridViewAutores
-            // 
-            dataGridViewAutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAutores.Location = new Point(396, 100);
-            dataGridViewAutores.Name = "dataGridViewAutores";
-            dataGridViewAutores.Size = new Size(472, 410);
-            dataGridViewAutores.TabIndex = 58;
-            // 
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(396, 554);
+            dataGridViewProcura.Location = new Point(396, 454);
             dataGridViewProcura.Name = "dataGridViewProcura";
-            dataGridViewProcura.Size = new Size(472, 120);
+            dataGridViewProcura.Size = new Size(472, 151);
             dataGridViewProcura.TabIndex = 59;
             // 
             // lblEditarLivro
@@ -176,16 +166,16 @@
             // 
             // txtBiografia
             // 
-            txtBiografia.Location = new Point(144, 226);
+            txtBiografia.Location = new Point(458, 146);
             txtBiografia.Multiline = true;
             txtBiografia.Name = "txtBiografia";
-            txtBiografia.Size = new Size(200, 74);
+            txtBiografia.Size = new Size(410, 74);
             txtBiografia.TabIndex = 68;
             // 
             // lblBio
             // 
             lblBio.AutoSize = true;
-            lblBio.Location = new Point(81, 229);
+            lblBio.Location = new Point(395, 149);
             lblBio.Name = "lblBio";
             lblBio.Size = new Size(54, 15);
             lblBio.TabIndex = 67;
@@ -193,7 +183,7 @@
             // 
             // txtFacebook
             // 
-            txtFacebook.Location = new Point(144, 306);
+            txtFacebook.Location = new Point(144, 249);
             txtFacebook.Name = "txtFacebook";
             txtFacebook.PlaceholderText = "facebook.com/nome_autor";
             txtFacebook.Size = new Size(200, 23);
@@ -202,7 +192,7 @@
             // lblFacebook
             // 
             lblFacebook.AutoSize = true;
-            lblFacebook.Location = new Point(62, 309);
+            lblFacebook.Location = new Point(62, 252);
             lblFacebook.Name = "lblFacebook";
             lblFacebook.Size = new Size(58, 15);
             lblFacebook.TabIndex = 69;
@@ -210,7 +200,7 @@
             // 
             // txtInstagram
             // 
-            txtInstagram.Location = new Point(144, 339);
+            txtInstagram.Location = new Point(144, 282);
             txtInstagram.Name = "txtInstagram";
             txtInstagram.PlaceholderText = "instagram.com/nome_autor";
             txtInstagram.Size = new Size(200, 23);
@@ -219,7 +209,7 @@
             // lblInstagram
             // 
             lblInstagram.AutoSize = true;
-            lblInstagram.Location = new Point(62, 342);
+            lblInstagram.Location = new Point(62, 285);
             lblInstagram.Name = "lblInstagram";
             lblInstagram.Size = new Size(60, 15);
             lblInstagram.TabIndex = 71;
@@ -227,7 +217,7 @@
             // 
             // txtTwitter
             // 
-            txtTwitter.Location = new Point(144, 371);
+            txtTwitter.Location = new Point(144, 314);
             txtTwitter.Name = "txtTwitter";
             txtTwitter.PlaceholderText = "twitter.com/nome_autor";
             txtTwitter.Size = new Size(200, 23);
@@ -236,7 +226,7 @@
             // lblTwitter
             // 
             lblTwitter.AutoSize = true;
-            lblTwitter.Location = new Point(62, 374);
+            lblTwitter.Location = new Point(62, 317);
             lblTwitter.Name = "lblTwitter";
             lblTwitter.Size = new Size(54, 15);
             lblTwitter.TabIndex = 73;
@@ -245,7 +235,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(52, 419);
+            label2.Location = new Point(383, 252);
             label2.Name = "label2";
             label2.Size = new Size(86, 15);
             label2.TabIndex = 75;
@@ -254,7 +244,7 @@
             // cmbCodSecao
             // 
             cmbCodSecao.FormattingEnabled = true;
-            cmbCodSecao.Location = new Point(144, 416);
+            cmbCodSecao.Location = new Point(475, 249);
             cmbCodSecao.Name = "cmbCodSecao";
             cmbCodSecao.Size = new Size(183, 23);
             cmbCodSecao.TabIndex = 76;
@@ -262,7 +252,7 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(47, 473);
+            btnLimparForm.Location = new Point(458, 306);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 78;
@@ -274,7 +264,7 @@
             // 
             btnRegistarAutor.FlatAppearance.BorderColor = Color.LimeGreen;
             btnRegistarAutor.FlatStyle = FlatStyle.Flat;
-            btnRegistarAutor.Location = new Point(212, 473);
+            btnRegistarAutor.Location = new Point(623, 306);
             btnRegistarAutor.Name = "btnRegistarAutor";
             btnRegistarAutor.Size = new Size(154, 37);
             btnRegistarAutor.TabIndex = 77;
@@ -285,7 +275,7 @@
             // btnLimparFormProcura
             // 
             btnLimparFormProcura.FlatStyle = FlatStyle.Flat;
-            btnLimparFormProcura.Location = new Point(47, 637);
+            btnLimparFormProcura.Location = new Point(47, 568);
             btnLimparFormProcura.Name = "btnLimparFormProcura";
             btnLimparFormProcura.Size = new Size(154, 37);
             btnLimparFormProcura.TabIndex = 80;
@@ -297,7 +287,7 @@
             // 
             btnProcuraAutor.FlatAppearance.BorderColor = Color.DarkViolet;
             btnProcuraAutor.FlatStyle = FlatStyle.Flat;
-            btnProcuraAutor.Location = new Point(212, 637);
+            btnProcuraAutor.Location = new Point(212, 568);
             btnProcuraAutor.Name = "btnProcuraAutor";
             btnProcuraAutor.Size = new Size(154, 37);
             btnProcuraAutor.TabIndex = 79;
@@ -307,7 +297,7 @@
             // 
             // txtNomeAutorProcura
             // 
-            txtNomeAutorProcura.Location = new Point(144, 599);
+            txtNomeAutorProcura.Location = new Point(144, 499);
             txtNomeAutorProcura.Name = "txtNomeAutorProcura";
             txtNomeAutorProcura.Size = new Size(200, 23);
             txtNomeAutorProcura.TabIndex = 82;
@@ -315,7 +305,7 @@
             // lblNomeAutorProcura
             // 
             lblNomeAutorProcura.AutoSize = true;
-            lblNomeAutorProcura.Location = new Point(62, 602);
+            lblNomeAutorProcura.Location = new Point(62, 502);
             lblNomeAutorProcura.Name = "lblNomeAutorProcura";
             lblNomeAutorProcura.Size = new Size(73, 15);
             lblNomeAutorProcura.TabIndex = 81;
@@ -325,7 +315,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label4.Location = new Point(81, 543);
+            label4.Location = new Point(81, 443);
             label4.Name = "label4";
             label4.Size = new Size(243, 21);
             label4.TabIndex = 83;
@@ -335,7 +325,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(893, 735);
+            ClientSize = new Size(893, 672);
             Controls.Add(label4);
             Controls.Add(txtNomeAutorProcura);
             Controls.Add(lblNomeAutorProcura);
@@ -359,9 +349,9 @@
             Controls.Add(label1);
             Controls.Add(lblEditarLivro);
             Controls.Add(dataGridViewProcura);
-            Controls.Add(dataGridViewAutores);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarAutor";
             Text = "FormRegistarAutor";
             Load += FormRegistarAutor_Load;
@@ -370,7 +360,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAutores).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -383,7 +372,6 @@
         private Label label9;
         private Panel panel1;
         private Label label8;
-        private DataGridView dataGridViewAutores;
         private DataGridView dataGridViewProcura;
         private Label lblEditarLivro;
         private TextBox txtNomeAutor;

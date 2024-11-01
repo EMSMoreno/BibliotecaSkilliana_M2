@@ -21,7 +21,6 @@ namespace BibliotecaSkilliana_M2.Autor
         private void FormRegistarAutor_Load(object sender, EventArgs e)
         {
             CarregarSecoes();
-            CarregarAutores();
         }
 
         #region Métodos
@@ -47,31 +46,6 @@ namespace BibliotecaSkilliana_M2.Autor
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar seções: " + ex.Message);
-            }
-        }
-
-        private void CarregarAutores()
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(cs))
-                {
-                    con.Open();
-                    string query = "SELECT * FROM Autor";
-                    SqlDataAdapter da = new SqlDataAdapter(query, con);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dataGridViewAutores.DataSource = dt;
-
-                    if (dt.Rows.Count == 0)
-                    {
-                        MessageBox.Show("Nenhum autor encontrado.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar autores: " + ex.Message);
             }
         }
 
@@ -104,7 +78,6 @@ namespace BibliotecaSkilliana_M2.Autor
                     MessageBox.Show("Autor registrado com sucesso!");
 
                     LimparForm();
-                    CarregarAutores();
                 }
             }
             catch (Exception ex)
@@ -122,34 +95,6 @@ namespace BibliotecaSkilliana_M2.Autor
             txtInstagram.Clear();
             txtTwitter.Clear();
             cmbCodSecao.SelectedIndex = -1;
-        }
-
-        #endregion
-
-        #region UI
-
-        private void btnRegistarAutor_Click(object sender, EventArgs e)
-        {
-            RegistarAutor();
-        }
-
-        private void btnLimparForm_Click(object sender, EventArgs e)
-        {
-            LimparForm();
-        }
-
-        #endregion
-
-        private void btnProcuraAutor_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtNomeAutorProcura.Text))
-            {
-                MessageBox.Show("Por favor, insira um nome para buscar.");
-                return;
-            }
-
-            ProcurarAutores(txtNomeAutorProcura.Text);
-            LimparFormProcura();
         }
 
         private void ProcurarAutores(string nomeAutor)
@@ -183,14 +128,43 @@ namespace BibliotecaSkilliana_M2.Autor
             }
         }
 
+        private void LimparFormProcura()
+        {
+            txtNomeAutorProcura.Clear();
+        }
+
+        #endregion
+
+        #region UI
+
+        private void btnRegistarAutor_Click(object sender, EventArgs e)
+        {
+            RegistarAutor();
+        }
+
+        private void btnLimparForm_Click(object sender, EventArgs e)
+        {
+            LimparForm();
+        }
+
+        private void btnProcuraAutor_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNomeAutorProcura.Text))
+            {
+                MessageBox.Show("Por favor, insira um nome para buscar.");
+                return;
+            }
+
+            ProcurarAutores(txtNomeAutorProcura.Text);
+            LimparFormProcura();
+        }
+
         private void btnLimparFormProcura_Click(object sender, EventArgs e)
         {
             LimparFormProcura();
         }
 
-        private void LimparFormProcura()
-        {
-            txtNomeAutorProcura.Clear();
-        }
+        #endregion
+        
     }
 }

@@ -189,6 +189,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormEditarSecao";
             Text = "FormEditarSecao";
             Load += FormEditarSecao_Load;

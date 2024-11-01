@@ -34,7 +34,6 @@
             label9 = new Label();
             panel1 = new Panel();
             label8 = new Label();
-            dataGridViewEstantes = new DataGridView();
             dataGridViewProcura = new DataGridView();
             label6 = new Label();
             lblEditarLivro = new Label();
@@ -51,7 +50,6 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewEstantes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             SuspendLayout();
             // 
@@ -106,20 +104,12 @@
             label8.TabIndex = 1;
             label8.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // dataGridViewEstantes
-            // 
-            dataGridViewEstantes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewEstantes.Location = new Point(459, 79);
-            dataGridViewEstantes.Name = "dataGridViewEstantes";
-            dataGridViewEstantes.Size = new Size(329, 205);
-            dataGridViewEstantes.TabIndex = 58;
-            // 
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(459, 314);
+            dataGridViewProcura.Location = new Point(459, 304);
             dataGridViewProcura.Name = "dataGridViewProcura";
-            dataGridViewProcura.Size = new Size(329, 101);
+            dataGridViewProcura.Size = new Size(329, 111);
             dataGridViewProcura.TabIndex = 59;
             // 
             // label6
@@ -161,7 +151,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(101, 202);
+            label2.Location = new Point(409, 154);
             label2.Name = "label2";
             label2.Size = new Size(44, 15);
             label2.TabIndex = 66;
@@ -170,7 +160,7 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(76, 247);
+            btnLimparForm.Location = new Point(223, 221);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 69;
@@ -182,7 +172,7 @@
             // 
             btnRegistarEstante.FlatAppearance.BorderColor = Color.LimeGreen;
             btnRegistarEstante.FlatStyle = FlatStyle.Flat;
-            btnRegistarEstante.Location = new Point(241, 247);
+            btnRegistarEstante.Location = new Point(388, 221);
             btnRegistarEstante.Name = "btnRegistarEstante";
             btnRegistarEstante.Size = new Size(154, 37);
             btnRegistarEstante.TabIndex = 68;
@@ -232,7 +222,7 @@
             // comboBoxSecao
             // 
             comboBoxSecao.FormattingEnabled = true;
-            comboBoxSecao.Location = new Point(151, 199);
+            comboBoxSecao.Location = new Point(459, 151);
             comboBoxSecao.Name = "comboBoxSecao";
             comboBoxSecao.Size = new Size(218, 23);
             comboBoxSecao.TabIndex = 74;
@@ -255,9 +245,9 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(label6);
             Controls.Add(dataGridViewProcura);
-            Controls.Add(dataGridViewEstantes);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarEstante";
             Text = "FormRegistarEstante";
             Load += FormRegistarEstante_Load;
@@ -266,7 +256,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewEstantes).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -279,7 +268,6 @@
         private Label label9;
         private Panel panel1;
         private Label label8;
-        private DataGridView dataGridViewEstantes;
         private DataGridView dataGridViewProcura;
         private Label label6;
         private Label lblEditarLivro;

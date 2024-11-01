@@ -134,6 +134,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormApagarFuncionario";
             Text = "FormApagarFuncionario";
             Load += FormRegistarSecao_Load;

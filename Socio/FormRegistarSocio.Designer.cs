@@ -355,6 +355,7 @@
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarSocio";
             Text = "FormRegistarSocio";
             Load += FormRegistarSocio_Load;

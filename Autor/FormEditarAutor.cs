@@ -31,7 +31,8 @@ namespace BibliotecaSkilliana_M2.Autor
                 {
                     con.Open();
                     string query = @"
-                    SELECT 
+                    SELECT
+                        ID_Autor,   
                         Nome, 
                         Data_Nascimento, 
                         Biografia, 
@@ -95,6 +96,8 @@ namespace BibliotecaSkilliana_M2.Autor
             {
                 DataGridViewRow row = dataGridViewAutores.Rows[e.RowIndex];
 
+                int autorId = (int)row.Cells["ID_Autor"].Value;
+
                 txtNomeAutor.Text = row.Cells["Nome"].Value.ToString();
                 dtpDataNasc.Value = Convert.ToDateTime(row.Cells["Data_Nascimento"].Value);
                 txtBiografia.Text = row.Cells["Biografia"].Value.ToString();
@@ -123,16 +126,20 @@ namespace BibliotecaSkilliana_M2.Autor
                 using (con = new SqlConnection(cs))
                 {
                     con.Open();
+
+                    int autorId = (int)dataGridViewAutores.CurrentRow.Cells["ID_Autor"].Value;
+
                     string query = @"
-                    UPDATE Autor
-                    SET 
-                        Nome = @Nome, 
-                        Data_Nascimento = @DataNascimento, 
-                        Biografia = @Biografia, 
-                        Facebook = @Facebook, 
-                        Instagram = @Instagram, 
-                        X_Twitter = @Twitter, 
-                        Codigo_Secao = @Secao";
+                UPDATE Autor
+                SET 
+                    Nome = @Nome, 
+                    Data_Nascimento = @DataNascimento, 
+                    Biografia = @Biografia, 
+                    Facebook = @Facebook, 
+                    Instagram = @Instagram, 
+                    X_Twitter = @Twitter, 
+                    Codigo_Secao = @Secao
+                WHERE ID_Autor = @Id";
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Nome", txtNomeAutor.Text);
@@ -142,6 +149,7 @@ namespace BibliotecaSkilliana_M2.Autor
                     cmd.Parameters.AddWithValue("@Instagram", txtInstagram.Text);
                     cmd.Parameters.AddWithValue("@Twitter", txtTwitter.Text);
                     cmd.Parameters.AddWithValue("@Secao", cmbCodSecao.SelectedValue);
+                    cmd.Parameters.AddWithValue("@Id", autorId);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Autor atualizado com sucesso!");
@@ -155,5 +163,7 @@ namespace BibliotecaSkilliana_M2.Autor
                 MessageBox.Show("Erro ao atualizar o autor: " + ex.Message);
             }
         }
+
+
     }
 }

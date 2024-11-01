@@ -134,7 +134,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormApagarEmprestimo";
             Text = "FormApagarEmprestimo";
             Load += FormEditarEmprestimo_Load;

@@ -1,6 +1,6 @@
-﻿namespace BibliotecaSkilliana_M2.Livro
+﻿namespace BibliotecaSkilliana_M2.Secçao
 {
-    partial class FormVerLivro
+    partial class FormVerSecao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,77 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerLivro));
-            dataGridView1 = new DataGridView();
-            btnAdicionarLivro = new Button();
-            btnEditarLivro = new Button();
-            btnApagarLivro = new Button();
-            lblEditarLivro = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerSecao));
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            lblEditarLivro = new Label();
+            btnApagarSecao = new Button();
+            btnEditarSecao = new Button();
+            btnAdicionarSecao = new Button();
+            dataGridView1 = new DataGridView();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 137);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(776, 314);
-            dataGridView1.TabIndex = 0;
-            // 
-            // btnAdicionarLivro
-            // 
-            btnAdicionarLivro.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
-            btnAdicionarLivro.FlatStyle = FlatStyle.Flat;
-            btnAdicionarLivro.Location = new Point(71, 481);
-            btnAdicionarLivro.Name = "btnAdicionarLivro";
-            btnAdicionarLivro.Size = new Size(135, 48);
-            btnAdicionarLivro.TabIndex = 1;
-            btnAdicionarLivro.Text = "Adicionar Livro";
-            btnAdicionarLivro.UseVisualStyleBackColor = true;
-            btnAdicionarLivro.Click += btnAdicionarLivro_Click;
-            // 
-            // btnEditarLivro
-            // 
-            btnEditarLivro.FlatAppearance.BorderColor = Color.Yellow;
-            btnEditarLivro.FlatStyle = FlatStyle.Flat;
-            btnEditarLivro.Location = new Point(324, 481);
-            btnEditarLivro.Name = "btnEditarLivro";
-            btnEditarLivro.Size = new Size(135, 48);
-            btnEditarLivro.TabIndex = 2;
-            btnEditarLivro.Text = "Editar Livro";
-            btnEditarLivro.UseVisualStyleBackColor = true;
-            btnEditarLivro.Click += btnEditarLivro_Click;
-            // 
-            // btnApagarLivro
-            // 
-            btnApagarLivro.FlatAppearance.BorderColor = Color.Red;
-            btnApagarLivro.FlatStyle = FlatStyle.Flat;
-            btnApagarLivro.Location = new Point(600, 481);
-            btnApagarLivro.Name = "btnApagarLivro";
-            btnApagarLivro.Size = new Size(135, 48);
-            btnApagarLivro.TabIndex = 3;
-            btnApagarLivro.Text = "Apagar Livro";
-            btnApagarLivro.UseVisualStyleBackColor = true;
-            btnApagarLivro.Click += btnApagarLivro_Click;
-            // 
-            // lblEditarLivro
-            // 
-            lblEditarLivro.AutoSize = true;
-            lblEditarLivro.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblEditarLivro.Location = new Point(12, 91);
-            lblEditarLivro.Name = "lblEditarLivro";
-            lblEditarLivro.Size = new Size(191, 21);
-            lblEditarLivro.TabIndex = 42;
-            lblEditarLivro.Text = "Menu Livros - Ver Livros";
             // 
             // panel2
             // 
@@ -108,7 +53,7 @@
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(806, 64);
-            panel2.TabIndex = 43;
+            panel2.TabIndex = 44;
             // 
             // pictureBox2
             // 
@@ -135,10 +80,10 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 587);
+            panel1.Location = new Point(0, 586);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 41);
-            panel1.TabIndex = 44;
+            panel1.TabIndex = 45;
             // 
             // label1
             // 
@@ -151,43 +96,98 @@
             label1.TabIndex = 1;
             label1.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // FormVerLivro
+            // lblEditarLivro
+            // 
+            lblEditarLivro.AutoSize = true;
+            lblEditarLivro.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblEditarLivro.Location = new Point(12, 94);
+            lblEditarLivro.Name = "lblEditarLivro";
+            lblEditarLivro.Size = new Size(221, 21);
+            lblEditarLivro.TabIndex = 50;
+            lblEditarLivro.Text = "Menu Secções - Ver Secções";
+            // 
+            // btnApagarSecao
+            // 
+            btnApagarSecao.FlatAppearance.BorderColor = Color.Red;
+            btnApagarSecao.FlatStyle = FlatStyle.Flat;
+            btnApagarSecao.Location = new Point(600, 484);
+            btnApagarSecao.Name = "btnApagarSecao";
+            btnApagarSecao.Size = new Size(135, 48);
+            btnApagarSecao.TabIndex = 49;
+            btnApagarSecao.Text = "Apagar Secção";
+            btnApagarSecao.UseVisualStyleBackColor = true;
+            btnApagarSecao.Click += btnApagarSecao_Click;
+            // 
+            // btnEditarSecao
+            // 
+            btnEditarSecao.FlatAppearance.BorderColor = Color.Yellow;
+            btnEditarSecao.FlatStyle = FlatStyle.Flat;
+            btnEditarSecao.Location = new Point(333, 484);
+            btnEditarSecao.Name = "btnEditarSecao";
+            btnEditarSecao.Size = new Size(135, 48);
+            btnEditarSecao.TabIndex = 48;
+            btnEditarSecao.Text = "Editar Secção";
+            btnEditarSecao.UseVisualStyleBackColor = true;
+            btnEditarSecao.Click += btnEditarSecao_Click;
+            // 
+            // btnAdicionarSecao
+            // 
+            btnAdicionarSecao.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
+            btnAdicionarSecao.FlatStyle = FlatStyle.Flat;
+            btnAdicionarSecao.Location = new Point(71, 484);
+            btnAdicionarSecao.Name = "btnAdicionarSecao";
+            btnAdicionarSecao.Size = new Size(135, 48);
+            btnAdicionarSecao.TabIndex = 47;
+            btnAdicionarSecao.Text = "Adicionar Secção";
+            btnAdicionarSecao.UseVisualStyleBackColor = true;
+            btnAdicionarSecao.Click += btnAdicionarSecao_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(207, 155);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(393, 314);
+            dataGridView1.TabIndex = 46;
+            // 
+            // FormVerSecao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
+            Controls.Add(lblEditarLivro);
+            Controls.Add(btnApagarSecao);
+            Controls.Add(btnEditarSecao);
+            Controls.Add(btnAdicionarSecao);
+            Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Controls.Add(lblEditarLivro);
-            Controls.Add(btnApagarLivro);
-            Controls.Add(btnEditarLivro);
-            Controls.Add(btnAdicionarLivro);
-            Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "FormVerLivro";
-            Text = "FormVerLivro";
-            Load += FormVerLivro_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Name = "FormVerSecao";
+            Text = "FormVerSecao";
+            Load += FormRegistarSecao_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private Button btnAdicionarLivro;
-        private Button btnEditarLivro;
-        private Button btnApagarLivro;
-        private Label lblEditarLivro;
         private Panel panel2;
         private PictureBox pictureBox2;
         private Label label2;
         private Panel panel1;
         private Label label1;
+        private Label lblEditarLivro;
+        private Button btnApagarSecao;
+        private Button btnEditarSecao;
+        private Button btnAdicionarSecao;
+        private DataGridView dataGridView1;
     }
 }

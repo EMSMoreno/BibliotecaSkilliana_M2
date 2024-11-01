@@ -391,6 +391,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarFuncionario";
             Text = "FormRegistarFuncionario";
             Load += FormRegistarFuncionario_Load;

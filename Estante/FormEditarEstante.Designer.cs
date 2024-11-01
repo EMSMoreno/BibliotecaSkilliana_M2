@@ -102,16 +102,16 @@
             // dataGridViewEstantes
             // 
             dataGridViewEstantes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewEstantes.Location = new Point(168, 225);
+            dataGridViewEstantes.Location = new Point(70, 139);
             dataGridViewEstantes.Name = "dataGridViewEstantes";
-            dataGridViewEstantes.Size = new Size(336, 150);
+            dataGridViewEstantes.Size = new Size(336, 264);
             dataGridViewEstantes.TabIndex = 58;
             dataGridViewEstantes.CellClick += dataGridViewEstantes_CellClick;
             // 
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(510, 225);
+            btnLimparForm.Location = new Point(493, 261);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 60;
@@ -123,7 +123,7 @@
             // 
             btnEditarEstante.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarEstante.FlatStyle = FlatStyle.Flat;
-            btnEditarEstante.Location = new Point(510, 268);
+            btnEditarEstante.Location = new Point(493, 304);
             btnEditarEstante.Name = "btnEditarEstante";
             btnEditarEstante.Size = new Size(154, 37);
             btnEditarEstante.TabIndex = 59;
@@ -134,7 +134,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(168, 199);
+            label2.Location = new Point(443, 190);
             label2.Name = "label2";
             label2.Size = new Size(44, 15);
             label2.TabIndex = 72;
@@ -142,7 +142,7 @@
             // 
             // txtDescricao
             // 
-            txtDescricao.Location = new Point(218, 161);
+            txtDescricao.Location = new Point(493, 152);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(182, 23);
             txtDescricao.TabIndex = 71;
@@ -150,7 +150,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(154, 164);
+            label1.Location = new Point(429, 155);
             label1.Name = "label1";
             label1.Size = new Size(58, 15);
             label1.TabIndex = 70;
@@ -169,7 +169,7 @@
             // comboBoxSecao
             // 
             comboBoxSecao.FormattingEnabled = true;
-            comboBoxSecao.Location = new Point(218, 196);
+            comboBoxSecao.Location = new Point(493, 187);
             comboBoxSecao.Name = "comboBoxSecao";
             comboBoxSecao.Size = new Size(182, 23);
             comboBoxSecao.TabIndex = 75;
@@ -189,6 +189,7 @@
             Controls.Add(dataGridViewEstantes);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormEditarEstante";
             Text = "FormEditarEstante";
             Load += FormEditarEstante_Load;

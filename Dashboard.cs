@@ -194,5 +194,23 @@ namespace BibliotecaSkilliana_M2
             using (FormVerFuncionario formVerFuncionario = new FormVerFuncionario())
             { formVerFuncionario.ShowDialog(); }
         }
+
+        private void btnGestãoAutor_Click(object sender, EventArgs e)
+        {
+            using (FormVerAutor formVerAutor = new FormVerAutor())
+            { formVerAutor.ShowDialog(); }
+        }
+
+        private void btnGestãoSecção_Click(object sender, EventArgs e)
+        {
+            using (FormVerSecao formVerSecao = new FormVerSecao())
+            { formVerSecao.ShowDialog(); }
+        }
+
+        private void btnGestaoEstante_Click(object sender, EventArgs e)
+        {
+            using (FormVerEstante formVerEstante = new FormVerEstante())
+            { formVerEstante.ShowDialog(); }
+        }
     }
 }

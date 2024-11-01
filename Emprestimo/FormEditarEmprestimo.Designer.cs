@@ -229,7 +229,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormEditarEmprestimo";
             Text = "FormEditarEmprestimo";
             Load += FormEditarEmprestimo_Load;

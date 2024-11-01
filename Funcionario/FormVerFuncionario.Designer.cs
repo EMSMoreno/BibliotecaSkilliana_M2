@@ -162,6 +162,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormVerFuncionario";
             Text = "FormVerFuncionario";
             Load += FormRegistarFuncionario_Load;

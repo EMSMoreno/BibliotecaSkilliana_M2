@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace BibliotecaSkilliana_M2.Estante
 {
@@ -17,13 +18,12 @@ namespace BibliotecaSkilliana_M2.Estante
             InitializeComponent();
         }
 
+        #region Métodos
+
         private void FormRegistarEstante_Load(object sender, EventArgs e)
         {
             CarregarSecoes();
-            CarregarEstantes();
         }
-
-        #region Métodos
 
         private void CarregarSecoes()
         {
@@ -46,51 +46,6 @@ namespace BibliotecaSkilliana_M2.Estante
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar seções: " + ex.Message);
-            }
-        }
-
-        private void CarregarEstantes(string busca = null)
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(cs))
-                {
-                    con.Open();
-                    string query = "SELECT * FROM Estante";
-
-                    if (!string.IsNullOrEmpty(busca))
-                    {
-                        query += " WHERE Descricao LIKE @busca";
-                    }
-
-                    SqlDataAdapter da = new SqlDataAdapter(query, con);
-
-                    if (!string.IsNullOrEmpty(busca))
-                    {
-                        da.SelectCommand.Parameters.AddWithValue("@busca", "%" + busca + "%");
-                    }
-
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    if (string.IsNullOrEmpty(busca))
-                    {
-                        dataGridViewEstantes.DataSource = dt;
-                    }
-                    else
-                    {
-                        dataGridViewProcura.DataSource = dt;
-                    }
-
-                    if (dt.Rows.Count == 0)
-                    {
-                        MessageBox.Show("Nenhuma estante encontrada.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar estantes: " + ex.Message);
             }
         }
 
@@ -158,8 +113,6 @@ namespace BibliotecaSkilliana_M2.Estante
                 MessageBox.Show("Por favor, insira uma descrição para procurar.");
                 return;
             }
-
-            CarregarEstantes(txtProcuraDescricao.Text);
         }
 
         private void btnLimparFormProcura_Click(object sender, EventArgs e)

@@ -429,6 +429,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarLivro";
             Text = "FormRegistarLivro";
             panel2.ResumeLayout(false);

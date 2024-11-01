@@ -286,7 +286,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarEmprestimo";
             Text = "FormRegistarEmprestimo";
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();

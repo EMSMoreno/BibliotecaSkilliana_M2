@@ -67,6 +67,9 @@
             label3 = new Label();
             label4 = new Label();
             groupBox1 = new GroupBox();
+            btnGestaoEstante = new Button();
+            btnGestãoSecção = new Button();
+            btnGestãoAutor = new Button();
             menuStrip2.SuspendLayout();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -75,7 +78,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(261, 81);
+            label1.Location = new Point(270, 78);
             label1.Name = "label1";
             label1.Size = new Size(293, 30);
             label1.TabIndex = 0;
@@ -86,7 +89,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { livrosToolStripMenuItem, estanteToolStripMenuItem, secçãoToolStripMenuItem, autorToolStripMenuItem, empréstimoToolStripMenuItem, sócioToolStripMenuItem, funcionárioToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(800, 24);
+            menuStrip2.Size = new Size(805, 24);
             menuStrip2.TabIndex = 2;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -290,9 +293,9 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(0, 409);
+            panel1.Location = new Point(0, 543);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 41);
+            panel1.Size = new Size(805, 41);
             panel1.TabIndex = 3;
             // 
             // label2
@@ -300,7 +303,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(190, 15);
+            label2.Location = new Point(173, 14);
             label2.Name = "label2";
             label2.Size = new Size(446, 17);
             label2.TabIndex = 1;
@@ -311,9 +314,9 @@
             btnGestãoLivro.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnGestãoLivro.FlatStyle = FlatStyle.Flat;
             btnGestãoLivro.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGestãoLivro.Location = new Point(177, 160);
+            btnGestãoLivro.Location = new Point(173, 159);
             btnGestãoLivro.Name = "btnGestãoLivro";
-            btnGestãoLivro.Size = new Size(196, 77);
+            btnGestãoLivro.Size = new Size(204, 77);
             btnGestãoLivro.TabIndex = 66;
             btnGestãoLivro.Text = "Gestão de Livros 📖";
             btnGestãoLivro.UseVisualStyleBackColor = true;
@@ -324,7 +327,7 @@
             btnGestãoSócio.FlatAppearance.BorderColor = Color.Lime;
             btnGestãoSócio.FlatStyle = FlatStyle.Flat;
             btnGestãoSócio.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGestãoSócio.Location = new Point(177, 266);
+            btnGestãoSócio.Location = new Point(52, 270);
             btnGestãoSócio.Name = "btnGestãoSócio";
             btnGestãoSócio.Size = new Size(196, 77);
             btnGestãoSócio.TabIndex = 67;
@@ -337,9 +340,9 @@
             btnGestaoEmprestimo.FlatAppearance.BorderColor = Color.Gold;
             btnGestaoEmprestimo.FlatStyle = FlatStyle.Flat;
             btnGestaoEmprestimo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGestaoEmprestimo.Location = new Point(413, 160);
+            btnGestaoEmprestimo.Location = new Point(417, 159);
             btnGestaoEmprestimo.Name = "btnGestaoEmprestimo";
-            btnGestaoEmprestimo.Size = new Size(195, 77);
+            btnGestaoEmprestimo.Size = new Size(202, 77);
             btnGestaoEmprestimo.TabIndex = 68;
             btnGestaoEmprestimo.Text = "Gestão de Empréstimos 📚";
             btnGestaoEmprestimo.UseVisualStyleBackColor = true;
@@ -350,9 +353,9 @@
             btnGestaoFuncionário.FlatAppearance.BorderColor = Color.Crimson;
             btnGestaoFuncionário.FlatStyle = FlatStyle.Flat;
             btnGestaoFuncionário.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGestaoFuncionário.Location = new Point(413, 266);
+            btnGestaoFuncionário.Location = new Point(288, 270);
             btnGestaoFuncionário.Name = "btnGestaoFuncionário";
-            btnGestaoFuncionário.Size = new Size(195, 77);
+            btnGestaoFuncionário.Size = new Size(196, 77);
             btnGestaoFuncionário.TabIndex = 69;
             btnGestaoFuncionário.Text = "Gestão de Funcionários \U0001f9cd";
             btnGestaoFuncionário.UseVisualStyleBackColor = true;
@@ -361,16 +364,16 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 58);
+            label3.Location = new Point(591, 111);
             label3.Name = "label3";
-            label3.Size = new Size(223, 90);
+            label3.Size = new Size(205, 30);
             label3.TabIndex = 70;
-            label3.Text = "Datagrid no botao azul e dps por \r\nbaixo 3 btns add, edit, \r\ndelete, qando clico vai para o formulário.\r\nRetirar datagrids no adicionar.\r\nAdd filtros pelos q estao por entregar.\r\n\r\n";
+            label3.Text = "Add filtros pelos q estao por entregar.\r\n\r\n";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(54, 43);
+            label4.Location = new Point(31, 40);
             label4.Name = "label4";
             label4.Size = new Size(87, 15);
             label4.TabIndex = 71;
@@ -379,17 +382,59 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(label4);
-            groupBox1.Location = new Point(588, 27);
+            groupBox1.Location = new Point(637, 38);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(200, 100);
+            groupBox1.Size = new Size(159, 70);
             groupBox1.TabIndex = 72;
             groupBox1.TabStop = false;
+            // 
+            // btnGestaoEstante
+            // 
+            btnGestaoEstante.FlatAppearance.BorderColor = Color.DarkViolet;
+            btnGestaoEstante.FlatStyle = FlatStyle.Flat;
+            btnGestaoEstante.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGestaoEstante.Location = new Point(535, 270);
+            btnGestaoEstante.Name = "btnGestaoEstante";
+            btnGestaoEstante.Size = new Size(209, 77);
+            btnGestaoEstante.TabIndex = 73;
+            btnGestaoEstante.Text = "Gestão de Estantes 🔖";
+            btnGestaoEstante.UseVisualStyleBackColor = true;
+            btnGestaoEstante.Click += btnGestaoEstante_Click;
+            // 
+            // btnGestãoSecção
+            // 
+            btnGestãoSecção.FlatAppearance.BorderColor = Color.Orange;
+            btnGestãoSecção.FlatStyle = FlatStyle.Flat;
+            btnGestãoSecção.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGestãoSecção.Location = new Point(173, 393);
+            btnGestãoSecção.Name = "btnGestãoSecção";
+            btnGestãoSecção.Size = new Size(204, 77);
+            btnGestãoSecção.TabIndex = 74;
+            btnGestãoSecção.Text = "Gestão de Secções 📑";
+            btnGestãoSecção.UseVisualStyleBackColor = true;
+            btnGestãoSecção.Click += btnGestãoSecção_Click;
+            // 
+            // btnGestãoAutor
+            // 
+            btnGestãoAutor.FlatAppearance.BorderColor = Color.Black;
+            btnGestãoAutor.FlatStyle = FlatStyle.Flat;
+            btnGestãoAutor.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGestãoAutor.Location = new Point(417, 393);
+            btnGestãoAutor.Name = "btnGestãoAutor";
+            btnGestãoAutor.Size = new Size(203, 77);
+            btnGestãoAutor.TabIndex = 75;
+            btnGestãoAutor.Text = "Gestão de Autores ✍️";
+            btnGestãoAutor.UseVisualStyleBackColor = true;
+            btnGestãoAutor.Click += btnGestãoAutor_Click;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(805, 583);
+            Controls.Add(btnGestãoAutor);
+            Controls.Add(btnGestãoSecção);
+            Controls.Add(btnGestaoEstante);
             Controls.Add(groupBox1);
             Controls.Add(label3);
             Controls.Add(btnGestaoFuncionário);
@@ -399,7 +444,7 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(menuStrip2);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Dashboard";
             Text = "Dashboard";
             menuStrip2.ResumeLayout(false);
@@ -453,5 +498,8 @@
         private Label label3;
         private Label label4;
         private GroupBox groupBox1;
+        private Button btnGestaoEstante;
+        private Button btnGestãoSecção;
+        private Button btnGestãoAutor;
     }
 }

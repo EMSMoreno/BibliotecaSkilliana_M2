@@ -39,7 +39,6 @@
             lblEditarLivro = new Label();
             lblDescricaoSecao = new Label();
             txtDescricaoSecao = new TextBox();
-            dataGridView1 = new DataGridView();
             dataGridViewProcura = new DataGridView();
             lblDescricaoProcura = new Label();
             txtDescricaoProcura = new TextBox();
@@ -51,7 +50,6 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             SuspendLayout();
             // 
@@ -109,7 +107,7 @@
             // lblCodSecao
             // 
             lblCodSecao.AutoSize = true;
-            lblCodSecao.Location = new Point(69, 146);
+            lblCodSecao.Location = new Point(182, 137);
             lblCodSecao.Name = "lblCodSecao";
             lblCodSecao.Size = new Size(86, 15);
             lblCodSecao.TabIndex = 47;
@@ -117,7 +115,7 @@
             // 
             // txtCodSecao
             // 
-            txtCodSecao.Location = new Point(69, 164);
+            txtCodSecao.Location = new Point(182, 155);
             txtCodSecao.Name = "txtCodSecao";
             txtCodSecao.Size = new Size(86, 23);
             txtCodSecao.TabIndex = 46;
@@ -135,7 +133,7 @@
             // lblDescricaoSecao
             // 
             lblDescricaoSecao.AutoSize = true;
-            lblDescricaoSecao.Location = new Point(172, 146);
+            lblDescricaoSecao.Location = new Point(319, 137);
             lblDescricaoSecao.Name = "lblDescricaoSecao";
             lblDescricaoSecao.Size = new Size(98, 15);
             lblDescricaoSecao.TabIndex = 49;
@@ -143,25 +141,18 @@
             // 
             // txtDescricaoSecao
             // 
-            txtDescricaoSecao.Location = new Point(172, 164);
+            txtDescricaoSecao.Location = new Point(319, 155);
+            txtDescricaoSecao.Multiline = true;
             txtDescricaoSecao.Name = "txtDescricaoSecao";
-            txtDescricaoSecao.Size = new Size(159, 23);
+            txtDescricaoSecao.Size = new Size(259, 44);
             txtDescricaoSecao.TabIndex = 48;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(415, 88);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(373, 195);
-            dataGridView1.TabIndex = 50;
             // 
             // dataGridViewProcura
             // 
             dataGridViewProcura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProcura.Location = new Point(415, 328);
+            dataGridViewProcura.Location = new Point(415, 310);
             dataGridViewProcura.Name = "dataGridViewProcura";
-            dataGridViewProcura.Size = new Size(373, 75);
+            dataGridViewProcura.Size = new Size(373, 93);
             dataGridViewProcura.TabIndex = 51;
             // 
             // lblDescricaoProcura
@@ -218,7 +209,7 @@
             // 
             btnLimparForm.FlatAppearance.BorderColor = Color.Black;
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(33, 211);
+            btnLimparForm.Location = new Point(170, 220);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(171, 30);
             btnLimparForm.TabIndex = 74;
@@ -230,7 +221,7 @@
             // 
             btnRegistarSecao.FlatAppearance.BorderColor = Color.Lime;
             btnRegistarSecao.FlatStyle = FlatStyle.Flat;
-            btnRegistarSecao.Location = new Point(210, 211);
+            btnRegistarSecao.Location = new Point(347, 220);
             btnRegistarSecao.Name = "btnRegistarSecao";
             btnRegistarSecao.Size = new Size(171, 30);
             btnRegistarSecao.TabIndex = 73;
@@ -251,7 +242,6 @@
             Controls.Add(btnLimparForm);
             Controls.Add(btnRegistarSecao);
             Controls.Add(dataGridViewProcura);
-            Controls.Add(dataGridView1);
             Controls.Add(lblDescricaoSecao);
             Controls.Add(txtDescricaoSecao);
             Controls.Add(lblCodSecao);
@@ -259,15 +249,14 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarSecao";
             Text = "FormRegistarSecao";
-            Load += FormRegistarSecao_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -285,7 +274,6 @@
         private Label lblEditarLivro;
         private Label lblDescricaoSecao;
         private TextBox txtDescricaoSecao;
-        private DataGridView dataGridView1;
         private DataGridView dataGridViewProcura;
         private Label lblDescricaoProcura;
         private TextBox txtDescricaoProcura;

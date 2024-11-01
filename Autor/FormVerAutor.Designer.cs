@@ -1,6 +1,6 @@
-﻿namespace BibliotecaSkilliana_M2.Livro
+﻿namespace BibliotecaSkilliana_M2.Autor
 {
-    partial class FormVerLivro
+    partial class FormVerAutor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,77 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerLivro));
-            dataGridView1 = new DataGridView();
-            btnAdicionarLivro = new Button();
-            btnEditarLivro = new Button();
-            btnApagarLivro = new Button();
-            lblEditarLivro = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerAutor));
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            lblEditarLivro = new Label();
+            btnApagarAutor = new Button();
+            btnEditarAutor = new Button();
+            btnAdicionarAutor = new Button();
+            dataGridView1 = new DataGridView();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 137);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(776, 314);
-            dataGridView1.TabIndex = 0;
-            // 
-            // btnAdicionarLivro
-            // 
-            btnAdicionarLivro.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
-            btnAdicionarLivro.FlatStyle = FlatStyle.Flat;
-            btnAdicionarLivro.Location = new Point(71, 481);
-            btnAdicionarLivro.Name = "btnAdicionarLivro";
-            btnAdicionarLivro.Size = new Size(135, 48);
-            btnAdicionarLivro.TabIndex = 1;
-            btnAdicionarLivro.Text = "Adicionar Livro";
-            btnAdicionarLivro.UseVisualStyleBackColor = true;
-            btnAdicionarLivro.Click += btnAdicionarLivro_Click;
-            // 
-            // btnEditarLivro
-            // 
-            btnEditarLivro.FlatAppearance.BorderColor = Color.Yellow;
-            btnEditarLivro.FlatStyle = FlatStyle.Flat;
-            btnEditarLivro.Location = new Point(324, 481);
-            btnEditarLivro.Name = "btnEditarLivro";
-            btnEditarLivro.Size = new Size(135, 48);
-            btnEditarLivro.TabIndex = 2;
-            btnEditarLivro.Text = "Editar Livro";
-            btnEditarLivro.UseVisualStyleBackColor = true;
-            btnEditarLivro.Click += btnEditarLivro_Click;
-            // 
-            // btnApagarLivro
-            // 
-            btnApagarLivro.FlatAppearance.BorderColor = Color.Red;
-            btnApagarLivro.FlatStyle = FlatStyle.Flat;
-            btnApagarLivro.Location = new Point(600, 481);
-            btnApagarLivro.Name = "btnApagarLivro";
-            btnApagarLivro.Size = new Size(135, 48);
-            btnApagarLivro.TabIndex = 3;
-            btnApagarLivro.Text = "Apagar Livro";
-            btnApagarLivro.UseVisualStyleBackColor = true;
-            btnApagarLivro.Click += btnApagarLivro_Click;
-            // 
-            // lblEditarLivro
-            // 
-            lblEditarLivro.AutoSize = true;
-            lblEditarLivro.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblEditarLivro.Location = new Point(12, 91);
-            lblEditarLivro.Name = "lblEditarLivro";
-            lblEditarLivro.Size = new Size(191, 21);
-            lblEditarLivro.TabIndex = 42;
-            lblEditarLivro.Text = "Menu Livros - Ver Livros";
             // 
             // panel2
             // 
@@ -108,7 +53,7 @@
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(806, 64);
-            panel2.TabIndex = 43;
+            panel2.TabIndex = 44;
             // 
             // pictureBox2
             // 
@@ -135,10 +80,10 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 587);
+            panel1.Location = new Point(0, 585);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 41);
-            panel1.TabIndex = 44;
+            panel1.TabIndex = 45;
             // 
             // label1
             // 
@@ -151,43 +96,99 @@
             label1.TabIndex = 1;
             label1.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
             // 
-            // FormVerLivro
+            // lblEditarLivro
+            // 
+            lblEditarLivro.AutoSize = true;
+            lblEditarLivro.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblEditarLivro.Location = new Point(12, 94);
+            lblEditarLivro.Name = "lblEditarLivro";
+            lblEditarLivro.Size = new Size(219, 21);
+            lblEditarLivro.TabIndex = 50;
+            lblEditarLivro.Text = "Menu Autores - Ver Autores";
+            // 
+            // btnApagarAutor
+            // 
+            btnApagarAutor.FlatAppearance.BorderColor = Color.Red;
+            btnApagarAutor.FlatStyle = FlatStyle.Flat;
+            btnApagarAutor.Location = new Point(600, 484);
+            btnApagarAutor.Name = "btnApagarAutor";
+            btnApagarAutor.Size = new Size(135, 48);
+            btnApagarAutor.TabIndex = 49;
+            btnApagarAutor.Text = "Apagar Autor";
+            btnApagarAutor.UseVisualStyleBackColor = true;
+            btnApagarAutor.Click += btnApagarAutor_Click;
+            // 
+            // btnEditarAutor
+            // 
+            btnEditarAutor.FlatAppearance.BorderColor = Color.Yellow;
+            btnEditarAutor.FlatStyle = FlatStyle.Flat;
+            btnEditarAutor.Location = new Point(324, 484);
+            btnEditarAutor.Name = "btnEditarAutor";
+            btnEditarAutor.Size = new Size(135, 48);
+            btnEditarAutor.TabIndex = 48;
+            btnEditarAutor.Text = "Editar Autor";
+            btnEditarAutor.UseVisualStyleBackColor = true;
+            btnEditarAutor.Click += btnEditarAutor_Click;
+            // 
+            // btnAdicionarAutor
+            // 
+            btnAdicionarAutor.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
+            btnAdicionarAutor.FlatStyle = FlatStyle.Flat;
+            btnAdicionarAutor.Location = new Point(71, 484);
+            btnAdicionarAutor.Name = "btnAdicionarAutor";
+            btnAdicionarAutor.Size = new Size(135, 48);
+            btnAdicionarAutor.TabIndex = 47;
+            btnAdicionarAutor.Text = "Adicionar Autor";
+            btnAdicionarAutor.UseVisualStyleBackColor = true;
+            btnAdicionarAutor.Click += btnAdicionarAutor_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Enabled = false;
+            dataGridView1.Location = new Point(12, 140);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(776, 314);
+            dataGridView1.TabIndex = 46;
+            // 
+            // FormVerAutor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
+            Controls.Add(lblEditarLivro);
+            Controls.Add(btnApagarAutor);
+            Controls.Add(btnEditarAutor);
+            Controls.Add(btnAdicionarAutor);
+            Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Controls.Add(lblEditarLivro);
-            Controls.Add(btnApagarLivro);
-            Controls.Add(btnEditarLivro);
-            Controls.Add(btnAdicionarLivro);
-            Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "FormVerLivro";
-            Text = "FormVerLivro";
-            Load += FormVerLivro_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Name = "FormVerAutor";
+            Text = "FormVerAutor";
+            Load += FormRegistarAutor_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private Button btnAdicionarLivro;
-        private Button btnEditarLivro;
-        private Button btnApagarLivro;
-        private Label lblEditarLivro;
         private Panel panel2;
         private PictureBox pictureBox2;
         private Label label2;
         private Panel panel1;
         private Label label1;
+        private Label lblEditarLivro;
+        private Button btnApagarAutor;
+        private Button btnEditarAutor;
+        private Button btnAdicionarAutor;
+        private DataGridView dataGridView1;
     }
 }

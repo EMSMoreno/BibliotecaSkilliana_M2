@@ -65,7 +65,7 @@
             panel2.Controls.Add(label9);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(819, 64);
+            panel2.Size = new Size(928, 64);
             panel2.TabIndex = 57;
             // 
             // pictureBox2
@@ -93,9 +93,9 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label8);
-            panel1.Location = new Point(0, 531);
+            panel1.Location = new Point(0, 648);
             panel1.Name = "panel1";
-            panel1.Size = new Size(819, 41);
+            panel1.Size = new Size(928, 41);
             panel1.TabIndex = 58;
             // 
             // label8
@@ -122,23 +122,23 @@
             // dataGridViewAutores
             // 
             dataGridViewAutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAutores.Location = new Point(69, 329);
+            dataGridViewAutores.Location = new Point(24, 352);
             dataGridViewAutores.Name = "dataGridViewAutores";
-            dataGridViewAutores.Size = new Size(734, 181);
+            dataGridViewAutores.Size = new Size(891, 260);
             dataGridViewAutores.TabIndex = 62;
             dataGridViewAutores.CellClick += dataGridViewAutores_CellClick;
             // 
             // txtNomeAutor
             // 
-            txtNomeAutor.Location = new Point(146, 161);
+            txtNomeAutor.Location = new Point(151, 172);
             txtNomeAutor.Name = "txtNomeAutor";
-            txtNomeAutor.Size = new Size(183, 23);
+            txtNomeAutor.Size = new Size(267, 23);
             txtNomeAutor.TabIndex = 68;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(64, 164);
+            label1.Location = new Point(69, 175);
             label1.Name = "label1";
             label1.Size = new Size(73, 15);
             label1.TabIndex = 67;
@@ -146,16 +146,16 @@
             // 
             // txtBiografia
             // 
-            txtBiografia.Location = new Point(129, 238);
+            txtBiografia.Location = new Point(137, 249);
             txtBiografia.Multiline = true;
             txtBiografia.Name = "txtBiografia";
-            txtBiografia.Size = new Size(200, 85);
+            txtBiografia.Size = new Size(281, 97);
             txtBiografia.TabIndex = 72;
             // 
             // lblBio
             // 
             lblBio.AutoSize = true;
-            lblBio.Location = new Point(66, 241);
+            lblBio.Location = new Point(71, 252);
             lblBio.Name = "lblBio";
             lblBio.Size = new Size(54, 15);
             lblBio.TabIndex = 71;
@@ -163,15 +163,15 @@
             // 
             // dtpDataNasc
             // 
-            dtpDataNasc.Location = new Point(164, 200);
+            dtpDataNasc.Location = new Point(169, 211);
             dtpDataNasc.Name = "dtpDataNasc";
-            dtpDataNasc.Size = new Size(165, 23);
+            dtpDataNasc.Size = new Size(249, 23);
             dtpDataNasc.TabIndex = 70;
             // 
             // lblDataNasc
             // 
             lblDataNasc.AutoSize = true;
-            lblDataNasc.Location = new Point(60, 206);
+            lblDataNasc.Location = new Point(65, 217);
             lblDataNasc.Name = "lblDataNasc";
             lblDataNasc.Size = new Size(98, 15);
             lblDataNasc.TabIndex = 69;
@@ -179,7 +179,7 @@
             // 
             // txtTwitter
             // 
-            txtTwitter.Location = new Point(426, 249);
+            txtTwitter.Location = new Point(526, 248);
             txtTwitter.Name = "txtTwitter";
             txtTwitter.PlaceholderText = "twitter.com/escreve_assim";
             txtTwitter.Size = new Size(200, 23);
@@ -188,7 +188,7 @@
             // lblTwitter
             // 
             lblTwitter.AutoSize = true;
-            lblTwitter.Location = new Point(344, 252);
+            lblTwitter.Location = new Point(444, 251);
             lblTwitter.Name = "lblTwitter";
             lblTwitter.Size = new Size(54, 15);
             lblTwitter.TabIndex = 79;
@@ -196,7 +196,7 @@
             // 
             // txtInstagram
             // 
-            txtInstagram.Location = new Point(426, 205);
+            txtInstagram.Location = new Point(526, 204);
             txtInstagram.Name = "txtInstagram";
             txtInstagram.PlaceholderText = "instagram.com/escreve_assim";
             txtInstagram.Size = new Size(200, 23);
@@ -205,7 +205,7 @@
             // lblInstagram
             // 
             lblInstagram.AutoSize = true;
-            lblInstagram.Location = new Point(344, 208);
+            lblInstagram.Location = new Point(444, 207);
             lblInstagram.Name = "lblInstagram";
             lblInstagram.Size = new Size(60, 15);
             lblInstagram.TabIndex = 77;
@@ -213,7 +213,7 @@
             // 
             // txtFacebook
             // 
-            txtFacebook.Location = new Point(426, 161);
+            txtFacebook.Location = new Point(526, 160);
             txtFacebook.Name = "txtFacebook";
             txtFacebook.PlaceholderText = "facebook.com/escreve_assim";
             txtFacebook.Size = new Size(200, 23);
@@ -222,7 +222,7 @@
             // lblFacebook
             // 
             lblFacebook.AutoSize = true;
-            lblFacebook.Location = new Point(344, 164);
+            lblFacebook.Location = new Point(444, 163);
             lblFacebook.Name = "lblFacebook";
             lblFacebook.Size = new Size(58, 15);
             lblFacebook.TabIndex = 75;
@@ -231,7 +231,7 @@
             // cmbCodSecao
             // 
             cmbCodSecao.FormattingEnabled = true;
-            cmbCodSecao.Location = new Point(427, 289);
+            cmbCodSecao.Location = new Point(527, 288);
             cmbCodSecao.Name = "cmbCodSecao";
             cmbCodSecao.Size = new Size(200, 23);
             cmbCodSecao.TabIndex = 82;
@@ -239,7 +239,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(335, 295);
+            label2.Location = new Point(435, 294);
             label2.Name = "label2";
             label2.Size = new Size(86, 15);
             label2.TabIndex = 81;
@@ -248,7 +248,7 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(649, 241);
+            btnLimparForm.Location = new Point(761, 266);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 84;
@@ -260,7 +260,7 @@
             // 
             btnEditarAutor.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarAutor.FlatStyle = FlatStyle.Flat;
-            btnEditarAutor.Location = new Point(649, 284);
+            btnEditarAutor.Location = new Point(761, 309);
             btnEditarAutor.Name = "btnEditarAutor";
             btnEditarAutor.Size = new Size(154, 37);
             btnEditarAutor.TabIndex = 83;
@@ -272,7 +272,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(819, 570);
+            ClientSize = new Size(927, 689);
             Controls.Add(btnLimparForm);
             Controls.Add(btnEditarAutor);
             Controls.Add(cmbCodSecao);
@@ -293,6 +293,7 @@
             Controls.Add(lblEditarLivro);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormEditarAutor";
             Text = "FormEditarAutor";
             Load += FormEditarAutor_Load;

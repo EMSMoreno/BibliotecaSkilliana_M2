@@ -46,6 +46,9 @@
             btnLimparForm = new Button();
             btnEditarEmprestimo = new Button();
             dataGridViewEmprestimos = new DataGridView();
+            btnEstenderEmprestimo = new Button();
+            cbEstado = new ComboBox();
+            lblEstado = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -115,7 +118,7 @@
             // 
             // dateTimePickerDataRegisto
             // 
-            dateTimePickerDataRegisto.Location = new Point(157, 164);
+            dateTimePickerDataRegisto.Location = new Point(424, 145);
             dateTimePickerDataRegisto.Name = "dateTimePickerDataRegisto";
             dateTimePickerDataRegisto.Size = new Size(170, 23);
             dateTimePickerDataRegisto.TabIndex = 83;
@@ -123,7 +126,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(69, 170);
+            label2.Location = new Point(336, 151);
             label2.Name = "label2";
             label2.Size = new Size(73, 15);
             label2.TabIndex = 81;
@@ -131,14 +134,14 @@
             // 
             // dateTimePickerDataDevolucao
             // 
-            dateTimePickerDataDevolucao.Location = new Point(157, 206);
+            dateTimePickerDataDevolucao.Location = new Point(424, 187);
             dateTimePickerDataDevolucao.Name = "dateTimePickerDataDevolucao";
             dateTimePickerDataDevolucao.Size = new Size(170, 23);
             dateTimePickerDataDevolucao.TabIndex = 87;
             // 
             // txtNumeroSocio
             // 
-            txtNumeroSocio.Location = new Point(428, 203);
+            txtNumeroSocio.Location = new Point(164, 148);
             txtNumeroSocio.Name = "txtNumeroSocio";
             txtNumeroSocio.Size = new Size(56, 23);
             txtNumeroSocio.TabIndex = 86;
@@ -146,7 +149,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(369, 206);
+            label4.Location = new Point(105, 151);
             label4.Name = "label4";
             label4.Size = new Size(53, 15);
             label4.TabIndex = 85;
@@ -155,7 +158,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(69, 199);
+            label3.Location = new Point(336, 180);
             label3.Name = "label3";
             label3.Size = new Size(78, 30);
             label3.TabIndex = 84;
@@ -164,7 +167,7 @@
             // comboBoxFuncionarioID
             // 
             comboBoxFuncionarioID.FormattingEnabled = true;
-            comboBoxFuncionarioID.Location = new Point(428, 164);
+            comboBoxFuncionarioID.Location = new Point(164, 190);
             comboBoxFuncionarioID.Name = "comboBoxFuncionarioID";
             comboBoxFuncionarioID.Size = new Size(160, 23);
             comboBoxFuncionarioID.TabIndex = 89;
@@ -172,7 +175,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(338, 167);
+            label5.Location = new Point(74, 193);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
             label5.TabIndex = 88;
@@ -181,9 +184,9 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(600, 234);
+            btnLimparForm.Location = new Point(629, 234);
             btnLimparForm.Name = "btnLimparForm";
-            btnLimparForm.Size = new Size(126, 37);
+            btnLimparForm.Size = new Size(140, 37);
             btnLimparForm.TabIndex = 91;
             btnLimparForm.Text = "Limpar Form";
             btnLimparForm.UseVisualStyleBackColor = true;
@@ -193,9 +196,9 @@
             // 
             btnEditarEmprestimo.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnEditarEmprestimo.Location = new Point(600, 192);
+            btnEditarEmprestimo.Location = new Point(629, 192);
             btnEditarEmprestimo.Name = "btnEditarEmprestimo";
-            btnEditarEmprestimo.Size = new Size(126, 37);
+            btnEditarEmprestimo.Size = new Size(140, 37);
             btnEditarEmprestimo.TabIndex = 90;
             btnEditarEmprestimo.Text = "Editar Empréstimo";
             btnEditarEmprestimo.UseVisualStyleBackColor = true;
@@ -206,15 +209,47 @@
             dataGridViewEmprestimos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewEmprestimos.Location = new Point(34, 277);
             dataGridViewEmprestimos.Name = "dataGridViewEmprestimos";
-            dataGridViewEmprestimos.Size = new Size(692, 127);
+            dataGridViewEmprestimos.Size = new Size(735, 127);
             dataGridViewEmprestimos.TabIndex = 92;
             dataGridViewEmprestimos.CellClick += dataGridViewEmprestimos_CellClick;
+            // 
+            // btnEstenderEmprestimo
+            // 
+            btnEstenderEmprestimo.FlatAppearance.BorderColor = Color.Firebrick;
+            btnEstenderEmprestimo.FlatStyle = FlatStyle.Flat;
+            btnEstenderEmprestimo.Location = new Point(629, 149);
+            btnEstenderEmprestimo.Name = "btnEstenderEmprestimo";
+            btnEstenderEmprestimo.Size = new Size(140, 37);
+            btnEstenderEmprestimo.TabIndex = 93;
+            btnEstenderEmprestimo.Text = "Estender Empréstimo";
+            btnEstenderEmprestimo.UseVisualStyleBackColor = true;
+            btnEstenderEmprestimo.Click += btnEstenderEmprestimo_Click;
+            // 
+            // cbEstado
+            // 
+            cbEstado.FormattingEnabled = true;
+            cbEstado.Location = new Point(164, 231);
+            cbEstado.Name = "cbEstado";
+            cbEstado.Size = new Size(160, 23);
+            cbEstado.TabIndex = 95;
+            // 
+            // lblEstado
+            // 
+            lblEstado.AutoSize = true;
+            lblEstado.Location = new Point(74, 234);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(42, 15);
+            lblEstado.TabIndex = 94;
+            lblEstado.Text = "Estado";
             // 
             // FormEditarEmprestimo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cbEstado);
+            Controls.Add(lblEstado);
+            Controls.Add(btnEstenderEmprestimo);
             Controls.Add(dataGridViewEmprestimos);
             Controls.Add(btnLimparForm);
             Controls.Add(btnEditarEmprestimo);
@@ -262,5 +297,8 @@
         private Button btnLimparForm;
         private Button btnEditarEmprestimo;
         private DataGridView dataGridViewEmprestimos;
+        private Button btnEstenderEmprestimo;
+        private ComboBox cbEstado;
+        private Label lblEstado;
     }
 }

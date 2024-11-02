@@ -32,7 +32,6 @@
             dataGridView1 = new DataGridView();
             btnAdicionarLivro = new Button();
             btnEditarLivro = new Button();
-            btnApagarLivro = new Button();
             lblEditarLivro = new Label();
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
@@ -53,14 +52,15 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(776, 314);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // btnAdicionarLivro
             // 
             btnAdicionarLivro.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
             btnAdicionarLivro.FlatStyle = FlatStyle.Flat;
-            btnAdicionarLivro.Location = new Point(71, 481);
+            btnAdicionarLivro.Location = new Point(165, 457);
             btnAdicionarLivro.Name = "btnAdicionarLivro";
-            btnAdicionarLivro.Size = new Size(135, 48);
+            btnAdicionarLivro.Size = new Size(219, 48);
             btnAdicionarLivro.TabIndex = 1;
             btnAdicionarLivro.Text = "Adicionar Livro";
             btnAdicionarLivro.UseVisualStyleBackColor = true;
@@ -70,25 +70,13 @@
             // 
             btnEditarLivro.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarLivro.FlatStyle = FlatStyle.Flat;
-            btnEditarLivro.Location = new Point(324, 481);
+            btnEditarLivro.Location = new Point(392, 457);
             btnEditarLivro.Name = "btnEditarLivro";
-            btnEditarLivro.Size = new Size(135, 48);
+            btnEditarLivro.Size = new Size(219, 48);
             btnEditarLivro.TabIndex = 2;
             btnEditarLivro.Text = "Editar Livro";
             btnEditarLivro.UseVisualStyleBackColor = true;
             btnEditarLivro.Click += btnEditarLivro_Click;
-            // 
-            // btnApagarLivro
-            // 
-            btnApagarLivro.FlatAppearance.BorderColor = Color.Red;
-            btnApagarLivro.FlatStyle = FlatStyle.Flat;
-            btnApagarLivro.Location = new Point(600, 481);
-            btnApagarLivro.Name = "btnApagarLivro";
-            btnApagarLivro.Size = new Size(135, 48);
-            btnApagarLivro.TabIndex = 3;
-            btnApagarLivro.Text = "Apagar Livro";
-            btnApagarLivro.UseVisualStyleBackColor = true;
-            btnApagarLivro.Click += btnApagarLivro_Click;
             // 
             // lblEditarLivro
             // 
@@ -159,7 +147,6 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Controls.Add(lblEditarLivro);
-            Controls.Add(btnApagarLivro);
             Controls.Add(btnEditarLivro);
             Controls.Add(btnAdicionarLivro);
             Controls.Add(dataGridView1);
@@ -182,7 +169,6 @@
         private DataGridView dataGridView1;
         private Button btnAdicionarLivro;
         private Button btnEditarLivro;
-        private Button btnApagarLivro;
         private Label lblEditarLivro;
         private Panel panel2;
         private PictureBox pictureBox2;

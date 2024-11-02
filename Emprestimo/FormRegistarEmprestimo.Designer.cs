@@ -34,7 +34,7 @@
             label4 = new Label();
             label5 = new Label();
             txtNumeroSocio = new TextBox();
-            comboBoxFuncionarioID = new ComboBox();
+            cbFuncionario = new ComboBox();
             dateTimePickerDataRegisto = new DateTimePicker();
             dateTimePickerDataDevolucao = new DateTimePicker();
             btnRegistarEmprestimo = new Button();
@@ -51,6 +51,8 @@
             btnLimparProcuraEmprestimo = new Button();
             txtEmprestimoIDProcura = new TextBox();
             label7 = new Label();
+            lblEstado = new Label();
+            cbEstado = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -60,7 +62,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(400, 143);
+            label2.Location = new Point(399, 145);
             label2.Name = "label2";
             label2.Size = new Size(73, 15);
             label2.TabIndex = 2;
@@ -69,7 +71,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(400, 183);
+            label3.Location = new Point(399, 185);
             label3.Name = "label3";
             label3.Size = new Size(78, 30);
             label3.TabIndex = 3;
@@ -78,7 +80,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(77, 148);
+            label4.Location = new Point(77, 136);
             label4.Name = "label4";
             label4.Size = new Size(53, 15);
             label4.TabIndex = 4;
@@ -87,7 +89,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(77, 193);
+            label5.Location = new Point(77, 181);
             label5.Name = "label5";
             label5.Size = new Size(84, 15);
             label5.TabIndex = 5;
@@ -95,38 +97,38 @@
             // 
             // txtNumeroSocio
             // 
-            txtNumeroSocio.Location = new Point(167, 145);
+            txtNumeroSocio.Location = new Point(167, 133);
             txtNumeroSocio.Name = "txtNumeroSocio";
             txtNumeroSocio.Size = new Size(43, 23);
             txtNumeroSocio.TabIndex = 7;
             // 
-            // comboBoxFuncionarioID
+            // cbFuncionario
             // 
-            comboBoxFuncionarioID.FormattingEnabled = true;
-            comboBoxFuncionarioID.Location = new Point(167, 190);
-            comboBoxFuncionarioID.Name = "comboBoxFuncionarioID";
-            comboBoxFuncionarioID.Size = new Size(176, 23);
-            comboBoxFuncionarioID.TabIndex = 8;
+            cbFuncionario.FormattingEnabled = true;
+            cbFuncionario.Location = new Point(167, 178);
+            cbFuncionario.Name = "cbFuncionario";
+            cbFuncionario.Size = new Size(176, 23);
+            cbFuncionario.TabIndex = 8;
             // 
             // dateTimePickerDataRegisto
             // 
-            dateTimePickerDataRegisto.Location = new Point(490, 137);
+            dateTimePickerDataRegisto.Location = new Point(489, 139);
             dateTimePickerDataRegisto.Name = "dateTimePickerDataRegisto";
-            dateTimePickerDataRegisto.Size = new Size(176, 23);
+            dateTimePickerDataRegisto.Size = new Size(189, 23);
             dateTimePickerDataRegisto.TabIndex = 9;
             // 
             // dateTimePickerDataDevolucao
             // 
-            dateTimePickerDataDevolucao.Location = new Point(490, 190);
+            dateTimePickerDataDevolucao.Location = new Point(489, 192);
             dateTimePickerDataDevolucao.Name = "dateTimePickerDataDevolucao";
-            dateTimePickerDataDevolucao.Size = new Size(176, 23);
+            dateTimePickerDataDevolucao.Size = new Size(189, 23);
             dateTimePickerDataDevolucao.TabIndex = 10;
             // 
             // btnRegistarEmprestimo
             // 
             btnRegistarEmprestimo.FlatAppearance.BorderColor = Color.LimeGreen;
             btnRegistarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnRegistarEmprestimo.Location = new Point(378, 265);
+            btnRegistarEmprestimo.Location = new Point(545, 238);
             btnRegistarEmprestimo.Name = "btnRegistarEmprestimo";
             btnRegistarEmprestimo.Size = new Size(154, 37);
             btnRegistarEmprestimo.TabIndex = 13;
@@ -137,7 +139,7 @@
             // btnLimparForm
             // 
             btnLimparForm.FlatStyle = FlatStyle.Flat;
-            btnLimparForm.Location = new Point(213, 265);
+            btnLimparForm.Location = new Point(380, 238);
             btnLimparForm.Name = "btnLimparForm";
             btnLimparForm.Size = new Size(154, 37);
             btnLimparForm.TabIndex = 14;
@@ -262,11 +264,30 @@
             label7.TabIndex = 58;
             label7.Text = "Empréstimo ID";
             // 
+            // lblEstado
+            // 
+            lblEstado.AutoSize = true;
+            lblEstado.Location = new Point(77, 226);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(42, 15);
+            lblEstado.TabIndex = 60;
+            lblEstado.Text = "Estado";
+            // 
+            // cbEstado
+            // 
+            cbEstado.FormattingEnabled = true;
+            cbEstado.Location = new Point(167, 223);
+            cbEstado.Name = "cbEstado";
+            cbEstado.Size = new Size(176, 23);
+            cbEstado.TabIndex = 61;
+            // 
             // FormRegistarEmprestimo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(782, 551);
+            Controls.Add(cbEstado);
+            Controls.Add(lblEstado);
             Controls.Add(txtEmprestimoIDProcura);
             Controls.Add(label7);
             Controls.Add(btnLimparProcuraEmprestimo);
@@ -280,7 +301,7 @@
             Controls.Add(btnRegistarEmprestimo);
             Controls.Add(dateTimePickerDataDevolucao);
             Controls.Add(dateTimePickerDataRegisto);
-            Controls.Add(comboBoxFuncionarioID);
+            Controls.Add(cbFuncionario);
             Controls.Add(txtNumeroSocio);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -289,6 +310,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormRegistarEmprestimo";
             Text = "FormRegistarEmprestimo";
+            Load += FormRegistarEmprestimo_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewProcura).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -305,7 +327,7 @@
         private Label label4;
         private Label label5;
         private TextBox txtNumeroSocio;
-        private ComboBox comboBoxFuncionarioID;
+        private ComboBox cbFuncionario;
         private DateTimePicker dateTimePickerDataRegisto;
         private DateTimePicker dateTimePickerDataDevolucao;
         private Button btnRegistarEmprestimo;
@@ -322,5 +344,7 @@
         private Button btnLimparProcuraEmprestimo;
         private TextBox txtEmprestimoIDProcura;
         private Label label7;
+        private Label lblEstado;
+        private ComboBox cbEstado;
     }
 }

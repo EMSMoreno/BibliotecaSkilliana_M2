@@ -34,7 +34,6 @@
             label2 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            btnApagarEmprestimo = new Button();
             lblEditarLivro = new Label();
             btnEditarEmprestimo = new Button();
             btnAdicionarEmprestimo = new Button();
@@ -90,23 +89,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(128, 14);
+            label1.Location = new Point(187, 14);
             label1.Name = "label1";
             label1.Size = new Size(446, 17);
             label1.TabIndex = 1;
             label1.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
-            // 
-            // btnApagarEmprestimo
-            // 
-            btnApagarEmprestimo.FlatAppearance.BorderColor = Color.Red;
-            btnApagarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnApagarEmprestimo.Location = new Point(550, 386);
-            btnApagarEmprestimo.Name = "btnApagarEmprestimo";
-            btnApagarEmprestimo.Size = new Size(135, 48);
-            btnApagarEmprestimo.TabIndex = 55;
-            btnApagarEmprestimo.Text = "Apagar Empréstimo";
-            btnApagarEmprestimo.UseVisualStyleBackColor = true;
-            btnApagarEmprestimo.Click += btnApagarEmprestimo_Click;
             // 
             // lblEditarLivro
             // 
@@ -122,9 +109,9 @@
             // 
             btnEditarEmprestimo.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnEditarEmprestimo.Location = new Point(333, 386);
+            btnEditarEmprestimo.Location = new Point(419, 361);
             btnEditarEmprestimo.Name = "btnEditarEmprestimo";
-            btnEditarEmprestimo.Size = new Size(135, 48);
+            btnEditarEmprestimo.Size = new Size(214, 48);
             btnEditarEmprestimo.TabIndex = 53;
             btnEditarEmprestimo.Text = "Editar Empréstimo";
             btnEditarEmprestimo.UseVisualStyleBackColor = true;
@@ -134,9 +121,9 @@
             // 
             btnAdicionarEmprestimo.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
             btnAdicionarEmprestimo.FlatStyle = FlatStyle.Flat;
-            btnAdicionarEmprestimo.Location = new Point(114, 386);
+            btnAdicionarEmprestimo.Location = new Point(168, 361);
             btnAdicionarEmprestimo.Name = "btnAdicionarEmprestimo";
-            btnAdicionarEmprestimo.Size = new Size(135, 48);
+            btnAdicionarEmprestimo.Size = new Size(214, 48);
             btnAdicionarEmprestimo.TabIndex = 52;
             btnAdicionarEmprestimo.Text = "Adicionar Empréstimo";
             btnAdicionarEmprestimo.UseVisualStyleBackColor = true;
@@ -149,13 +136,13 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(636, 196);
             dataGridView1.TabIndex = 51;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // FormVerEmprestimo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 527);
-            Controls.Add(btnApagarEmprestimo);
             Controls.Add(lblEditarLivro);
             Controls.Add(btnEditarEmprestimo);
             Controls.Add(btnAdicionarEmprestimo);
@@ -183,7 +170,6 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
-        private Button btnApagarEmprestimo;
         private Label lblEditarLivro;
         private Button btnEditarEmprestimo;
         private Button btnAdicionarEmprestimo;

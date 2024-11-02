@@ -91,27 +91,63 @@ namespace BibliotecaSkilliana_M2.Livro
                 using (con = new SqlConnection(cs))
                 {
                     con.Open();
-                    string query = @"
-                INSERT INTO Livro
-                (Titulo, Data_Lancamento, Sinopse, Edicao, Editora, Idioma, Numero_Paginas, Estado, Codigo_Estante, Quantidade)
-                VALUES
-                (@Titulo, @DataLancamento, @Sinopse, @Edicao, @Editora, @Idioma, @NumeroPaginas, @Estado, @CodigoEstante, @Quantidade)";
 
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
-                    cmd.Parameters.AddWithValue("@DataLancamento", dtpDataLancamento.Value);
-                    cmd.Parameters.AddWithValue("@Sinopse", txtSinopse.Text);
-                    cmd.Parameters.AddWithValue("@Edicao", txtEdicao.Text);
-                    cmd.Parameters.AddWithValue("@Editora", txtEditora.Text);
-                    cmd.Parameters.AddWithValue("@Idioma", txtIdioma.Text);
-                    cmd.Parameters.AddWithValue("@NumeroPaginas", txtNumeroPaginas.Text);
-                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-                    cmd.Parameters.AddWithValue("@CodigoEstante", txtCodigoEstante.Text);
-                    cmd.Parameters.AddWithValue("@Quantidade", txtQuantidade.Text);
+                    // Validação Código Estante (FK)
+                    string estanteQuery = "SELECT COUNT(*) FROM Estante WHERE Codigo_Estante = @CodigoEstante";
+                    SqlCommand estanteCmd = new SqlCommand(estanteQuery, con);
+                    estanteCmd.Parameters.AddWithValue("@CodigoEstante", txtCodigoEstante.Text);
 
-                    cmd.ExecuteNonQuery();
+                    int estanteCount = (int)estanteCmd.ExecuteScalar();
+                    if (estanteCount == 0)
+                    {
+                        MessageBox.Show("O Código de Estante inserido é inválido. Por favor, selecione um código válido.");
+                        return;
+                    }
 
-                    MessageBox.Show("Livro registado com sucesso!");
+                    // Verificar se o livro já existe (pelo Título ou ISBN)
+                    string checkLivroQuery = "SELECT Quantidade FROM Livro WHERE Titulo = @Titulo";
+                    SqlCommand checkLivroCmd = new SqlCommand(checkLivroQuery, con);
+                    checkLivroCmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
+
+                    object quantidadeExistenteObj = checkLivroCmd.ExecuteScalar();
+
+                    if (quantidadeExistenteObj != null)
+                    {
+                        int quantidadeExistente = Convert.ToInt32(quantidadeExistenteObj);
+                        int novaQuantidade = quantidadeExistente + int.Parse(txtQuantidade.Text);
+
+                        string updateLivroQuery = "UPDATE Livro SET Quantidade = @Quantidade WHERE Titulo = @Titulo";
+                        SqlCommand updateLivroCmd = new SqlCommand(updateLivroQuery, con);
+                        updateLivroCmd.Parameters.AddWithValue("@Quantidade", novaQuantidade);
+                        updateLivroCmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
+
+                        updateLivroCmd.ExecuteNonQuery();
+                        MessageBox.Show("Quantidade atualizada com sucesso!");
+                    }
+                    else
+                    {
+                        string query = @"
+                    INSERT INTO Livro
+                    (Titulo, Data_Lancamento, Sinopse, Edicao, Editora, Idioma, Numero_Paginas, Estado, Codigo_Estante, Quantidade)
+                    VALUES
+                    (@Titulo, @DataLancamento, @Sinopse, @Edicao, @Editora, @Idioma, @NumeroPaginas, @Estado, @CodigoEstante, @Quantidade)";
+
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
+                        cmd.Parameters.AddWithValue("@DataLancamento", dtpDataLancamento.Value);
+                        cmd.Parameters.AddWithValue("@Sinopse", txtSinopse.Text);
+                        cmd.Parameters.AddWithValue("@Edicao", txtEdicao.Text);
+                        cmd.Parameters.AddWithValue("@Editora", txtEditora.Text);
+                        cmd.Parameters.AddWithValue("@Idioma", txtIdioma.Text);
+                        cmd.Parameters.AddWithValue("@NumeroPaginas", txtNumeroPaginas.Text);
+                        cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+                        cmd.Parameters.AddWithValue("@CodigoEstante", txtCodigoEstante.Text);
+                        cmd.Parameters.AddWithValue("@Quantidade", txtQuantidade.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Livro registrado com sucesso!");
+                    }
+
                     LimparForm();
                 }
             }

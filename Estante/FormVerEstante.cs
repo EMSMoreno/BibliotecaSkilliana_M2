@@ -1,15 +1,6 @@
-﻿using BibliotecaSkilliana_M2.Livro;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BibliotecaSkilliana_M2.Estante
 {
@@ -54,22 +45,61 @@ namespace BibliotecaSkilliana_M2.Estante
 
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-
-                    if (string.IsNullOrEmpty(busca))
-                    {
-                        dataGridView1.DataSource = dt;
-                    }
-                    
+                    dataGridView1.DataSource = dt;
 
                     if (dt.Rows.Count == 0)
                     {
                         MessageBox.Show("Nenhuma estante encontrada.");
                     }
+
+                    if (dataGridView1.Columns["btnApagar"] == null)
+                    {
+                        DataGridViewButtonColumn btnApagar = new DataGridViewButtonColumn();
+                        btnApagar.Name = "btnApagar";
+                        btnApagar.HeaderText = "Ação";
+                        btnApagar.Text = "Apagar";
+                        btnApagar.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(btnApagar);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar estantes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar as estantes: " + ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["btnApagar"].Index && e.RowIndex >= 0)
+            {
+                var confirmResult = MessageBox.Show("Tens a certeza que quueres apagar esta estante?",
+                                                    "Confirmação",
+                                                    MessageBoxButtons.YesNo);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int estanteId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID_Estante"].Value);
+
+                        using (SqlConnection con = new SqlConnection(cs))
+                        {
+                            con.Open();
+                            string deleteQuery = "DELETE FROM Estante WHERE ID_Estante = @id";
+                            SqlCommand cmd = new SqlCommand(deleteQuery, con);
+                            cmd.Parameters.AddWithValue("@id", estanteId);
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Estante apagada com sucesso!");
+                            CarregarEstantes();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao apagar a estante: " + ex.Message);
+                    }
+                }
             }
         }
 
@@ -85,11 +115,6 @@ namespace BibliotecaSkilliana_M2.Estante
             { formEditarEstante.ShowDialog(); }
         }
 
-        private void btnApagarEstante_Click(object sender, EventArgs e)
-        {
-            using (FormApagarEstante formApagarEstante = new FormApagarEstante())
-            { formApagarEstante.ShowDialog(); }
-        }
     }
 
 }

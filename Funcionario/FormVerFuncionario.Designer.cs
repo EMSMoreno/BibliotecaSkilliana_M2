@@ -34,7 +34,6 @@
             label2 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            btnApagarSocio = new Button();
             lblEditarLivro = new Label();
             btnEditarSocio = new Button();
             btnAdicionarSocio = new Button();
@@ -90,23 +89,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(165, 15);
+            label1.Location = new Point(185, 15);
             label1.Name = "label1";
             label1.Size = new Size(446, 17);
             label1.TabIndex = 1;
             label1.Text = "@2024 WorldSkills Portugal Regional Exam - Portugal, September 2024";
-            // 
-            // btnApagarSocio
-            // 
-            btnApagarSocio.FlatAppearance.BorderColor = Color.Red;
-            btnApagarSocio.FlatStyle = FlatStyle.Flat;
-            btnApagarSocio.Location = new Point(613, 483);
-            btnApagarSocio.Name = "btnApagarSocio";
-            btnApagarSocio.Size = new Size(135, 48);
-            btnApagarSocio.TabIndex = 60;
-            btnApagarSocio.Text = "Apagar Colaborador";
-            btnApagarSocio.UseVisualStyleBackColor = true;
-            btnApagarSocio.Click += btnApagarSocio_Click;
             // 
             // lblEditarLivro
             // 
@@ -122,9 +109,9 @@
             // 
             btnEditarSocio.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarSocio.FlatStyle = FlatStyle.Flat;
-            btnEditarSocio.Location = new Point(326, 483);
+            btnEditarSocio.Location = new Point(410, 461);
             btnEditarSocio.Name = "btnEditarSocio";
-            btnEditarSocio.Size = new Size(135, 48);
+            btnEditarSocio.Size = new Size(201, 48);
             btnEditarSocio.TabIndex = 58;
             btnEditarSocio.Text = "Editar Colaborador";
             btnEditarSocio.UseVisualStyleBackColor = true;
@@ -134,9 +121,9 @@
             // 
             btnAdicionarSocio.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
             btnAdicionarSocio.FlatStyle = FlatStyle.Flat;
-            btnAdicionarSocio.Location = new Point(53, 483);
+            btnAdicionarSocio.Location = new Point(203, 461);
             btnAdicionarSocio.Name = "btnAdicionarSocio";
-            btnAdicionarSocio.Size = new Size(135, 48);
+            btnAdicionarSocio.Size = new Size(201, 48);
             btnAdicionarSocio.TabIndex = 57;
             btnAdicionarSocio.Text = "Adicionar Colaborador";
             btnAdicionarSocio.UseVisualStyleBackColor = true;
@@ -149,13 +136,13 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(776, 314);
             dataGridView1.TabIndex = 56;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // FormVerFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
-            Controls.Add(btnApagarSocio);
             Controls.Add(lblEditarLivro);
             Controls.Add(btnEditarSocio);
             Controls.Add(btnAdicionarSocio);
@@ -183,7 +170,6 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
-        private Button btnApagarSocio;
         private Label lblEditarLivro;
         private Button btnEditarSocio;
         private Button btnAdicionarSocio;

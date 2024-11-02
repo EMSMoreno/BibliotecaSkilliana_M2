@@ -31,12 +31,6 @@ namespace BibliotecaSkilliana_M2
             { formEditarSocio.ShowDialog(); }
         }
 
-        private void apagarEmpréstimoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var formEditarSocio = new FormApagarEmprestimo())
-            { formEditarSocio.ShowDialog(); }
-        }
-
         #endregion
 
         #region Menu Strip - Sócio
@@ -51,12 +45,6 @@ namespace BibliotecaSkilliana_M2
         {
             using (var formEditarSocio = new FormEditarSocio())
             { formEditarSocio.ShowDialog(); }
-        }
-
-        private void apagarSócioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var formApagarSocio = new FormApagarSocio())
-            { formApagarSocio.ShowDialog(); }
         }
 
         #endregion
@@ -75,12 +63,6 @@ namespace BibliotecaSkilliana_M2
             { formEditarFuncionario.ShowDialog(); }
         }
 
-        private void apagarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var formApagarFuncionario = new FormApagarFuncionario())
-            { formApagarFuncionario.ShowDialog(); }
-        }
-
         #endregion
 
         #region Menu Strip - Livro
@@ -95,12 +77,6 @@ namespace BibliotecaSkilliana_M2
         {
             using (var formEditarLivro = new FormEditarLivro())
             { formEditarLivro.ShowDialog(); }
-        }
-
-        private void apagarLivroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var formApagarLivro = new FormApagarLivro())
-            { formApagarLivro.ShowDialog(); }
         }
 
         #endregion
@@ -119,12 +95,6 @@ namespace BibliotecaSkilliana_M2
             { formEditarSecao.ShowDialog(); }
         }
 
-        private void apagarSecçãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var formApagarSecao = new FormApagarSecao())
-            { formApagarSecao.ShowDialog(); }
-        }
-
         #endregion
 
         #region Menu Strip - Estante
@@ -139,12 +109,6 @@ namespace BibliotecaSkilliana_M2
         {
             using (var formEditarEstante = new FormEditarEstante())
             { formEditarEstante.ShowDialog(); }
-        }
-
-        private void apagarEstanteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var formApagarEstante = new FormApagarEstante())
-            { formApagarEstante.ShowDialog(); }
         }
 
         #endregion
@@ -163,11 +127,6 @@ namespace BibliotecaSkilliana_M2
             { formEditarAutor.ShowDialog(); }
         }
 
-        private void apagarAutorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var formApagarAutor = new FormApagarAutor())
-            { formApagarAutor.ShowDialog(); }
-        }
 
         #endregion
 

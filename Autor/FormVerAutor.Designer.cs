@@ -35,7 +35,6 @@
             panel1 = new Panel();
             label1 = new Label();
             lblEditarLivro = new Label();
-            btnApagarAutor = new Button();
             btnEditarAutor = new Button();
             btnAdicionarAutor = new Button();
             dataGridView1 = new DataGridView();
@@ -106,25 +105,13 @@
             lblEditarLivro.TabIndex = 50;
             lblEditarLivro.Text = "Menu Autores - Ver Autores";
             // 
-            // btnApagarAutor
-            // 
-            btnApagarAutor.FlatAppearance.BorderColor = Color.Red;
-            btnApagarAutor.FlatStyle = FlatStyle.Flat;
-            btnApagarAutor.Location = new Point(600, 484);
-            btnApagarAutor.Name = "btnApagarAutor";
-            btnApagarAutor.Size = new Size(135, 48);
-            btnApagarAutor.TabIndex = 49;
-            btnApagarAutor.Text = "Apagar Autor";
-            btnApagarAutor.UseVisualStyleBackColor = true;
-            btnApagarAutor.Click += btnApagarAutor_Click;
-            // 
             // btnEditarAutor
             // 
             btnEditarAutor.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarAutor.FlatStyle = FlatStyle.Flat;
-            btnEditarAutor.Location = new Point(324, 484);
+            btnEditarAutor.Location = new Point(419, 460);
             btnEditarAutor.Name = "btnEditarAutor";
-            btnEditarAutor.Size = new Size(135, 48);
+            btnEditarAutor.Size = new Size(192, 48);
             btnEditarAutor.TabIndex = 48;
             btnEditarAutor.Text = "Editar Autor";
             btnEditarAutor.UseVisualStyleBackColor = true;
@@ -134,9 +121,9 @@
             // 
             btnAdicionarAutor.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
             btnAdicionarAutor.FlatStyle = FlatStyle.Flat;
-            btnAdicionarAutor.Location = new Point(71, 484);
+            btnAdicionarAutor.Location = new Point(165, 460);
             btnAdicionarAutor.Name = "btnAdicionarAutor";
-            btnAdicionarAutor.Size = new Size(135, 48);
+            btnAdicionarAutor.Size = new Size(192, 48);
             btnAdicionarAutor.TabIndex = 47;
             btnAdicionarAutor.Text = "Adicionar Autor";
             btnAdicionarAutor.UseVisualStyleBackColor = true;
@@ -150,6 +137,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(776, 314);
             dataGridView1.TabIndex = 46;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // FormVerAutor
             // 
@@ -157,7 +145,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
             Controls.Add(lblEditarLivro);
-            Controls.Add(btnApagarAutor);
             Controls.Add(btnEditarAutor);
             Controls.Add(btnAdicionarAutor);
             Controls.Add(dataGridView1);
@@ -185,7 +172,6 @@
         private Panel panel1;
         private Label label1;
         private Label lblEditarLivro;
-        private Button btnApagarAutor;
         private Button btnEditarAutor;
         private Button btnAdicionarAutor;
         private DataGridView dataGridView1;

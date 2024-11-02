@@ -35,7 +35,6 @@
             panel1 = new Panel();
             label1 = new Label();
             lblEditarLivro = new Label();
-            btnApagarSecao = new Button();
             btnEditarSecao = new Button();
             btnAdicionarSecao = new Button();
             dataGridView1 = new DataGridView();
@@ -106,23 +105,11 @@
             lblEditarLivro.TabIndex = 50;
             lblEditarLivro.Text = "Menu Secções - Ver Secções";
             // 
-            // btnApagarSecao
-            // 
-            btnApagarSecao.FlatAppearance.BorderColor = Color.Red;
-            btnApagarSecao.FlatStyle = FlatStyle.Flat;
-            btnApagarSecao.Location = new Point(600, 484);
-            btnApagarSecao.Name = "btnApagarSecao";
-            btnApagarSecao.Size = new Size(135, 48);
-            btnApagarSecao.TabIndex = 49;
-            btnApagarSecao.Text = "Apagar Secção";
-            btnApagarSecao.UseVisualStyleBackColor = true;
-            btnApagarSecao.Click += btnApagarSecao_Click;
-            // 
             // btnEditarSecao
             // 
             btnEditarSecao.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarSecao.FlatStyle = FlatStyle.Flat;
-            btnEditarSecao.Location = new Point(333, 484);
+            btnEditarSecao.Location = new Point(419, 475);
             btnEditarSecao.Name = "btnEditarSecao";
             btnEditarSecao.Size = new Size(135, 48);
             btnEditarSecao.TabIndex = 48;
@@ -134,7 +121,7 @@
             // 
             btnAdicionarSecao.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
             btnAdicionarSecao.FlatStyle = FlatStyle.Flat;
-            btnAdicionarSecao.Location = new Point(71, 484);
+            btnAdicionarSecao.Location = new Point(278, 475);
             btnAdicionarSecao.Name = "btnAdicionarSecao";
             btnAdicionarSecao.Size = new Size(135, 48);
             btnAdicionarSecao.TabIndex = 47;
@@ -148,8 +135,9 @@
             dataGridView1.Location = new Point(207, 155);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(393, 314);
+            dataGridView1.Size = new Size(429, 314);
             dataGridView1.TabIndex = 46;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // FormVerSecao
             // 
@@ -157,7 +145,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
             Controls.Add(lblEditarLivro);
-            Controls.Add(btnApagarSecao);
             Controls.Add(btnEditarSecao);
             Controls.Add(btnAdicionarSecao);
             Controls.Add(dataGridView1);
@@ -185,7 +172,6 @@
         private Panel panel1;
         private Label label1;
         private Label lblEditarLivro;
-        private Button btnApagarSecao;
         private Button btnEditarSecao;
         private Button btnAdicionarSecao;
         private DataGridView dataGridView1;

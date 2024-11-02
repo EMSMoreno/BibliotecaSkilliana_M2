@@ -1,15 +1,6 @@
-﻿using BibliotecaSkilliana_M2.Livro;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BibliotecaSkilliana_M2.Autor
 {
@@ -48,11 +39,55 @@ namespace BibliotecaSkilliana_M2.Autor
                     {
                         MessageBox.Show("Nenhum autor encontrado.");
                     }
+
+                    if (dataGridView1.Columns["btnApagar"] == null)
+                    {
+                        DataGridViewButtonColumn btnApagar = new DataGridViewButtonColumn();
+                        btnApagar.Name = "btnApagar";
+                        btnApagar.HeaderText = "Ação";
+                        btnApagar.Text = "Apagar";
+                        btnApagar.UseColumnTextForButtonValue = true;
+                        dataGridView1.Columns.Add(btnApagar);
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar autores: " + ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["btnApagar"].Index && e.RowIndex >= 0)
+            {
+                var confirmResult = MessageBox.Show("Tens a certeza que queres apagar este autor?",
+                                                    "Confirmação",
+                                                    MessageBoxButtons.YesNo);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int autorId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID_Autor"].Value);
+
+                        using (SqlConnection con = new SqlConnection(cs))
+                        {
+                            con.Open();
+                            string deleteQuery = "DELETE FROM Autor WHERE ID_Autor = @id";
+                            SqlCommand cmd = new SqlCommand(deleteQuery, con);
+                            cmd.Parameters.AddWithValue("@id", autorId);
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Autor apagado com sucesso!");
+                            CarregarAutores();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao apagar o autor: " + ex.Message);
+                    }
+                }
             }
         }
 
@@ -68,10 +103,5 @@ namespace BibliotecaSkilliana_M2.Autor
             { formEditarAutor.ShowDialog(); }
         }
 
-        private void btnApagarAutor_Click(object sender, EventArgs e)
-        {
-            using (FormApagarAutor formApagarAutor = new FormApagarAutor())
-            { formApagarAutor.ShowDialog(); }
-        }
     }
 }

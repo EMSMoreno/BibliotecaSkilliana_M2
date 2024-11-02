@@ -35,7 +35,6 @@
             panel1 = new Panel();
             label1 = new Label();
             lblEditarLivro = new Label();
-            btnApagarEstante = new Button();
             btnEditarEstante = new Button();
             btnAdicionarEstante = new Button();
             dataGridView1 = new DataGridView();
@@ -106,23 +105,11 @@
             lblEditarLivro.TabIndex = 50;
             lblEditarLivro.Text = "Menu Estantes - Ver Estantes";
             // 
-            // btnApagarEstante
-            // 
-            btnApagarEstante.FlatAppearance.BorderColor = Color.Red;
-            btnApagarEstante.FlatStyle = FlatStyle.Flat;
-            btnApagarEstante.Location = new Point(600, 484);
-            btnApagarEstante.Name = "btnApagarEstante";
-            btnApagarEstante.Size = new Size(135, 48);
-            btnApagarEstante.TabIndex = 49;
-            btnApagarEstante.Text = "Apagar Estante";
-            btnApagarEstante.UseVisualStyleBackColor = true;
-            btnApagarEstante.Click += btnApagarEstante_Click;
-            // 
             // btnEditarEstante
             // 
             btnEditarEstante.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarEstante.FlatStyle = FlatStyle.Flat;
-            btnEditarEstante.Location = new Point(324, 484);
+            btnEditarEstante.Location = new Point(418, 484);
             btnEditarEstante.Name = "btnEditarEstante";
             btnEditarEstante.Size = new Size(135, 48);
             btnEditarEstante.TabIndex = 48;
@@ -134,7 +121,7 @@
             // 
             btnAdicionarEstante.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
             btnAdicionarEstante.FlatStyle = FlatStyle.Flat;
-            btnAdicionarEstante.Location = new Point(71, 484);
+            btnAdicionarEstante.Location = new Point(277, 484);
             btnAdicionarEstante.Name = "btnAdicionarEstante";
             btnAdicionarEstante.Size = new Size(135, 48);
             btnAdicionarEstante.TabIndex = 47;
@@ -145,11 +132,12 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(210, 154);
+            dataGridView1.Location = new Point(186, 152);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(388, 314);
+            dataGridView1.Size = new Size(458, 314);
             dataGridView1.TabIndex = 46;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // FormVerEstante
             // 
@@ -157,7 +145,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
             Controls.Add(lblEditarLivro);
-            Controls.Add(btnApagarEstante);
             Controls.Add(btnEditarEstante);
             Controls.Add(btnAdicionarEstante);
             Controls.Add(dataGridView1);
@@ -185,7 +172,6 @@
         private Panel panel1;
         private Label label1;
         private Label lblEditarLivro;
-        private Button btnApagarEstante;
         private Button btnEditarEstante;
         private Button btnAdicionarEstante;
         private DataGridView dataGridView1;

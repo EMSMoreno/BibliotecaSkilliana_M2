@@ -38,7 +38,6 @@
             btnEditarSocio = new Button();
             btnAdicionarSocio = new Button();
             dataGridView1 = new DataGridView();
-            btnApagarSocio = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -90,7 +89,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(165, 14);
+            label1.Location = new Point(177, 14);
             label1.Name = "label1";
             label1.Size = new Size(446, 17);
             label1.TabIndex = 1;
@@ -110,9 +109,9 @@
             // 
             btnEditarSocio.FlatAppearance.BorderColor = Color.Yellow;
             btnEditarSocio.FlatStyle = FlatStyle.Flat;
-            btnEditarSocio.Location = new Point(326, 481);
+            btnEditarSocio.Location = new Point(401, 459);
             btnEditarSocio.Name = "btnEditarSocio";
-            btnEditarSocio.Size = new Size(135, 48);
+            btnEditarSocio.Size = new Size(205, 48);
             btnEditarSocio.TabIndex = 48;
             btnEditarSocio.Text = "Editar Sócio";
             btnEditarSocio.UseVisualStyleBackColor = true;
@@ -122,9 +121,9 @@
             // 
             btnAdicionarSocio.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 0);
             btnAdicionarSocio.FlatStyle = FlatStyle.Flat;
-            btnAdicionarSocio.Location = new Point(53, 481);
+            btnAdicionarSocio.Location = new Point(190, 459);
             btnAdicionarSocio.Name = "btnAdicionarSocio";
-            btnAdicionarSocio.Size = new Size(135, 48);
+            btnAdicionarSocio.Size = new Size(205, 48);
             btnAdicionarSocio.TabIndex = 47;
             btnAdicionarSocio.Text = "Adicionar Sócio";
             btnAdicionarSocio.UseVisualStyleBackColor = true;
@@ -137,25 +136,13 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(776, 314);
             dataGridView1.TabIndex = 46;
-            // 
-            // btnApagarSocio
-            // 
-            btnApagarSocio.FlatAppearance.BorderColor = Color.Red;
-            btnApagarSocio.FlatStyle = FlatStyle.Flat;
-            btnApagarSocio.Location = new Point(613, 481);
-            btnApagarSocio.Name = "btnApagarSocio";
-            btnApagarSocio.Size = new Size(135, 48);
-            btnApagarSocio.TabIndex = 50;
-            btnApagarSocio.Text = "Apagar Sócio";
-            btnApagarSocio.UseVisualStyleBackColor = true;
-            btnApagarSocio.Click += btnApagarLivro_Click;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // FormVerSocio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
-            Controls.Add(btnApagarSocio);
             Controls.Add(lblEditarLivro);
             Controls.Add(btnEditarSocio);
             Controls.Add(btnAdicionarSocio);
@@ -187,6 +174,5 @@
         private Button btnEditarSocio;
         private Button btnAdicionarSocio;
         private DataGridView dataGridView1;
-        private Button btnApagarSocio;
     }
 }

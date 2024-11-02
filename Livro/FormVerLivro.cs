@@ -126,10 +126,5 @@ namespace BibliotecaSkilliana_M2.Livro
             { formEditarLivro.ShowDialog(); }
         }
 
-        private void btnApagarLivro_Click(object sender, EventArgs e)
-        {
-            using (FormApagarLivro formApagarLivro = new FormApagarLivro())
-            { formApagarLivro.ShowDialog(); }
-        }
     }
 }

@@ -33,12 +33,56 @@ namespace BibliotecaSkilliana_M2.Secçao
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
                         dataGridView1.DataSource = dt;
+
+                        if (dataGridView1.Columns["btnApagar"] == null)
+                        {
+                            DataGridViewButtonColumn btnApagar = new DataGridViewButtonColumn();
+                            btnApagar.Name = "btnApagar";
+                            btnApagar.HeaderText = "Ação";
+                            btnApagar.Text = "Apagar";
+                            btnApagar.UseColumnTextForButtonValue = true;
+                            dataGridView1.Columns.Add(btnApagar);
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar secções: " + ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["btnApagar"].Index && e.RowIndex >= 0)
+            {
+                var confirmResult = MessageBox.Show("Tens a certeza que queres apagar esta secção?",
+                                                    "Confirmação",
+                                                    MessageBoxButtons.YesNo);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int secaoId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Codigo_Secao"].Value);
+
+                        using (SqlConnection con = new SqlConnection(cs))
+                        {
+                            con.Open();
+                            string deleteQuery = "DELETE FROM Secao WHERE Codigo_Secao = @id";
+                            SqlCommand cmd = new SqlCommand(deleteQuery, con);
+                            cmd.Parameters.AddWithValue("@id", secaoId);
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Secção apagada com sucesso!");
+                            LoadSecoes();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao apagar a secção: " + ex.Message);
+                    }
+                }
             }
         }
 
@@ -52,12 +96,6 @@ namespace BibliotecaSkilliana_M2.Secçao
         {
             using (FormEditarSecao formEditarSecao = new FormEditarSecao())
             { formEditarSecao.ShowDialog(); }
-        }
-
-        private void btnApagarSecao_Click(object sender, EventArgs e)
-        {
-            using (FormApagarSecao formApagarSecao = new FormApagarSecao())
-            { formApagarSecao.ShowDialog(); }
         }
     }
 }

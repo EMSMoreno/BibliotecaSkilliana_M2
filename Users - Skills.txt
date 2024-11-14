@@ -1,0 +1,23 @@
+
+Utilizadores
+
+servantAdam@yopmail.com
+servantAdam123456#
+
+helperBrian@yopmail.com
+helperBrian12345#
+
+ricardoAlves@yopmail.com
+ricardoAlves1234#
+
+carlosTeste332yopmail.com
+carlosTeste33#
+
+eduardo@yopmail.com
+Eduardo1234322# (role admin)
+
+john.doe@example.com
+JonhDoe1237890# (role client)
+
+tiago@yopmail.com
+Tiago897878# (role other)
